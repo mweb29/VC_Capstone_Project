@@ -2,7 +2,6 @@
 
 """
 Script: vc_synthetic_data_export.py
-Location: app/export/
 
 Description:
     Generates synthetic data for venture capital analytics, including:

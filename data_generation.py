@@ -47,6 +47,7 @@ portfolio_general_info = pd.DataFrame({
 })
 
 # --- 2. PORTFOLIO_ATTRIBUTES ---
+# JSON --> Future
 attribute_types = [
     ('Strategy', 'Early-StageVC', 'Early-Stage VC'),
     ('Region', 'NorthAmerica', 'North America'),
@@ -162,7 +163,7 @@ locations = [
 ]
 
 vintages = [1996, 1999, 2003, 2021, 1998, 2019, 2024, 2023, 1989, 2021]
-
+# Easier variable names
 irr = np.round(np.random.uniform(-10, 60, size=10), 2)
 quartile = ["1 (Top Quartile)"] * 10
 dpi = np.round(np.random.uniform(0.5, 20, size=10), 2)
@@ -194,6 +195,9 @@ vc_funds = pd.DataFrame({
 })
 
 # --- EXPORT to Excel ---
+"""
+    This
+"""
 timestamp = datetime.now().strftime("%Y%m%d_%H%M")
 output_path = f"vc_synthetic_data_{timestamp}.xlsx"
 

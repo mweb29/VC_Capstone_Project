@@ -1,7 +1,7 @@
 import snowflake
 # from sympy.physics.vector.printing import params
 
-from db_connection import get_snowflake_connection
+from Existing_code.db_connection import get_snowflake_connection
 from quantitative_data_generation_updated import QuantData
 import os
 import json

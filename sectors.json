@@ -1,0 +1,46 @@
+[
+  {
+    "Sector Code": 10,
+    "Sector": "Energy"
+  },
+  {
+    "Sector Code": 15,
+    "Sector": "Materials"
+  },
+  {
+    "Sector Code": 20,
+    "Sector": "Industrials"
+  },
+  {
+    "Sector Code": 25,
+    "Sector": "Consumer Discretionary"
+  },
+  {
+    "Sector Code": 30,
+    "Sector": "Consumer Staples"
+  },
+  {
+    "Sector Code": 35,
+    "Sector": "Health Care"
+  },
+  {
+    "Sector Code": 40,
+    "Sector": "Financials"
+  },
+  {
+    "Sector Code": 45,
+    "Sector": "Information Technology"
+  },
+  {
+    "Sector Code": 50,
+    "Sector": "Communication Services"
+  },
+  {
+    "Sector Code": 55,
+    "Sector": "Utilities"
+  },
+  {
+    "Sector Code": 60,
+    "Sector": "Real Estate"
+  }
+]

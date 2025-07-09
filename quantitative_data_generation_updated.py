@@ -7,7 +7,7 @@ from DeriveValidPeriods import read_data as rdt
 import string
 import random
 import snowflake
-from db_connection import get_snowflake_connection
+from Existing_code.db_connection import get_snowflake_connection
 from snowflake.connector.pandas_tools import write_pandas
 from datetime import datetime, timedelta, date
 from open_ai_interactions import get_openai_client_obj, interact_with_chat_application, interact_with_gpt4

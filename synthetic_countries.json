@@ -1,0 +1,1752 @@
+[
+  {
+    "Country Name": "Aruba",
+    "ISO2": "AW",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "AWG"
+  },
+  {
+    "Country Name": "Afghanistan",
+    "ISO2": "AF",
+    "Region": "Asia",
+    "Subregion": "Southern Asia",
+    "Currency": "AFN"
+  },
+  {
+    "Country Name": "Angola",
+    "ISO2": "AO",
+    "Region": "Africa",
+    "Subregion": "Middle Africa",
+    "Currency": "AOA"
+  },
+  {
+    "Country Name": "Anguilla",
+    "ISO2": "AI",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "XCD"
+  },
+  {
+    "Country Name": "\u00c5land Islands",
+    "ISO2": "AX",
+    "Region": "Europe",
+    "Subregion": "Northern Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Albania",
+    "ISO2": "AL",
+    "Region": "Europe",
+    "Subregion": "Southeast Europe",
+    "Currency": "ALL"
+  },
+  {
+    "Country Name": "Andorra",
+    "ISO2": "AD",
+    "Region": "Europe",
+    "Subregion": "Southern Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "United Arab Emirates",
+    "ISO2": "AE",
+    "Region": "Asia",
+    "Subregion": "Western Asia",
+    "Currency": "AED"
+  },
+  {
+    "Country Name": "Argentina",
+    "ISO2": "AR",
+    "Region": "Americas",
+    "Subregion": "South America",
+    "Currency": "ARS"
+  },
+  {
+    "Country Name": "Armenia",
+    "ISO2": "AM",
+    "Region": "Asia",
+    "Subregion": "Western Asia",
+    "Currency": "AMD"
+  },
+  {
+    "Country Name": "American Samoa",
+    "ISO2": "AS",
+    "Region": "Oceania",
+    "Subregion": "Polynesia",
+    "Currency": "USD"
+  },
+  {
+    "Country Name": "Antarctica",
+    "ISO2": "AQ",
+    "Region": "Antarctic",
+    "Subregion": "",
+    "Currency": null
+  },
+  {
+    "Country Name": "French Southern and Antarctic Lands",
+    "ISO2": "TF",
+    "Region": "Antarctic",
+    "Subregion": "",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Antigua and Barbuda",
+    "ISO2": "AG",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "XCD"
+  },
+  {
+    "Country Name": "Australia",
+    "ISO2": "AU",
+    "Region": "Oceania",
+    "Subregion": "Australia and New Zealand",
+    "Currency": "AUD"
+  },
+  {
+    "Country Name": "Austria",
+    "ISO2": "AT",
+    "Region": "Europe",
+    "Subregion": "Central Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Azerbaijan",
+    "ISO2": "AZ",
+    "Region": "Asia",
+    "Subregion": "Western Asia",
+    "Currency": "AZN"
+  },
+  {
+    "Country Name": "Burundi",
+    "ISO2": "BI",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "BIF"
+  },
+  {
+    "Country Name": "Belgium",
+    "ISO2": "BE",
+    "Region": "Europe",
+    "Subregion": "Western Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Benin",
+    "ISO2": "BJ",
+    "Region": "Africa",
+    "Subregion": "Western Africa",
+    "Currency": "XOF"
+  },
+  {
+    "Country Name": "Burkina Faso",
+    "ISO2": "BF",
+    "Region": "Africa",
+    "Subregion": "Western Africa",
+    "Currency": "XOF"
+  },
+  {
+    "Country Name": "Bangladesh",
+    "ISO2": "BD",
+    "Region": "Asia",
+    "Subregion": "Southern Asia",
+    "Currency": "BDT"
+  },
+  {
+    "Country Name": "Bulgaria",
+    "ISO2": "BG",
+    "Region": "Europe",
+    "Subregion": "Southeast Europe",
+    "Currency": "BGN"
+  },
+  {
+    "Country Name": "Bahrain",
+    "ISO2": "BH",
+    "Region": "Asia",
+    "Subregion": "Western Asia",
+    "Currency": "BHD"
+  },
+  {
+    "Country Name": "Bahamas",
+    "ISO2": "BS",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "BSD"
+  },
+  {
+    "Country Name": "Bosnia and Herzegovina",
+    "ISO2": "BA",
+    "Region": "Europe",
+    "Subregion": "Southeast Europe",
+    "Currency": "BAM"
+  },
+  {
+    "Country Name": "Saint Barth\u00e9lemy",
+    "ISO2": "BL",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Saint Helena, Ascension and Tristan da Cunha",
+    "ISO2": "SH",
+    "Region": "Africa",
+    "Subregion": "Western Africa",
+    "Currency": "GBP"
+  },
+  {
+    "Country Name": "Belarus",
+    "ISO2": "BY",
+    "Region": "Europe",
+    "Subregion": "Eastern Europe",
+    "Currency": "BYN"
+  },
+  {
+    "Country Name": "Belize",
+    "ISO2": "BZ",
+    "Region": "Americas",
+    "Subregion": "Central America",
+    "Currency": "BZD"
+  },
+  {
+    "Country Name": "Bermuda",
+    "ISO2": "BM",
+    "Region": "Americas",
+    "Subregion": "North America",
+    "Currency": "BMD"
+  },
+  {
+    "Country Name": "Bolivia",
+    "ISO2": "BO",
+    "Region": "Americas",
+    "Subregion": "South America",
+    "Currency": "BOB"
+  },
+  {
+    "Country Name": "Caribbean Netherlands",
+    "ISO2": "BQ",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "USD"
+  },
+  {
+    "Country Name": "Brazil",
+    "ISO2": "BR",
+    "Region": "Americas",
+    "Subregion": "South America",
+    "Currency": "BRL"
+  },
+  {
+    "Country Name": "Barbados",
+    "ISO2": "BB",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "BBD"
+  },
+  {
+    "Country Name": "Brunei",
+    "ISO2": "BN",
+    "Region": "Asia",
+    "Subregion": "South-Eastern Asia",
+    "Currency": "BND"
+  },
+  {
+    "Country Name": "Bhutan",
+    "ISO2": "BT",
+    "Region": "Asia",
+    "Subregion": "Southern Asia",
+    "Currency": "BTN"
+  },
+  {
+    "Country Name": "Bouvet Island",
+    "ISO2": "BV",
+    "Region": "Antarctic",
+    "Subregion": "",
+    "Currency": null
+  },
+  {
+    "Country Name": "Botswana",
+    "ISO2": "BW",
+    "Region": "Africa",
+    "Subregion": "Southern Africa",
+    "Currency": "BWP"
+  },
+  {
+    "Country Name": "Central African Republic",
+    "ISO2": "CF",
+    "Region": "Africa",
+    "Subregion": "Middle Africa",
+    "Currency": "XAF"
+  },
+  {
+    "Country Name": "Canada",
+    "ISO2": "CA",
+    "Region": "Americas",
+    "Subregion": "North America",
+    "Currency": "CAD"
+  },
+  {
+    "Country Name": "Cocos (Keeling) Islands",
+    "ISO2": "CC",
+    "Region": "Oceania",
+    "Subregion": "Australia and New Zealand",
+    "Currency": "AUD"
+  },
+  {
+    "Country Name": "Switzerland",
+    "ISO2": "CH",
+    "Region": "Europe",
+    "Subregion": "Western Europe",
+    "Currency": "CHF"
+  },
+  {
+    "Country Name": "Chile",
+    "ISO2": "CL",
+    "Region": "Americas",
+    "Subregion": "South America",
+    "Currency": "CLP"
+  },
+  {
+    "Country Name": "China",
+    "ISO2": "CN",
+    "Region": "Asia",
+    "Subregion": "Eastern Asia",
+    "Currency": "CNY"
+  },
+  {
+    "Country Name": "Ivory Coast",
+    "ISO2": "CI",
+    "Region": "Africa",
+    "Subregion": "Western Africa",
+    "Currency": "XOF"
+  },
+  {
+    "Country Name": "Cameroon",
+    "ISO2": "CM",
+    "Region": "Africa",
+    "Subregion": "Middle Africa",
+    "Currency": "XAF"
+  },
+  {
+    "Country Name": "DR Congo",
+    "ISO2": "CD",
+    "Region": "Africa",
+    "Subregion": "Middle Africa",
+    "Currency": "CDF"
+  },
+  {
+    "Country Name": "Congo",
+    "ISO2": "CG",
+    "Region": "Africa",
+    "Subregion": "Middle Africa",
+    "Currency": "XAF"
+  },
+  {
+    "Country Name": "Cook Islands",
+    "ISO2": "CK",
+    "Region": "Oceania",
+    "Subregion": "Polynesia",
+    "Currency": "CKD"
+  },
+  {
+    "Country Name": "Colombia",
+    "ISO2": "CO",
+    "Region": "Americas",
+    "Subregion": "South America",
+    "Currency": "COP"
+  },
+  {
+    "Country Name": "Comoros",
+    "ISO2": "KM",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "KMF"
+  },
+  {
+    "Country Name": "Cape Verde",
+    "ISO2": "CV",
+    "Region": "Africa",
+    "Subregion": "Western Africa",
+    "Currency": "CVE"
+  },
+  {
+    "Country Name": "Costa Rica",
+    "ISO2": "CR",
+    "Region": "Americas",
+    "Subregion": "Central America",
+    "Currency": "CRC"
+  },
+  {
+    "Country Name": "Cuba",
+    "ISO2": "CU",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "CUC"
+  },
+  {
+    "Country Name": "Cura\u00e7ao",
+    "ISO2": "CW",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "ANG"
+  },
+  {
+    "Country Name": "Christmas Island",
+    "ISO2": "CX",
+    "Region": "Oceania",
+    "Subregion": "Australia and New Zealand",
+    "Currency": "AUD"
+  },
+  {
+    "Country Name": "Cayman Islands",
+    "ISO2": "KY",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "KYD"
+  },
+  {
+    "Country Name": "Cyprus",
+    "ISO2": "CY",
+    "Region": "Europe",
+    "Subregion": "Southern Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Czechia",
+    "ISO2": "CZ",
+    "Region": "Europe",
+    "Subregion": "Central Europe",
+    "Currency": "CZK"
+  },
+  {
+    "Country Name": "Germany",
+    "ISO2": "DE",
+    "Region": "Europe",
+    "Subregion": "Western Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Djibouti",
+    "ISO2": "DJ",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "DJF"
+  },
+  {
+    "Country Name": "Dominica",
+    "ISO2": "DM",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "XCD"
+  },
+  {
+    "Country Name": "Denmark",
+    "ISO2": "DK",
+    "Region": "Europe",
+    "Subregion": "Northern Europe",
+    "Currency": "DKK"
+  },
+  {
+    "Country Name": "Dominican Republic",
+    "ISO2": "DO",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "DOP"
+  },
+  {
+    "Country Name": "Algeria",
+    "ISO2": "DZ",
+    "Region": "Africa",
+    "Subregion": "Northern Africa",
+    "Currency": "DZD"
+  },
+  {
+    "Country Name": "Ecuador",
+    "ISO2": "EC",
+    "Region": "Americas",
+    "Subregion": "South America",
+    "Currency": "USD"
+  },
+  {
+    "Country Name": "Egypt",
+    "ISO2": "EG",
+    "Region": "Africa",
+    "Subregion": "Northern Africa",
+    "Currency": "EGP"
+  },
+  {
+    "Country Name": "Eritrea",
+    "ISO2": "ER",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "ERN"
+  },
+  {
+    "Country Name": "Western Sahara",
+    "ISO2": "EH",
+    "Region": "Africa",
+    "Subregion": "Northern Africa",
+    "Currency": "DZD"
+  },
+  {
+    "Country Name": "Spain",
+    "ISO2": "ES",
+    "Region": "Europe",
+    "Subregion": "Southern Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Estonia",
+    "ISO2": "EE",
+    "Region": "Europe",
+    "Subregion": "Northern Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Ethiopia",
+    "ISO2": "ET",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "ETB"
+  },
+  {
+    "Country Name": "Finland",
+    "ISO2": "FI",
+    "Region": "Europe",
+    "Subregion": "Northern Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Fiji",
+    "ISO2": "FJ",
+    "Region": "Oceania",
+    "Subregion": "Melanesia",
+    "Currency": "FJD"
+  },
+  {
+    "Country Name": "Falkland Islands",
+    "ISO2": "FK",
+    "Region": "Americas",
+    "Subregion": "South America",
+    "Currency": "FKP"
+  },
+  {
+    "Country Name": "France",
+    "ISO2": "FR",
+    "Region": "Europe",
+    "Subregion": "Western Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Faroe Islands",
+    "ISO2": "FO",
+    "Region": "Europe",
+    "Subregion": "Northern Europe",
+    "Currency": "DKK"
+  },
+  {
+    "Country Name": "Micronesia",
+    "ISO2": "FM",
+    "Region": "Oceania",
+    "Subregion": "Micronesia",
+    "Currency": null
+  },
+  {
+    "Country Name": "Gabon",
+    "ISO2": "GA",
+    "Region": "Africa",
+    "Subregion": "Middle Africa",
+    "Currency": "XAF"
+  },
+  {
+    "Country Name": "United Kingdom",
+    "ISO2": "GB",
+    "Region": "Europe",
+    "Subregion": "Northern Europe",
+    "Currency": "GBP"
+  },
+  {
+    "Country Name": "Georgia",
+    "ISO2": "GE",
+    "Region": "Asia",
+    "Subregion": "Western Asia",
+    "Currency": "GEL"
+  },
+  {
+    "Country Name": "Guernsey",
+    "ISO2": "GG",
+    "Region": "Europe",
+    "Subregion": "Northern Europe",
+    "Currency": "GBP"
+  },
+  {
+    "Country Name": "Ghana",
+    "ISO2": "GH",
+    "Region": "Africa",
+    "Subregion": "Western Africa",
+    "Currency": "GHS"
+  },
+  {
+    "Country Name": "Gibraltar",
+    "ISO2": "GI",
+    "Region": "Europe",
+    "Subregion": "Southern Europe",
+    "Currency": "GIP"
+  },
+  {
+    "Country Name": "Guinea",
+    "ISO2": "GN",
+    "Region": "Africa",
+    "Subregion": "Western Africa",
+    "Currency": "GNF"
+  },
+  {
+    "Country Name": "Guadeloupe",
+    "ISO2": "GP",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Gambia",
+    "ISO2": "GM",
+    "Region": "Africa",
+    "Subregion": "Western Africa",
+    "Currency": "GMD"
+  },
+  {
+    "Country Name": "Guinea-Bissau",
+    "ISO2": "GW",
+    "Region": "Africa",
+    "Subregion": "Western Africa",
+    "Currency": "XOF"
+  },
+  {
+    "Country Name": "Equatorial Guinea",
+    "ISO2": "GQ",
+    "Region": "Africa",
+    "Subregion": "Middle Africa",
+    "Currency": "XAF"
+  },
+  {
+    "Country Name": "Greece",
+    "ISO2": "GR",
+    "Region": "Europe",
+    "Subregion": "Southern Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Grenada",
+    "ISO2": "GD",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "XCD"
+  },
+  {
+    "Country Name": "Greenland",
+    "ISO2": "GL",
+    "Region": "Americas",
+    "Subregion": "North America",
+    "Currency": "DKK"
+  },
+  {
+    "Country Name": "Guatemala",
+    "ISO2": "GT",
+    "Region": "Americas",
+    "Subregion": "Central America",
+    "Currency": "GTQ"
+  },
+  {
+    "Country Name": "French Guiana",
+    "ISO2": "GF",
+    "Region": "Americas",
+    "Subregion": "South America",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Guam",
+    "ISO2": "GU",
+    "Region": "Oceania",
+    "Subregion": "Micronesia",
+    "Currency": "USD"
+  },
+  {
+    "Country Name": "Guyana",
+    "ISO2": "GY",
+    "Region": "Americas",
+    "Subregion": "South America",
+    "Currency": "GYD"
+  },
+  {
+    "Country Name": "Hong Kong",
+    "ISO2": "HK",
+    "Region": "Asia",
+    "Subregion": "Eastern Asia",
+    "Currency": "HKD"
+  },
+  {
+    "Country Name": "Heard Island and McDonald Islands",
+    "ISO2": "HM",
+    "Region": "Antarctic",
+    "Subregion": "",
+    "Currency": null
+  },
+  {
+    "Country Name": "Honduras",
+    "ISO2": "HN",
+    "Region": "Americas",
+    "Subregion": "Central America",
+    "Currency": "HNL"
+  },
+  {
+    "Country Name": "Croatia",
+    "ISO2": "HR",
+    "Region": "Europe",
+    "Subregion": "Southeast Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Haiti",
+    "ISO2": "HT",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "HTG"
+  },
+  {
+    "Country Name": "Hungary",
+    "ISO2": "HU",
+    "Region": "Europe",
+    "Subregion": "Central Europe",
+    "Currency": "HUF"
+  },
+  {
+    "Country Name": "Indonesia",
+    "ISO2": "ID",
+    "Region": "Asia",
+    "Subregion": "South-Eastern Asia",
+    "Currency": "IDR"
+  },
+  {
+    "Country Name": "Isle of Man",
+    "ISO2": "IM",
+    "Region": "Europe",
+    "Subregion": "Northern Europe",
+    "Currency": "GBP"
+  },
+  {
+    "Country Name": "India",
+    "ISO2": "IN",
+    "Region": "Asia",
+    "Subregion": "Southern Asia",
+    "Currency": "INR"
+  },
+  {
+    "Country Name": "British Indian Ocean Territory",
+    "ISO2": "IO",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "USD"
+  },
+  {
+    "Country Name": "Ireland",
+    "ISO2": "IE",
+    "Region": "Europe",
+    "Subregion": "Northern Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Iran",
+    "ISO2": "IR",
+    "Region": "Asia",
+    "Subregion": "Southern Asia",
+    "Currency": "IRR"
+  },
+  {
+    "Country Name": "Iraq",
+    "ISO2": "IQ",
+    "Region": "Asia",
+    "Subregion": "Western Asia",
+    "Currency": "IQD"
+  },
+  {
+    "Country Name": "Iceland",
+    "ISO2": "IS",
+    "Region": "Europe",
+    "Subregion": "Northern Europe",
+    "Currency": "ISK"
+  },
+  {
+    "Country Name": "Israel",
+    "ISO2": "IL",
+    "Region": "Asia",
+    "Subregion": "Western Asia",
+    "Currency": "ILS"
+  },
+  {
+    "Country Name": "Italy",
+    "ISO2": "IT",
+    "Region": "Europe",
+    "Subregion": "Southern Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Jamaica",
+    "ISO2": "JM",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "JMD"
+  },
+  {
+    "Country Name": "Jersey",
+    "ISO2": "JE",
+    "Region": "Europe",
+    "Subregion": "Northern Europe",
+    "Currency": "GBP"
+  },
+  {
+    "Country Name": "Jordan",
+    "ISO2": "JO",
+    "Region": "Asia",
+    "Subregion": "Western Asia",
+    "Currency": "JOD"
+  },
+  {
+    "Country Name": "Japan",
+    "ISO2": "JP",
+    "Region": "Asia",
+    "Subregion": "Eastern Asia",
+    "Currency": "JPY"
+  },
+  {
+    "Country Name": "Kazakhstan",
+    "ISO2": "KZ",
+    "Region": "Asia",
+    "Subregion": "Central Asia",
+    "Currency": "KZT"
+  },
+  {
+    "Country Name": "Kenya",
+    "ISO2": "KE",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "KES"
+  },
+  {
+    "Country Name": "Kyrgyzstan",
+    "ISO2": "KG",
+    "Region": "Asia",
+    "Subregion": "Central Asia",
+    "Currency": "KGS"
+  },
+  {
+    "Country Name": "Cambodia",
+    "ISO2": "KH",
+    "Region": "Asia",
+    "Subregion": "South-Eastern Asia",
+    "Currency": "KHR"
+  },
+  {
+    "Country Name": "Kiribati",
+    "ISO2": "KI",
+    "Region": "Oceania",
+    "Subregion": "Micronesia",
+    "Currency": "AUD"
+  },
+  {
+    "Country Name": "Saint Kitts and Nevis",
+    "ISO2": "KN",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "XCD"
+  },
+  {
+    "Country Name": "South Korea",
+    "ISO2": "KR",
+    "Region": "Asia",
+    "Subregion": "Eastern Asia",
+    "Currency": "KRW"
+  },
+  {
+    "Country Name": "Kosovo",
+    "ISO2": "XK",
+    "Region": "Europe",
+    "Subregion": "Southeast Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Kuwait",
+    "ISO2": "KW",
+    "Region": "Asia",
+    "Subregion": "Western Asia",
+    "Currency": "KWD"
+  },
+  {
+    "Country Name": "Laos",
+    "ISO2": "LA",
+    "Region": "Asia",
+    "Subregion": "South-Eastern Asia",
+    "Currency": "LAK"
+  },
+  {
+    "Country Name": "Lebanon",
+    "ISO2": "LB",
+    "Region": "Asia",
+    "Subregion": "Western Asia",
+    "Currency": "LBP"
+  },
+  {
+    "Country Name": "Liberia",
+    "ISO2": "LR",
+    "Region": "Africa",
+    "Subregion": "Western Africa",
+    "Currency": "LRD"
+  },
+  {
+    "Country Name": "Libya",
+    "ISO2": "LY",
+    "Region": "Africa",
+    "Subregion": "Northern Africa",
+    "Currency": "LYD"
+  },
+  {
+    "Country Name": "Saint Lucia",
+    "ISO2": "LC",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "XCD"
+  },
+  {
+    "Country Name": "Liechtenstein",
+    "ISO2": "LI",
+    "Region": "Europe",
+    "Subregion": "Western Europe",
+    "Currency": "CHF"
+  },
+  {
+    "Country Name": "Sri Lanka",
+    "ISO2": "LK",
+    "Region": "Asia",
+    "Subregion": "Southern Asia",
+    "Currency": "LKR"
+  },
+  {
+    "Country Name": "Lesotho",
+    "ISO2": "LS",
+    "Region": "Africa",
+    "Subregion": "Southern Africa",
+    "Currency": "LSL"
+  },
+  {
+    "Country Name": "Lithuania",
+    "ISO2": "LT",
+    "Region": "Europe",
+    "Subregion": "Northern Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Luxembourg",
+    "ISO2": "LU",
+    "Region": "Europe",
+    "Subregion": "Western Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Latvia",
+    "ISO2": "LV",
+    "Region": "Europe",
+    "Subregion": "Northern Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Macau",
+    "ISO2": "MO",
+    "Region": "Asia",
+    "Subregion": "Eastern Asia",
+    "Currency": "MOP"
+  },
+  {
+    "Country Name": "Saint Martin",
+    "ISO2": "MF",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Morocco",
+    "ISO2": "MA",
+    "Region": "Africa",
+    "Subregion": "Northern Africa",
+    "Currency": "MAD"
+  },
+  {
+    "Country Name": "Monaco",
+    "ISO2": "MC",
+    "Region": "Europe",
+    "Subregion": "Western Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Moldova",
+    "ISO2": "MD",
+    "Region": "Europe",
+    "Subregion": "Eastern Europe",
+    "Currency": "MDL"
+  },
+  {
+    "Country Name": "Madagascar",
+    "ISO2": "MG",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "MGA"
+  },
+  {
+    "Country Name": "Maldives",
+    "ISO2": "MV",
+    "Region": "Asia",
+    "Subregion": "Southern Asia",
+    "Currency": "MVR"
+  },
+  {
+    "Country Name": "Mexico",
+    "ISO2": "MX",
+    "Region": "Americas",
+    "Subregion": "North America",
+    "Currency": "MXN"
+  },
+  {
+    "Country Name": "Marshall Islands",
+    "ISO2": "MH",
+    "Region": "Oceania",
+    "Subregion": "Micronesia",
+    "Currency": "USD"
+  },
+  {
+    "Country Name": "North Macedonia",
+    "ISO2": "MK",
+    "Region": "Europe",
+    "Subregion": "Southeast Europe",
+    "Currency": "MKD"
+  },
+  {
+    "Country Name": "Mali",
+    "ISO2": "ML",
+    "Region": "Africa",
+    "Subregion": "Western Africa",
+    "Currency": "XOF"
+  },
+  {
+    "Country Name": "Malta",
+    "ISO2": "MT",
+    "Region": "Europe",
+    "Subregion": "Southern Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Myanmar",
+    "ISO2": "MM",
+    "Region": "Asia",
+    "Subregion": "South-Eastern Asia",
+    "Currency": "MMK"
+  },
+  {
+    "Country Name": "Montenegro",
+    "ISO2": "ME",
+    "Region": "Europe",
+    "Subregion": "Southeast Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Mongolia",
+    "ISO2": "MN",
+    "Region": "Asia",
+    "Subregion": "Eastern Asia",
+    "Currency": "MNT"
+  },
+  {
+    "Country Name": "Northern Mariana Islands",
+    "ISO2": "MP",
+    "Region": "Oceania",
+    "Subregion": "Micronesia",
+    "Currency": "USD"
+  },
+  {
+    "Country Name": "Mozambique",
+    "ISO2": "MZ",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "MZN"
+  },
+  {
+    "Country Name": "Mauritania",
+    "ISO2": "MR",
+    "Region": "Africa",
+    "Subregion": "Western Africa",
+    "Currency": "MRU"
+  },
+  {
+    "Country Name": "Montserrat",
+    "ISO2": "MS",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "XCD"
+  },
+  {
+    "Country Name": "Martinique",
+    "ISO2": "MQ",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Mauritius",
+    "ISO2": "MU",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "MUR"
+  },
+  {
+    "Country Name": "Malawi",
+    "ISO2": "MW",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "MWK"
+  },
+  {
+    "Country Name": "Malaysia",
+    "ISO2": "MY",
+    "Region": "Asia",
+    "Subregion": "South-Eastern Asia",
+    "Currency": "MYR"
+  },
+  {
+    "Country Name": "Mayotte",
+    "ISO2": "YT",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Namibia",
+    "ISO2": "NA",
+    "Region": "Africa",
+    "Subregion": "Southern Africa",
+    "Currency": "NAD"
+  },
+  {
+    "Country Name": "New Caledonia",
+    "ISO2": "NC",
+    "Region": "Oceania",
+    "Subregion": "Melanesia",
+    "Currency": "XPF"
+  },
+  {
+    "Country Name": "Niger",
+    "ISO2": "NE",
+    "Region": "Africa",
+    "Subregion": "Western Africa",
+    "Currency": "XOF"
+  },
+  {
+    "Country Name": "Norfolk Island",
+    "ISO2": "NF",
+    "Region": "Oceania",
+    "Subregion": "Australia and New Zealand",
+    "Currency": "AUD"
+  },
+  {
+    "Country Name": "Nigeria",
+    "ISO2": "NG",
+    "Region": "Africa",
+    "Subregion": "Western Africa",
+    "Currency": "NGN"
+  },
+  {
+    "Country Name": "Nicaragua",
+    "ISO2": "NI",
+    "Region": "Americas",
+    "Subregion": "Central America",
+    "Currency": "NIO"
+  },
+  {
+    "Country Name": "Niue",
+    "ISO2": "NU",
+    "Region": "Oceania",
+    "Subregion": "Polynesia",
+    "Currency": "NZD"
+  },
+  {
+    "Country Name": "Netherlands",
+    "ISO2": "NL",
+    "Region": "Europe",
+    "Subregion": "Western Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Norway",
+    "ISO2": "NO",
+    "Region": "Europe",
+    "Subregion": "Northern Europe",
+    "Currency": "NOK"
+  },
+  {
+    "Country Name": "Nepal",
+    "ISO2": "NP",
+    "Region": "Asia",
+    "Subregion": "Southern Asia",
+    "Currency": "NPR"
+  },
+  {
+    "Country Name": "Nauru",
+    "ISO2": "NR",
+    "Region": "Oceania",
+    "Subregion": "Micronesia",
+    "Currency": "AUD"
+  },
+  {
+    "Country Name": "New Zealand",
+    "ISO2": "NZ",
+    "Region": "Oceania",
+    "Subregion": "Australia and New Zealand",
+    "Currency": "NZD"
+  },
+  {
+    "Country Name": "Oman",
+    "ISO2": "OM",
+    "Region": "Asia",
+    "Subregion": "Western Asia",
+    "Currency": "OMR"
+  },
+  {
+    "Country Name": "Pakistan",
+    "ISO2": "PK",
+    "Region": "Asia",
+    "Subregion": "Southern Asia",
+    "Currency": "PKR"
+  },
+  {
+    "Country Name": "Panama",
+    "ISO2": "PA",
+    "Region": "Americas",
+    "Subregion": "Central America",
+    "Currency": "PAB"
+  },
+  {
+    "Country Name": "Pitcairn Islands",
+    "ISO2": "PN",
+    "Region": "Oceania",
+    "Subregion": "Polynesia",
+    "Currency": "NZD"
+  },
+  {
+    "Country Name": "Peru",
+    "ISO2": "PE",
+    "Region": "Americas",
+    "Subregion": "South America",
+    "Currency": "PEN"
+  },
+  {
+    "Country Name": "Philippines",
+    "ISO2": "PH",
+    "Region": "Asia",
+    "Subregion": "South-Eastern Asia",
+    "Currency": "PHP"
+  },
+  {
+    "Country Name": "Palau",
+    "ISO2": "PW",
+    "Region": "Oceania",
+    "Subregion": "Micronesia",
+    "Currency": "USD"
+  },
+  {
+    "Country Name": "Papua New Guinea",
+    "ISO2": "PG",
+    "Region": "Oceania",
+    "Subregion": "Melanesia",
+    "Currency": "PGK"
+  },
+  {
+    "Country Name": "Poland",
+    "ISO2": "PL",
+    "Region": "Europe",
+    "Subregion": "Central Europe",
+    "Currency": "PLN"
+  },
+  {
+    "Country Name": "Puerto Rico",
+    "ISO2": "PR",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "USD"
+  },
+  {
+    "Country Name": "North Korea",
+    "ISO2": "KP",
+    "Region": "Asia",
+    "Subregion": "Eastern Asia",
+    "Currency": "KPW"
+  },
+  {
+    "Country Name": "Portugal",
+    "ISO2": "PT",
+    "Region": "Europe",
+    "Subregion": "Southern Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Paraguay",
+    "ISO2": "PY",
+    "Region": "Americas",
+    "Subregion": "South America",
+    "Currency": "PYG"
+  },
+  {
+    "Country Name": "Palestine",
+    "ISO2": "PS",
+    "Region": "Asia",
+    "Subregion": "Western Asia",
+    "Currency": "EGP"
+  },
+  {
+    "Country Name": "French Polynesia",
+    "ISO2": "PF",
+    "Region": "Oceania",
+    "Subregion": "Polynesia",
+    "Currency": "XPF"
+  },
+  {
+    "Country Name": "Qatar",
+    "ISO2": "QA",
+    "Region": "Asia",
+    "Subregion": "Western Asia",
+    "Currency": "QAR"
+  },
+  {
+    "Country Name": "R\u00e9union",
+    "ISO2": "RE",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Romania",
+    "ISO2": "RO",
+    "Region": "Europe",
+    "Subregion": "Southeast Europe",
+    "Currency": "RON"
+  },
+  {
+    "Country Name": "Russia",
+    "ISO2": "RU",
+    "Region": "Europe",
+    "Subregion": "Eastern Europe",
+    "Currency": "RUB"
+  },
+  {
+    "Country Name": "Rwanda",
+    "ISO2": "RW",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "RWF"
+  },
+  {
+    "Country Name": "Saudi Arabia",
+    "ISO2": "SA",
+    "Region": "Asia",
+    "Subregion": "Western Asia",
+    "Currency": "SAR"
+  },
+  {
+    "Country Name": "Sudan",
+    "ISO2": "SD",
+    "Region": "Africa",
+    "Subregion": "Northern Africa",
+    "Currency": "SDG"
+  },
+  {
+    "Country Name": "Senegal",
+    "ISO2": "SN",
+    "Region": "Africa",
+    "Subregion": "Western Africa",
+    "Currency": "XOF"
+  },
+  {
+    "Country Name": "Singapore",
+    "ISO2": "SG",
+    "Region": "Asia",
+    "Subregion": "South-Eastern Asia",
+    "Currency": "SGD"
+  },
+  {
+    "Country Name": "South Georgia",
+    "ISO2": "GS",
+    "Region": "Antarctic",
+    "Subregion": "",
+    "Currency": "SHP"
+  },
+  {
+    "Country Name": "Svalbard and Jan Mayen",
+    "ISO2": "SJ",
+    "Region": "Europe",
+    "Subregion": "Northern Europe",
+    "Currency": "NOK"
+  },
+  {
+    "Country Name": "Solomon Islands",
+    "ISO2": "SB",
+    "Region": "Oceania",
+    "Subregion": "Melanesia",
+    "Currency": "SBD"
+  },
+  {
+    "Country Name": "Sierra Leone",
+    "ISO2": "SL",
+    "Region": "Africa",
+    "Subregion": "Western Africa",
+    "Currency": "SLL"
+  },
+  {
+    "Country Name": "El Salvador",
+    "ISO2": "SV",
+    "Region": "Americas",
+    "Subregion": "Central America",
+    "Currency": "USD"
+  },
+  {
+    "Country Name": "San Marino",
+    "ISO2": "SM",
+    "Region": "Europe",
+    "Subregion": "Southern Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Somalia",
+    "ISO2": "SO",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "SOS"
+  },
+  {
+    "Country Name": "Saint Pierre and Miquelon",
+    "ISO2": "PM",
+    "Region": "Americas",
+    "Subregion": "North America",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Serbia",
+    "ISO2": "RS",
+    "Region": "Europe",
+    "Subregion": "Southeast Europe",
+    "Currency": "RSD"
+  },
+  {
+    "Country Name": "South Sudan",
+    "ISO2": "SS",
+    "Region": "Africa",
+    "Subregion": "Middle Africa",
+    "Currency": "SSP"
+  },
+  {
+    "Country Name": "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+    "ISO2": "ST",
+    "Region": "Africa",
+    "Subregion": "Middle Africa",
+    "Currency": "STN"
+  },
+  {
+    "Country Name": "Suriname",
+    "ISO2": "SR",
+    "Region": "Americas",
+    "Subregion": "South America",
+    "Currency": "SRD"
+  },
+  {
+    "Country Name": "Slovakia",
+    "ISO2": "SK",
+    "Region": "Europe",
+    "Subregion": "Central Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Slovenia",
+    "ISO2": "SI",
+    "Region": "Europe",
+    "Subregion": "Central Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Sweden",
+    "ISO2": "SE",
+    "Region": "Europe",
+    "Subregion": "Northern Europe",
+    "Currency": "SEK"
+  },
+  {
+    "Country Name": "Eswatini",
+    "ISO2": "SZ",
+    "Region": "Africa",
+    "Subregion": "Southern Africa",
+    "Currency": "SZL"
+  },
+  {
+    "Country Name": "Sint Maarten",
+    "ISO2": "SX",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "ANG"
+  },
+  {
+    "Country Name": "Seychelles",
+    "ISO2": "SC",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "SCR"
+  },
+  {
+    "Country Name": "Syria",
+    "ISO2": "SY",
+    "Region": "Asia",
+    "Subregion": "Western Asia",
+    "Currency": "SYP"
+  },
+  {
+    "Country Name": "Turks and Caicos Islands",
+    "ISO2": "TC",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "USD"
+  },
+  {
+    "Country Name": "Chad",
+    "ISO2": "TD",
+    "Region": "Africa",
+    "Subregion": "Middle Africa",
+    "Currency": "XAF"
+  },
+  {
+    "Country Name": "Togo",
+    "ISO2": "TG",
+    "Region": "Africa",
+    "Subregion": "Western Africa",
+    "Currency": "XOF"
+  },
+  {
+    "Country Name": "Thailand",
+    "ISO2": "TH",
+    "Region": "Asia",
+    "Subregion": "South-Eastern Asia",
+    "Currency": "THB"
+  },
+  {
+    "Country Name": "Tajikistan",
+    "ISO2": "TJ",
+    "Region": "Asia",
+    "Subregion": "Central Asia",
+    "Currency": "TJS"
+  },
+  {
+    "Country Name": "Tokelau",
+    "ISO2": "TK",
+    "Region": "Oceania",
+    "Subregion": "Polynesia",
+    "Currency": "NZD"
+  },
+  {
+    "Country Name": "Turkmenistan",
+    "ISO2": "TM",
+    "Region": "Asia",
+    "Subregion": "Central Asia",
+    "Currency": "TMT"
+  },
+  {
+    "Country Name": "Timor-Leste",
+    "ISO2": "TL",
+    "Region": "Asia",
+    "Subregion": "South-Eastern Asia",
+    "Currency": "USD"
+  },
+  {
+    "Country Name": "Tonga",
+    "ISO2": "TO",
+    "Region": "Oceania",
+    "Subregion": "Polynesia",
+    "Currency": "TOP"
+  },
+  {
+    "Country Name": "Trinidad and Tobago",
+    "ISO2": "TT",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "TTD"
+  },
+  {
+    "Country Name": "Tunisia",
+    "ISO2": "TN",
+    "Region": "Africa",
+    "Subregion": "Northern Africa",
+    "Currency": "TND"
+  },
+  {
+    "Country Name": "T\u00fcrkiye",
+    "ISO2": "TR",
+    "Region": "Asia",
+    "Subregion": "Western Asia",
+    "Currency": "TRY"
+  },
+  {
+    "Country Name": "Tuvalu",
+    "ISO2": "TV",
+    "Region": "Oceania",
+    "Subregion": "Polynesia",
+    "Currency": "AUD"
+  },
+  {
+    "Country Name": "Taiwan",
+    "ISO2": "TW",
+    "Region": "Asia",
+    "Subregion": "Eastern Asia",
+    "Currency": "TWD"
+  },
+  {
+    "Country Name": "Tanzania",
+    "ISO2": "TZ",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "TZS"
+  },
+  {
+    "Country Name": "Uganda",
+    "ISO2": "UG",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "UGX"
+  },
+  {
+    "Country Name": "Ukraine",
+    "ISO2": "UA",
+    "Region": "Europe",
+    "Subregion": "Eastern Europe",
+    "Currency": "UAH"
+  },
+  {
+    "Country Name": "United States Minor Outlying Islands",
+    "ISO2": "UM",
+    "Region": "Americas",
+    "Subregion": "North America",
+    "Currency": "USD"
+  },
+  {
+    "Country Name": "Uruguay",
+    "ISO2": "UY",
+    "Region": "Americas",
+    "Subregion": "South America",
+    "Currency": "UYU"
+  },
+  {
+    "Country Name": "United States",
+    "ISO2": "US",
+    "Region": "Americas",
+    "Subregion": "North America",
+    "Currency": "USD"
+  },
+  {
+    "Country Name": "Uzbekistan",
+    "ISO2": "UZ",
+    "Region": "Asia",
+    "Subregion": "Central Asia",
+    "Currency": "UZS"
+  },
+  {
+    "Country Name": "Vatican City",
+    "ISO2": "VA",
+    "Region": "Europe",
+    "Subregion": "Southern Europe",
+    "Currency": "EUR"
+  },
+  {
+    "Country Name": "Saint Vincent and the Grenadines",
+    "ISO2": "VC",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "XCD"
+  },
+  {
+    "Country Name": "Venezuela",
+    "ISO2": "VE",
+    "Region": "Americas",
+    "Subregion": "South America",
+    "Currency": "VES"
+  },
+  {
+    "Country Name": "British Virgin Islands",
+    "ISO2": "VG",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "USD"
+  },
+  {
+    "Country Name": "United States Virgin Islands",
+    "ISO2": "VI",
+    "Region": "Americas",
+    "Subregion": "Caribbean",
+    "Currency": "USD"
+  },
+  {
+    "Country Name": "Vietnam",
+    "ISO2": "VN",
+    "Region": "Asia",
+    "Subregion": "South-Eastern Asia",
+    "Currency": "VND"
+  },
+  {
+    "Country Name": "Vanuatu",
+    "ISO2": "VU",
+    "Region": "Oceania",
+    "Subregion": "Melanesia",
+    "Currency": "VUV"
+  },
+  {
+    "Country Name": "Wallis and Futuna",
+    "ISO2": "WF",
+    "Region": "Oceania",
+    "Subregion": "Polynesia",
+    "Currency": "XPF"
+  },
+  {
+    "Country Name": "Samoa",
+    "ISO2": "WS",
+    "Region": "Oceania",
+    "Subregion": "Polynesia",
+    "Currency": "WST"
+  },
+  {
+    "Country Name": "Yemen",
+    "ISO2": "YE",
+    "Region": "Asia",
+    "Subregion": "Western Asia",
+    "Currency": "YER"
+  },
+  {
+    "Country Name": "South Africa",
+    "ISO2": "ZA",
+    "Region": "Africa",
+    "Subregion": "Southern Africa",
+    "Currency": "ZAR"
+  },
+  {
+    "Country Name": "Zambia",
+    "ISO2": "ZM",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "ZMW"
+  },
+  {
+    "Country Name": "Zimbabwe",
+    "ISO2": "ZW",
+    "Region": "Africa",
+    "Subregion": "Eastern Africa",
+    "Currency": "BWP"
+  }
+]

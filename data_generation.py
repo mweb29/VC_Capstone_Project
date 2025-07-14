@@ -1,7 +1,5 @@
-# data_generation.py
-
 """
-Script: vc_synthetic_data_export.py
+Script: data_generation.py
 
 Description:
     Generates synthetic data for venture capital analytics, including:

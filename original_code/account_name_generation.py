@@ -1,5 +1,5 @@
-from db_connection import get_snowflake_connection
-from open_ai_interactions import get_openai_client_obj, interact_with_chat_application, interact_with_gpt4
+from original_code.db_connection import get_snowflake_connection
+from original_code.open_ai_interactions import get_openai_client_obj, interact_with_chat_application, interact_with_gpt4
 import pandas as pd
 
 

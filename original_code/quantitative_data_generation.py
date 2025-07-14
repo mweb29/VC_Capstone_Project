@@ -2,11 +2,11 @@ import pandas as pd
 import numpy as np
 import decimal
 from decimal import Decimal
-from DeriveValidPeriods import exec_script as ext
-from DeriveValidPeriods import read_data as rdt
+from original_code.DeriveValidPeriods import exec_script as ext
+from original_code.DeriveValidPeriods import read_data as rdt
 import string
 import random
-from open_ai_interactions import get_openai_client_obj, interact_with_chat_application, interact_with_gpt4
+from original_code.open_ai_interactions import get_openai_client_obj, interact_with_chat_application, interact_with_gpt4
 
 def add_random_float(x, min=-1, max = 1):
     if np.issubdtype(type(x), np.number):

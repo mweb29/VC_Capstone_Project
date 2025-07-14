@@ -1,7 +1,7 @@
 from Existing_code.db_connection import azure_sql_connection
 import pandas as pd
 import json
-from open_ai_interactions import interact_with_chat_application,get_openai_client_obj,interact_with_gpt4
+from original_code.open_ai_interactions import interact_with_chat_application,get_openai_client_obj,interact_with_gpt4
 
 
 def execute_data_queries(query, cnxn, frame_columns=None):

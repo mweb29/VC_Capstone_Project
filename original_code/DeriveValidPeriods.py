@@ -1,7 +1,7 @@
 import pandas as pd
 import datetime
-from fn_GetBeginEndDates import exec_script as ext
-from fn_GetBeginEndDates import read_data as rdt
+from original_code.fn_GetBeginEndDates import exec_script as ext
+from original_code.fn_GetBeginEndDates import read_data as rdt
 
 
 def read_data(name, parameters):

@@ -3,5 +3,6 @@ pandas == 2.2.3
 numpy == 1.26.3
 openai == 1.10.0
 SQLAlchemy == 2.0.29
+faker == 37.4.0
 snowflake-connector-python
 snowflake-connector-python[pandas]

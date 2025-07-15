@@ -11,7 +11,7 @@ consistent formatting.
 
 import pandas as pd
 import random
-import requests
+import json
 from faker import Faker
 
 fake = Faker()
@@ -48,23 +48,17 @@ lp_data = [
     ("Illinois Municipal Fund", "Public Pension Fund", "United States"),
 ]
 
-def get_currency_info(country):
+def get_currency_info(country, filename="currency_lookup.json"):
     """
-    Fetch the currency code, name, and an approximate FX rate to USD
-    using the restcountries API. Defaults to USD if lookup fails.
+    Retrieve currency code, name, and FX rate from cached JSON.
     """
-    try:
-        if country == "Unknown":
-            return "USD", "US Dollar", 1.0
-        r = requests.get(f"https://restcountries.com/v3.1/name/{country}")
-        r.raise_for_status()
-        data = r.json()[0]
-        currency_code = list(data["currencies"].keys())[0]
-        currency_name = data["currencies"][currency_code]["name"]
-        fx_dict = {"USD": 1.0, "EUR": 1.1, "GBP": 1.3, "CAD": 0.74, "JPY": 0.0067}
-        fx_to_usd = fx_dict.get(currency_code, 1.0)
-        return currency_code, currency_name, fx_to_usd
-    except:
+    with open(filename, "r") as f:
+        currency_cache = json.load(f)
+
+    info = currency_cache.get(country)
+    if info:
+        return info["currency_code"], info["currency_name"], info["fx_to_usd"]
+    else:
         return "USD", "US Dollar", 1.0
 
 def generate_institutional_accounts():

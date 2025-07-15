@@ -1,3 +1,36 @@
+"""
+Description:
+    This script fetches global country metadata from the open-source 
+    `mledoze/countries` GitHub repository and parses relevant attributes for
+    financial and investor modeling. Extracted fields include country name,
+    ISO 2-character code, region, subregion, and primary currency code. The 
+    processed data is displayed as a Pandas DataFrame and optionally saved to
+    a local JSON file for later use in synthetic data generation or Snowflake
+    integration.
+
+    This utility is intended for early-stage data validation and inspection; 
+    it is not designed for use in production pipelines. Placeholder functions
+    are included for eventual Snowflake ingestion.
+
+Functions:
+    - fetch_countries_data(): Retrieves and parses country data from the
+    external JSON source.
+    - json_output(df, filename): Saves a DataFrame to a local JSON file for
+    inspection or reuse.
+    - connect_to_snowflake(): Placeholder for establishing a connection to
+    Snowflake.
+    - upload_to_snowflake_country(df): Placeholder for uploading the country
+    data into Snowflake.
+
+Output:
+    - Displays a DataFrame of global country metadata.
+    - Optionally exports the metadata to 'synthetic_countries.json'.
+
+Example:
+    Run this script once to generate the currency cache file:
+        $ python countries_api.py
+"""
+
 import requests
 import json
 import pandas as pd

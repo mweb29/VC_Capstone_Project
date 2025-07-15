@@ -1,9 +1,45 @@
 """
-Script to generate a local JSON file containing currency information
-(FX rates, currency code, and currency name) from restcountries API,
-to avoid repeated API calls in other scripts. This is limited to a select
-number based on our LP and individual account scripts. This could be expanded
-to include more countries as needed, but for now we focus on the ones we have.
+Description:
+    This script generates a local JSON file (`currency_lookup.json`) containin
+    basic currency metadata for a defined list of countries relevant to the
+    venture capital account-level dataset. Currency data is retrieved from the
+    RESTCountries API and includes the 3-letter currency code, currency name,
+    and a fixed FX rate to USD.
+
+    The goal is to avoid repeated real-time API calls in downstream investor
+    simulations by providing a cached, reusable lookup structure. This is
+    particularly important for reproducibility, performance, and offline 
+    compatibility in synthetic data generation.
+
+Output Structure:
+    {
+        "Country Name": {
+            "currency_code": "USD",
+            "currency_name": "US Dollar",
+            "fx_to_usd": 1.0
+        },
+        ...
+    }
+
+Functions:
+    - get_currency_info(country): Queries the RESTCountries API and returns 
+    currency metadata.
+    - build_currency_json(): Builds the currency lookup dictionary and writes
+    it to a JSON file.
+
+Output:
+    - Creates a single JSON file `currency_lookup.json` containing currency data for:
+        Luxembourg, United States, Canada, United Kingdom, Germany, France, 
+        Australia, Netherlands, Japan, India, and Brazil.
+
+Intended Use:
+    This JSON cache will be used by investor generation scripts (`institutional` and 
+    `individual` account builders) to assign currency attributes without incurring 
+    additional API latency or dependency.
+
+Example:
+    Run this script once to generate the currency cache file:
+        $ python currency_cache_generator.py
 """
 
 import requests

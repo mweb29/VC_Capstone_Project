@@ -1,13 +1,16 @@
 """
+By: Michael Webber
 holdings.py
 
-This script generates synthetic private equity or venture capital portfolio holdings
-data, suitable for use in a Snowflake-backed data pipeline. Each record represents a
-portfolio company held by a fund, including monetary details (cost basis, market value,
-book value), classification (sector, region), and identifiers (issuer names, currency codes).
+This script generates synthetic private equity or venture capital portfolio 
+holdings data, suitable for use in a Snowflake-backed data pipeline. Each 
+record represents a portfolio company held by a fund, including monetary 
+details (cost basis, market value, book value), classification (sector, 
+region), and identifiers (issuer names, currency codes).
 
-This is intended to simulate the data that would feed the HOLDINGSDETAILS table and 
-can be used to benchmark or analyze fund performance at the portfolio company level.
+This is intended to simulate the data that would feed the HOLDINGSDETAILS
+table and can be used to benchmark or analyze fund performance at the 
+portfolio company level.
 
 Assumptions:
 - Funds are labeled as FUND_001 to FUND_005
@@ -20,6 +23,7 @@ import numpy as np
 import random
 from datetime import datetime, timedelta
 from faker import Faker
+import json
 
 # Initialize random number generators for reproducibility
 fake = Faker()
@@ -38,14 +42,29 @@ def generate_holdings_data(n=100):
     """
     # Define sample pools for random selection
     portfolio_codes = [f"FUND_{i:03d}" for i in range(1, 6)]  # Five example funds
+
+    # Read in the JSON File for country metadata
+    with open('synthetic_countries.json', "r") as f:
+        countries_json = json.load(f)
+
+    # This accesses the JSON --> Need to limit it to a subset of countries
+    countries_regions = [
+        (entry["ISO2"], entry["Country Name"], entry["Region"])
+        for entry in countries_json
+    ]
+
+    # This information is currently stored in the JSON file, so we can randomly
+    # select from predefined lists (country, currency, gics, region)
+    # Need to look back at this API
     currencies = [("USD", "US Dollar"), ("EUR", "Euro"), ("CAD", "Canadian Dollar")]
-    countries = [("US", "United States"), ("DE", "Germany"), ("IN", "India"),
-                 ("CN", "China"), ("CA", "Canada")]
-    regions = ["North America", "Europe", "Asia-Pacific"]
+
+    # Read in the JSON File for sectors metadata
+    with open('sectors.json', "r") as f:
+        countries_json = json.load(f)
+
     sectors = ["Tech", "Healthcare", "CleanTech", "AI", "Fintech"]
 
     records = []
-
     for _ in range(n):
         # Random fund assignment
         portfolio_code = random.choice(portfolio_codes)
@@ -57,6 +76,7 @@ def generate_holdings_data(n=100):
         issuername = fake.company()
 
         # Generate monetary metrics
+        # NEED TO REFER TO THE CHEATSHEET SO THAT THE VALUES ARE REALISTIC
         costbasis = round(np.random.uniform(1e6, 1e7), 2)  # Initial investment
         quantity = round(np.random.uniform(1e4, 1e6), 2)   # Number of shares/units
         price = round((costbasis / quantity) * np.random.uniform(0.8, 1.2), 2)  # Simulated mark
@@ -65,8 +85,7 @@ def generate_holdings_data(n=100):
         unrealized = round(market_value - book_value, 2)   # Paper gain/loss
 
         # Geographic and sector metadata
-        risk_country_code, risk_country = random.choice(countries)
-        region = random.choice(regions)
+        risk_country_code, risk_country, region = random.choice(countries_regions)
         sector = random.choice(sectors)
 
         # Snapshot date (randomized within past year)

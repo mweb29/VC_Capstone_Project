@@ -92,7 +92,5 @@ def build_currency_json():
     with open("currency_lookup.json", "w") as f:
         json.dump(cache, f, indent=2)
 
-    print("Currency cache saved to 'currency_lookup.json'.")
-
 if __name__ == "__main__":
     build_currency_json()

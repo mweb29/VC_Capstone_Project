@@ -13,14 +13,55 @@ easily since we can properly visualize how they will all connect back.
  to create a lot of fake names and other attributes.
 
 ## countries_api.py
-## currency_lookup.json
+- This file uses an API to get information regarding countries. It contains 
+their name, abbreviation (ISO2), region, subregion, and currency. This 
+information is then stored as a JSON file for later use within other scripts. 
+The resulting JSON is named, synthetic_countries.json.
+
 ## data_generation.py
+- This file was our initial data generation that we used as a framework for our
+subsequent files. The jupyter notebooks that are in this repository are the
+most up to date code segments that generate informaton for the VC portfolio. 
+This file leads to the creation of vc_synthetic_data_20250706_2112.xlsx.
+
 ## extract_currency_api.py
-## gics.json
-## holdings.py
-## institutional_data.py
-## requirements.txt
-## sectors.json
+- This script is designed to extract currency exchange rates from a specified 
+API. It utilizes the `requests` library to fetch data and processes it to 
+provide users with up-to-date currency information. Like our other API collection
+files, this also stores the results as a JSON file.
+
 ## sectors.py
+- Like the currency API above, this script is designed to extract industry
+sectors from a specified API. It utilizes the `requests` library to fetch data 
+and processes it to provide users with up-to-date sector information. Like our 
+other API collection files, this also stores the results as a JSON file.
+
+## holdings.py
+- This is the framework that we are going to build out in relation to the 
+holdings table that is present in snowflake. This is going to be the base layer
+that our product, portfolio, and performance tables will use to have a dynamic
+input. The setup will expand to upload information directly to Snowflake, once
+we get the exact output that we are looking for.
+
+## institutional_data.py
+- This file was the original setup for what is present in Jooyeon's jupyter
+notebook. As we continue to iterate, we will combine what is in her notebook 
+and what remains in here. Please use her notebook as the most up to date version
+in order to understand the progress that has been made.
+
 ## synthetic_countries.json
+- The resulting file from the call to countries_api.py
+
+## currency_lookup.json
+- The resulting file from the call to extract_currency_api.py
+
+## sectors.json
+- The resulting file from the call to sectors.py
+
+## gics.json
+- The resulting file from the call to sectors.py
+
 ## vc_synthetic_data_20250706_2112.xlsx
+- This was one of our original synthetic data creations. It was used as a 
+framework for what we wanted to do, but it is not longer the standard of 
+what we are building towards. It is the result of running data_generation.py

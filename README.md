@@ -50,11 +50,14 @@ and what remains in here. Please use her notebook as the most up to date version
 in order to understand the progress that has been made.
 
 ## Benchmark.ipynb
-- This notebook simulates benchmark performance data tailored for venture capital strategies. It aligns with Assette’s Snowflake schema and models synthetic returns using industry-informed patterns—such as J-curve behavior, vintage-year clustering, and top-quartile dispersion.
-It produces four structured tables:
+- This notebook simulates benchmark performance data tailored for venture capital strategies. It aligns with Assette’s Snowflake schema and models synthetic returns using industry-informed patterns—such as J-curve behavior, vintage-year clustering, and top-quartile dispersion.It produces four structured tables:
+
 **BENCHMARKGENERALINFORMATION**: Contains metadata for 20 synthetic benchmarks, including unique codes, sector/geography-based names, provider, and region. Acts as the anchor table for all benchmark joins.
+
 **BENCHMARKCHARACTERISTICS**: Provides static summary statistics such as median IRR, MOIC, and fund count, along with associated units and currencies.
+
 **BENCHMARKPERFORMANCE**: Stores time-series return data (quarterly, YTD, 1Y, 3Y, 5Y, 10Y) for each benchmark, enabling trend analysis across key VC metrics like IRR and MOIC.
+
 **PORTFOLIOBENCHMARKASSOCIATION**: Links 100 simulated VC portfolios to appropriate benchmarks via foreign keys, supporting composite benchmarking and performance attribution.
 This synthetic dataset is designed for seamless integration into a fact sheet automation pipeline.
 
@@ -63,12 +66,16 @@ This synthetic dataset is designed for seamless integration into a fact sheet au
 
 **PORTFOLIOGENERALINFO**:
 Stores metadata for 100 synthetic VC portfolios, including codes, names, investment styles, categories, dates, and base currency details. This acts as the core portfolio identity table and supports downstream joins.
+
 **PORTFOLIOATTRIBUTES**:
 Captures static portfolio-level metadata like region, sector, and vintage year, reflecting GICS-style structure. Enables filtering, slicing, and grouping operations for analytics and reporting.
+
 **REGIONALALLOCATION**:
 Represents regional exposure allocations per portfolio (as of a given history date), simulating multi-currency, multi-language support. Useful for exposure summaries and compliance views.
+
 **PORTFOLIOPERFORMANCE**:
 Simulates quarterly time-series returns (IRR, TVPI, DPI) over 10 years for each portfolio. Captures realistic VC patterns such as delayed value realization, enabling performance trend visualizations.
+
 **PORTFOLIOHOLDINGS**:
 Generates synthetic holdings snapshots for each portfolio, including asset-level details such as market value, country, sector, and currency. Useful for concentration and attribution analysis.
 

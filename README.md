@@ -58,6 +58,22 @@ It produces four structured tables:
 **PORTFOLIOBENCHMARKASSOCIATION**: Links 100 simulated VC portfolios to appropriate benchmarks via foreign keys, supporting composite benchmarking and performance attribution.
 This synthetic dataset is designed for seamless integration into a fact sheet automation pipeline.
 
+## factsheet_V2.ipynb
+This notebook simulates fact sheet components for Venture Capital portfolios, aligning with Assette’s Snowflake schema and business logic. It produces synthetic yet institutionally consistent data across key analytical domains needed for automated reporting and client presentations.
+
+Produced Tables
+
+**PORTFOLIOGENERALINFO**
+Stores metadata for 100 synthetic VC portfolios, including codes, names, investment styles, categories, dates, and base currency details. This acts as the core portfolio identity table and supports downstream joins.
+**PORTFOLIOATTRIBUTES**
+Captures static portfolio-level metadata like region, sector, and vintage year, reflecting GICS-style structure. Enables filtering, slicing, and grouping operations for analytics and reporting.
+**REGIONALALLOCATION**
+Represents regional exposure allocations per portfolio (as of a given history date), simulating multi-currency, multi-language support. Useful for exposure summaries and compliance views.
+**PORTFOLIOPERFORMANCE**
+Simulates quarterly time-series returns (IRR, TVPI, DPI) over 10 years for each portfolio. Captures realistic VC patterns such as delayed value realization, enabling performance trend visualizations.
+**PORTFOLIOHOLDINGS**
+Generates synthetic holdings snapshots for each portfolio, including asset-level details such as market value, country, sector, and currency. Useful for concentration and attribution analysis.
+
 ## synthetic_countries.json
 - The resulting file from the call to countries_api.py
 

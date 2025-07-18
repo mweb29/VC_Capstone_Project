@@ -49,6 +49,15 @@ notebook. As we continue to iterate, we will combine what is in her notebook
 and what remains in here. Please use her notebook as the most up to date version
 in order to understand the progress that has been made.
 
+## Benchmark.ipynb
+- This notebook simulates benchmark performance data tailored for venture capital strategies. It aligns with Assette’s Snowflake schema and models synthetic returns using industry-informed patterns—such as J-curve behavior, vintage-year clustering, and top-quartile dispersion.
+It produces four structured tables:
+BENCHMARKGENERALINFORMATION: Contains metadata for 20 synthetic benchmarks, including unique codes, sector/geography-based names, provider, and region. Acts as the anchor table for all benchmark joins.
+BENCHMARKCHARACTERISTICS: Provides static summary statistics such as median IRR, MOIC, and fund count, along with associated units and currencies.
+BENCHMARKPERFORMANCE: Stores time-series return data (quarterly, YTD, 1Y, 3Y, 5Y, 10Y) for each benchmark, enabling trend analysis across key VC metrics like IRR and MOIC.
+PORTFOLIOBENCHMARKASSOCIATION: Links 100 simulated VC portfolios to appropriate benchmarks via foreign keys, supporting composite benchmarking and performance attribution.
+This synthetic dataset is designed for seamless integration into a fact sheet automation pipeline.
+
 ## synthetic_countries.json
 - The resulting file from the call to countries_api.py
 

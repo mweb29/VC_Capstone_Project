@@ -64,20 +64,17 @@ This synthetic dataset is designed for seamless integration into a fact sheet au
 ## factsheet_V2.ipynb
 - This notebook simulates fact sheet components for Venture Capital portfolios, aligning with Assette’s Snowflake schema and business logic. It produces synthetic yet institutionally consistent data across key analytical domains needed for automated reporting and client presentations.
 
-**PORTFOLIOGENERALINFO**:
-Stores metadata for 100 synthetic VC portfolios, including codes, names, investment styles, categories, dates, and base currency details. This acts as the core portfolio identity table and supports downstream joins.
+**portfolio_general_info_df**
+Stores metadata for 100 synthetic VC portfolios, based on real PitchBook fund exports and extended via simulation. Includes fund name, strategy, close date, fund size, location, base currency, and unique product codes.
 
-**PORTFOLIOATTRIBUTES**:
-Captures static portfolio-level metadata like region, sector, and vintage year, reflecting GICS-style structure. Enables filtering, slicing, and grouping operations for analytics and reporting.
+**accounts_df**
+Simulates both institutional and individual limited partners (LPs). Each record includes LP name, type, country, account currency, committed capital (local & USD), NAV, and number of funds committed to.
 
-**REGIONALALLOCATION**:
-Represents regional exposure allocations per portfolio (as of a given history date), simulating multi-currency, multi-language support. Useful for exposure summaries and compliance views.
+**portfolio_account_map_df**
+Creates a many-to-many relationship between LP accounts and VC portfolios, using the Number of Funds field from accounts_df to allocate investments. Ensures no duplicate assignments per account unless replacement is needed.
 
-**PORTFOLIOPERFORMANCE**:
-Simulates quarterly time-series returns (IRR, TVPI, DPI) over 10 years for each portfolio. Captures realistic VC patterns such as delayed value realization, enabling performance trend visualizations.
-
-**PORTFOLIOHOLDINGS**:
-Generates synthetic holdings snapshots for each portfolio, including asset-level details such as market value, country, sector, and currency. Useful for concentration and attribution analysis.
+**product_master_df**
+Generates standardized product master data based on PRODUCTCODE. Adds fields such as strategy, asset class, vehicle type/category, and share class. Supports reporting and classification of portfolio products.
 
 ## synthetic_countries.json
 - The resulting file from the call to countries_api.py

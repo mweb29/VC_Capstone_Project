@@ -64,16 +64,16 @@ This synthetic dataset is designed for seamless integration into a fact sheet au
 ## factsheet_V2.ipynb
 - This notebook simulates fact sheet components for Venture Capital portfolios, aligning with Assette’s Snowflake schema and business logic. It produces synthetic yet institutionally consistent data across key analytical domains needed for automated reporting and client presentations.
 
-**portfolio_general_info_df**
+**PORTFOLIO GENERAL INFO**
 Stores metadata for 100 synthetic VC portfolios, based on real PitchBook fund exports and extended via simulation. Includes fund name, strategy, close date, fund size, location, base currency, and unique product codes.
 
-**accounts_df**
+**ACCOUNT**
 Simulates both institutional and individual limited partners (LPs). Each record includes LP name, type, country, account currency, committed capital (local & USD), NAV, and number of funds committed to.
 
-**portfolio_account_map_df**
+**PORTFORLIO ACCOUNT ASSOCIATION**
 Creates a many-to-many relationship between LP accounts and VC portfolios, using the Number of Funds field from accounts_df to allocate investments. Ensures no duplicate assignments per account unless replacement is needed.
 
-**product_master_df**
+**PRODUCT MASTER**
 Generates standardized product master data based on PRODUCTCODE. Adds fields such as strategy, asset class, vehicle type/category, and share class. Supports reporting and classification of portfolio products.
 
 ## synthetic_countries.json

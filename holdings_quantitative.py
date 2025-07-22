@@ -126,6 +126,10 @@ def generate_portfolio_company_financials(n=100):
     Returns:
     pd.DataFrame: Tabular output with one row per company
     """
+
+    # This is where we need to make the connection to the holdings.py file
+    # so that the company names are comning over correctly
+
     records = [build_company_record(f"PC{i:04d}") for i in range(1, n + 1)]
     return pd.DataFrame(records)
 

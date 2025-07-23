@@ -23,6 +23,7 @@ separately. Here, we focus solely on the financials.
 """
 
 import numpy as np
+import numpy_financial as npf
 import pandas as pd
 from datetime import datetime, timedelta
 import random
@@ -75,7 +76,7 @@ def compute_irr(cash_flows):
         amounts, dates = zip(*cash_flows)
         days = np.array([(d - dates[0]).days for d in dates])
         years = days / 365.25
-        return round(np.irr(amounts), 4)
+        return round(npf.irr(amounts), 4)
     except:
         return None
 

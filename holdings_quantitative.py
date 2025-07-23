@@ -31,6 +31,7 @@ import random
 # ----------------------------
 # Helper Functions
 # ----------------------------
+
 def generate_investment_date(start_year=2015, end_year=2022):
     """Randomly generate an investment date between start_year and end_year."""
     start = datetime(start_year, 1, 1)

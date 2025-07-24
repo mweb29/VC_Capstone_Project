@@ -107,6 +107,39 @@ def build_company_record(company_id):
         "tvpi": tvpi
     }
 
+def validate_performance(df):
+    """
+        Checks that MOIC, DPI, and TVPI values in the DataFrame are consistent with
+        the investment amount, distribution amounts, and current NAV.
+
+        For each row, it recalculates the metrics and compares them to what's stored.
+        Raises an error if any values are significantly off.
+
+        Parameters:
+        df : pandas.DataFrame
+            Must include columns: 'investment_amount', 'distribution_amounts',
+            'current_nav', 'moic', 'dpi', and 'tvpi'.
+    """
+    for i, row in df.iterrows():
+        investment = row['investment_amount']
+        nav = row['current_nav']
+        distributions = sum(row['distribution_amounts'])
+
+        # Recalculate metrics
+        expected_moic = round((distributions + nav) / investment, 4)
+        expected_dpi = round(distributions / investment, 4)
+        expected_tvpi = expected_moic  # TVPI and MOIC are equivalent
+
+        # Pull from row
+        moic, dpi, tvpi = round(row['moic'], 4), round(row['dpi'], 4), round(row['tvpi'], 4)
+
+        # Validate
+        assert np.isclose(moic, expected_moic, atol=0.01), f"MOIC mismatch at index {i}"
+        assert np.isclose(dpi, expected_dpi, atol=0.01), f"DPI mismatch at index {i}"
+        assert np.isclose(tvpi, expected_tvpi, atol=0.01), f"TVPI mismatch at index {i}"
+        assert np.isclose(tvpi, moic, atol=0.001), f"TVPI and MOIC should match at index {i}"
+
+    print("All performance metrics are internally consistent!")
 
 def generate_portfolio_company_financials(n=100):
     """
@@ -125,4 +158,9 @@ if __name__ == "__main__":
     # 100 has to be entered so that the company names are coming over correctly
     # from the holdings module
     df = generate_portfolio_company_financials(100)
+
+    # Run the validation
+    validate_performance(df)
+
+    # Display the first few rows of the generated DataFrame
     print(df.head())

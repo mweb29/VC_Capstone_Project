@@ -28,13 +28,6 @@ import pandas as pd
 from datetime import datetime, timedelta
 import random
 
-def generate_investment_date(start_year=2015, end_year=2022):
-    """Randomly generate an investment date in the last 7 years. This follows
-    the same structure from the holdings table so we only have dates in a valid
-    and consistent range."""
-    return datetime.today().date() - timedelta(days=random.randint(0, 365*7))
-
-
 def generate_distributions(investment_date, total_investment, max_years=10):
     """
     Generate synthetic distributions after investment_date.
@@ -81,7 +74,9 @@ def build_company_record(company_id):
     Generate full financial record for a single portfolio company.
     Returns a dictionary containing all performance metrics and synthetic inputs.
     """
-    investment_date = generate_investment_date()
+    # Generate an investment date from the last 7 years like holdings.pys
+    investment_date = datetime.today().date() - timedelta(days=random.randint(0, 365*7))
+    
     investment_amount = round(random.uniform(1_000_000, 10_000_000), 2)
     dist_dates, dist_amounts = generate_distributions(investment_date, investment_amount)
     nav, val_date = generate_nav(investment_date, dist_dates, dist_amounts, investment_amount)
@@ -100,11 +95,11 @@ def build_company_record(company_id):
 
     return {
         "company_id": company_id,
-        "investment_date": investment_date.date(),
+        "investment_date": investment_date,
         "investment_amount": investment_amount,
         "distribution_dates": dist_dates,
         "distribution_amounts": dist_amounts,
-        "valuation_date": val_date.date(),
+        "valuation_date": val_date,
         "current_nav": nav,
         "irr": irr,
         "moic": moic,
@@ -123,15 +118,11 @@ def generate_portfolio_company_financials(n=100):
     Returns:
     pd.DataFrame: Tabular output with one row per company
     """
-
-    # This is where we need to make the connection to the holdings.py file
-    # so that the company names are comning over correctly
-
-    records = [build_company_record(f"PC{i:04d}") for i in range(1, n + 1)]
+    records = [build_company_record(f"COMPANY_{i}") for i in range(1, n + 1)]
     return pd.DataFrame(records)
 
-
-# Example usage
 if __name__ == "__main__":
+    # 100 has to be entered so that the company names are coming over correctly
+    # from the holdings module
     df = generate_portfolio_company_financials(100)
     print(df.head())

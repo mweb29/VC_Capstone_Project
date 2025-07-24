@@ -9,8 +9,7 @@ details (cost basis, market value, book value), classification (sector,
 region), and identifiers (issuer names, currency codes).
 
 This is intended to simulate the data that would feed the HOLDINGSDETAILS
-table and can be used to benchmark or analyze fund performance at the 
-portfolio company level.
+table. This table will connect via the 
 
 Assumptions:
 - Funds are labeled as FUND_001 to FUND_005
@@ -41,10 +40,10 @@ def generate_holdings_data(n=100):
         pd.DataFrame: A DataFrame representing the synthetic holdings.
     """
     # Define sample pools for random selection
-    portfolio_codes = [f"FUND_{i:03d}" for i in range(1, 6)]  # Five example funds
+    portfolio_codes = [f"FUND_{i:03d}" for i in range(1, 6)] # FUND_001 to FUND_005
 
     # Read in the JSON File for country metadata
-    with open('synthetic_countries.json', "r") as f:
+    with open('JSON/synthetic_countries.json', "r") as f:
         countries_json = json.load(f)
 
     # This accesses the JSON --> Need to limit it to a subset of countries
@@ -69,24 +68,18 @@ def generate_holdings_data(n=100):
         # Random fund assignment
         portfolio_code = random.choice(portfolio_codes)
 
-        # Currency assignment (code + name)
-        currency_code, currency_name = random.choice(currencies)
-
         # Generate a fake company name
         issuername = fake.company()
 
-        # Generate monetary metrics
-        # NEED TO REFER TO THE CHEATSHEET SO THAT THE VALUES ARE REALISTIC
-        costbasis = round(np.random.uniform(1e6, 1e7), 2)  # Initial investment
-        quantity = round(np.random.uniform(1e4, 1e6), 2)   # Number of shares/units
-        price = round((costbasis / quantity) * np.random.uniform(0.8, 1.2), 2)  # Simulated mark
-        market_value = round(quantity * price, 2)          # Current value
-        book_value = round(costbasis * np.random.uniform(0.9, 1.1), 2)  # Book-adjusted value
-        unrealized = round(market_value - book_value, 2)   # Paper gain/loss
+        # Generate the company identifier
+        company_code = f"COMPANY_{_}"  # COMPANY_000 to COMPANY_099
 
         # Geographic and sector metadata
         risk_country_code, risk_country, region = random.choice(countries_regions)
         sector = random.choice(sectors)
+        
+        # Currency assignment (code + name)
+        currency_code, currency_name = random.choice(currencies)
 
         # Snapshot date (randomized within past year)
         history_date = datetime.today().date() - timedelta(days=random.randint(0, 365))
@@ -95,15 +88,9 @@ def generate_holdings_data(n=100):
             "PORTFOLIOCODE": portfolio_code,
             "CURRENCYCODE": currency_code,
             "CURRENCY": currency_name,
-            "ISSUERNAME": issuername,
+            "ISSUERNAME": company_code,
             "ISSUENAME": issuername,
             "ISSUEDISPLAYNAME": issuername,
-            "COSTBASIS": costbasis,
-            "QUANTITY": quantity,
-            "MARKETVALUE": market_value,
-            "BOOKVALUE": book_value,
-            "UNREALIZEDGAINSLOSSES": unrealized,
-            "PRICE": price,
             "ASSETCLASSNAME": "Private Equity",
             "PRIMARYSECTORNAME": sector,
             "PRIMARYINDUSTRYNAME": f"{sector} Services",

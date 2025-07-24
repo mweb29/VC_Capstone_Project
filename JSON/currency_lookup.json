@@ -4,11 +4,6 @@
     "currency_name": "Australian dollar",
     "fx_to_usd": 1.0
   },
-  "India": {
-    "currency_code": "USD",
-    "currency_name": "United States dollar",
-    "fx_to_usd": 1.0
-  },
   "France": {
     "currency_code": "EUR",
     "currency_name": "Euro",

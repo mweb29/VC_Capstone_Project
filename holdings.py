@@ -52,17 +52,17 @@ def generate_holdings_data(n=100):
         for entry in countries_json
     ]
 
-    # This information is currently stored in the JSON file, so we can randomly
-    # select from predefined lists (country, currency, gics, region)
-    # Need to look back at this API
-    currencies = [("USD", "US Dollar"), ("EUR", "Euro"), ("CAD", "Canadian Dollar")]
-
     # Read in the JSON File for sectors metadata
-    with open('sectors.json', "r") as f:
-        countries_json = json.load(f)
+    with open('JSON/sectors.json', "r") as f:
+        sectors_json = json.load(f)
 
-    sectors = ["Tech", "Healthcare", "CleanTech", "AI", "Fintech"]
+    sectors = [entry["Sector"] for entry in sectors_json]
 
+    # Read in the JSON File for currency metadata
+    with open('JSON/currency_lookup.json', "r") as f:
+        currency_json = json.load(f)
+
+    # Generate synthetic holdings data
     records = []
     for _ in range(n):
         # Random fund assignment
@@ -78,11 +78,17 @@ def generate_holdings_data(n=100):
         risk_country_code, risk_country, region = random.choice(countries_regions)
         sector = random.choice(sectors)
         
-        # Currency assignment (code + name)
-        currency_code, currency_name = random.choice(currencies)
+        # Look up currency details
+        if risk_country in currency_json:
+            currency_info = currency_json[risk_country]
+            currency_code = currency_info["currency_code"]
+            currency_name = currency_info["currency_name"]
+        else:
+            currency_code = "USD"  # Default to USD if not found
+            currency_name = "United States Dollar"
 
-        # Snapshot date (randomized within past year)
-        history_date = datetime.today().date() - timedelta(days=random.randint(0, 365))
+        # Snapshot date (randomized within the last 7 years)
+        history_date = datetime.today().date() - timedelta(days=random.randint(0, 365*7))
 
         records.append({
             "PORTFOLIOCODE": portfolio_code,

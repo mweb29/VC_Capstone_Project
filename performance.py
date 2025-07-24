@@ -28,16 +28,11 @@ import pandas as pd
 from datetime import datetime, timedelta
 import random
 
-
-# ----------------------------
-# Helper Functions
-# ----------------------------
-
 def generate_investment_date(start_year=2015, end_year=2022):
-    """Randomly generate an investment date between start_year and end_year."""
-    start = datetime(start_year, 1, 1)
-    end = datetime(end_year, 12, 31)
-    return start + timedelta(days=random.randint(0, (end - start).days))
+    """Randomly generate an investment date in the last 7 years. This follows
+    the same structure from the holdings table so we only have dates in a valid
+    and consistent range."""
+    return datetime.today().date() - timedelta(days=random.randint(0, 365*7))
 
 
 def generate_distributions(investment_date, total_investment, max_years=10):

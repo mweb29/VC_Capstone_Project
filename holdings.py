@@ -72,6 +72,7 @@ def generate_holdings_data(n=100):
         issuername = fake.company()
 
         # Generate the company identifier
+        # This is specific to a time and day, but needs to be general
         company_code = f"COMPANY_{_}"  # COMPANY_000 to COMPANY_099
 
         # Geographic and sector metadata
@@ -88,8 +89,12 @@ def generate_holdings_data(n=100):
             currency_name = "United States Dollar"
 
         # Snapshot date (randomized within the last 7 years)
+        # Necessary for performance, but not necessarily for holdings
         history_date = datetime.today().date() - timedelta(days=random.randint(0, 365*7))
 
+        # Ticker column for Company_ID
+        # GUID for the company generated as a unique identifier
+        # Check datatype within snowflake
         records.append({
             "PORTFOLIOCODE": portfolio_code,
             "CURRENCYCODE": currency_code,

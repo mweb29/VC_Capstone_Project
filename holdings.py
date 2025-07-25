@@ -23,6 +23,7 @@ import random
 from datetime import datetime, timedelta
 from faker import Faker
 import json
+import uuid
 
 # Initialize random number generators for reproducibility
 fake = Faker()
@@ -72,8 +73,8 @@ def generate_holdings_data(n=100):
         issuername = fake.company()
 
         # Generate the company identifier
-        # This is specific to a time and day, but needs to be general
-        company_code = f"COMPANY_{_}"  # COMPANY_000 to COMPANY_099
+        company_code = uuid.uuid4()
+        company_code = str(company_code).upper()
 
         # Geographic and sector metadata
         risk_country_code, risk_country, region = random.choice(countries_regions)
@@ -88,18 +89,13 @@ def generate_holdings_data(n=100):
             currency_code = "USD"  # Default to USD if not found
             currency_name = "United States Dollar"
 
-        # Snapshot date (randomized within the last 7 years)
-        # Necessary for performance, but not necessarily for holdings
-        history_date = datetime.today().date() - timedelta(days=random.randint(0, 365*7))
-
         # Ticker column for Company_ID
         # GUID for the company generated as a unique identifier
-        # Check datatype within snowflake
         records.append({
             "PORTFOLIOCODE": portfolio_code,
             "CURRENCYCODE": currency_code,
             "CURRENCY": currency_name,
-            "ISSUERNAME": company_code,
+            "TICKER": company_code,
             "ISSUENAME": issuername,
             "ISSUEDISPLAYNAME": issuername,
             "ASSETCLASSNAME": "Private Equity",
@@ -107,9 +103,8 @@ def generate_holdings_data(n=100):
             "PRIMARYINDUSTRYNAME": f"{sector} Services",
             "RISKCOUNTRYCODE": risk_country_code,
             "RISKCOUNTRY": risk_country,
-            "REGIONNAME": region,
-            "HISTORYDATE": history_date
-        })
+            "REGIONNAME": region
+            })
 
     return pd.DataFrame(records)
 

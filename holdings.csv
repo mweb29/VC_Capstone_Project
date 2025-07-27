@@ -1,0 +1,101 @@
+PORTFOLIOCODE,CURRENCYCODE,CURRENCY,TICKER,ISSUENAME,ISSUEDISPLAYNAME,ASSETCLASSNAME,PRIMARYSECTORNAME,PRIMARYINDUSTRYNAME,RISKCOUNTRYCODE,RISKCOUNTRY,REGIONNAME
+FUND_001,USD,United States Dollar,6D79ACF7-F1DE-4F55-B114-F36FE3F5F9A3,Stewart Inc,Stewart Inc,Private Equity,Consumer Staples,Consumer Staples Services,AD,Andorra,Europe
+FUND_002,USD,United States Dollar,37283435-F279-4763-9271-C4971F3954E1,Ramirez and Sons,Ramirez and Sons,Private Equity,Industrials,Industrials Services,KY,Cayman Islands,Americas
+FUND_001,USD,United States Dollar,F707BA4F-5475-46FA-B653-2B5A58DF1C37,"Russell, Clark and Pena","Russell, Clark and Pena",Private Equity,Communication Services,Communication Services Services,OM,Oman,Asia
+FUND_001,USD,United States Dollar,037731A3-434C-4E57-A498-F05C59A09823,Hess-Maxwell,Hess-Maxwell,Private Equity,Financials,Financials Services,MN,Mongolia,Asia
+FUND_001,USD,United States Dollar,20BE275E-54BD-4FFF-A0D7-69C6A4D7881B,Gutierrez Group,Gutierrez Group,Private Equity,Materials,Materials Services,AE,United Arab Emirates,Asia
+FUND_002,USD,United States Dollar,692AF709-350A-4081-A3C0-03BC82E20DCE,"Love, Ball and Moreno","Love, Ball and Moreno",Private Equity,Communication Services,Communication Services Services,CZ,Czechia,Europe
+FUND_005,USD,United States Dollar,477B0A4B-088A-4D8B-9982-4E9D28415074,Obrien Inc,Obrien Inc,Private Equity,Communication Services,Communication Services Services,AD,Andorra,Europe
+FUND_002,USD,United States Dollar,6876EF3D-38ED-41D2-8372-3F9420092072,"Austin, Jefferson and Watson","Austin, Jefferson and Watson",Private Equity,Real Estate,Real Estate Services,KP,North Korea,Asia
+FUND_005,USD,United States Dollar,E53A34C2-7D0B-4F26-84AA-97A996F01541,"Smith, White and Mcgrath","Smith, White and Mcgrath",Private Equity,Consumer Discretionary,Consumer Discretionary Services,IE,Ireland,Europe
+FUND_004,USD,United States Dollar,AC445033-885B-4E9C-8BF8-3D6EE7DC68EE,Martinez LLC,Martinez LLC,Private Equity,Consumer Staples,Consumer Staples Services,ME,Montenegro,Europe
+FUND_001,USD,United States Dollar,B81FA81E-C225-492C-BA77-D56B2139C09C,Fischer PLC,Fischer PLC,Private Equity,Industrials,Industrials Services,SD,Sudan,Africa
+FUND_004,USD,United States Dollar,3A28D2D5-3401-43F7-8936-D709F2C9C999,Boyer PLC,Boyer PLC,Private Equity,Consumer Staples,Consumer Staples Services,GM,Gambia,Africa
+FUND_002,USD,United States Dollar,ADDA8757-F1DE-4E14-9B4B-65DB8B8CCEEF,Cooper Group,Cooper Group,Private Equity,Health Care,Health Care Services,CW,Curaçao,Americas
+FUND_001,USD,United States Dollar,55FE1FFA-2579-4F81-A6A4-D77D94FD5DC7,"Harper, Knox and Riggs","Harper, Knox and Riggs",Private Equity,Financials,Financials Services,BH,Bahrain,Asia
+FUND_001,USD,United States Dollar,FFF3CC4A-1497-4F00-9477-35F71850B6F9,"Ruiz, Wade and Wallace","Ruiz, Wade and Wallace",Private Equity,Health Care,Health Care Services,GD,Grenada,Americas
+FUND_005,USD,United States Dollar,2AF7F0B3-A668-4E64-801E-B1D959B1A6CF,Phillips LLC,Phillips LLC,Private Equity,Energy,Energy Services,EG,Egypt,Africa
+FUND_004,USD,United States Dollar,10C57160-FDC8-495F-82BF-4634F2F63F15,"Hernandez, Hartman and Martin","Hernandez, Hartman and Martin",Private Equity,Materials,Materials Services,MO,Macau,Asia
+FUND_004,USD,United States Dollar,DE3B031E-7262-4D2A-B9E4-0C1C975DE69F,Ballard-May,Ballard-May,Private Equity,Communication Services,Communication Services Services,BF,Burkina Faso,Africa
+FUND_003,USD,United States Dollar,64F02C2A-9904-43CF-AE09-BD4B44128593,Saunders-Moran,Saunders-Moran,Private Equity,Real Estate,Real Estate Services,SZ,Eswatini,Africa
+FUND_005,USD,United States Dollar,CD19E151-953E-45EB-AE8A-43F1D1CC4906,"Davis, Hernandez and Burgess","Davis, Hernandez and Burgess",Private Equity,Health Care,Health Care Services,TN,Tunisia,Africa
+FUND_005,USD,United States Dollar,774F25FB-57F2-4B8D-83B9-01B29D7DA240,Cruz Ltd,Cruz Ltd,Private Equity,Materials,Materials Services,CK,Cook Islands,Oceania
+FUND_001,USD,United States Dollar,83E114A7-0CAA-4C78-BC87-C951EDF8476E,Mcintosh Inc,Mcintosh Inc,Private Equity,Consumer Discretionary,Consumer Discretionary Services,NO,Norway,Europe
+FUND_003,USD,United States Dollar,6373B833-011A-4A39-BE39-6D21EF0C14E7,"Freeman, Lyons and Brown","Freeman, Lyons and Brown",Private Equity,Consumer Discretionary,Consumer Discretionary Services,BF,Burkina Faso,Africa
+FUND_001,USD,United States Dollar,291D863B-48C7-44F8-9773-114CD227872C,Spence-Wallace,Spence-Wallace,Private Equity,Consumer Staples,Consumer Staples Services,HK,Hong Kong,Asia
+FUND_004,USD,United States Dollar,A779A04C-6F96-4575-AB74-D0BFAB42FAEF,Ortiz-Odonnell,Ortiz-Odonnell,Private Equity,Health Care,Health Care Services,NC,New Caledonia,Oceania
+FUND_002,USD,United States Dollar,63CA5B25-B2EE-47FB-8D59-B66AB11AFA8B,Harris-Williams,Harris-Williams,Private Equity,Health Care,Health Care Services,GF,French Guiana,Americas
+FUND_002,USD,United States Dollar,93AF724C-EEBB-40CB-8D60-2592731DD8A5,Walker LLC,Walker LLC,Private Equity,Consumer Staples,Consumer Staples Services,NR,Nauru,Oceania
+FUND_001,USD,United States Dollar,13F607A1-A364-40B6-AAB8-01851ADEF6FB,Cross Ltd,Cross Ltd,Private Equity,Real Estate,Real Estate Services,MS,Montserrat,Americas
+FUND_002,USD,United States Dollar,E7D6E444-B8AC-45CC-85FD-3B935C57FF7D,"King, Williamson and Howard","King, Williamson and Howard",Private Equity,Consumer Discretionary,Consumer Discretionary Services,LV,Latvia,Europe
+FUND_002,USD,United States Dollar,3D6CF788-D673-45C8-9A82-87392C69E578,"Smith, Smith and Stevens","Smith, Smith and Stevens",Private Equity,Financials,Financials Services,KE,Kenya,Africa
+FUND_003,USD,United States Dollar,17F2AD5A-8E40-47BE-8F0C-207C423308D4,Hines-Hutchinson,Hines-Hutchinson,Private Equity,Real Estate,Real Estate Services,UZ,Uzbekistan,Asia
+FUND_005,USD,United States Dollar,8AEF3160-E704-4F7F-A479-6BFE4452F13D,Weaver-Stuart,Weaver-Stuart,Private Equity,Real Estate,Real Estate Services,CX,Christmas Island,Oceania
+FUND_003,USD,United States Dollar,C7FCFBE0-666C-4AF7-922B-3F853AC5678D,Griffin-Garcia,Griffin-Garcia,Private Equity,Energy,Energy Services,SY,Syria,Asia
+FUND_002,USD,United States Dollar,D829E902-40AB-4E1B-BAAE-B7261216CD07,Young-Valdez,Young-Valdez,Private Equity,Energy,Energy Services,SI,Slovenia,Europe
+FUND_003,USD,United States Dollar,3B5D15B4-4421-46BB-800B-3AF6A5BE806C,"Nelson, Blake and Mathis","Nelson, Blake and Mathis",Private Equity,Consumer Staples,Consumer Staples Services,HU,Hungary,Europe
+FUND_001,USD,United States Dollar,30242E18-2AA1-4955-A3AC-E1E5864AA97A,Parrish-Stevenson,Parrish-Stevenson,Private Equity,Utilities,Utilities Services,CU,Cuba,Americas
+FUND_003,USD,United States Dollar,D0BB6DD6-7DCB-4880-A879-AA94EA7E9054,Blankenship-Marshall,Blankenship-Marshall,Private Equity,Real Estate,Real Estate Services,CU,Cuba,Americas
+FUND_004,USD,United States Dollar,2FC6CBA1-6E1E-432B-8593-2B1E5813082A,"Morales, White and Allison","Morales, White and Allison",Private Equity,Real Estate,Real Estate Services,HT,Haiti,Americas
+FUND_004,USD,United States Dollar,73902089-134E-45A1-B999-AC1AB5FA0053,Frederick and Sons,Frederick and Sons,Private Equity,Consumer Staples,Consumer Staples Services,BT,Bhutan,Asia
+FUND_002,USD,United States Dollar,33827E32-1B53-4BD4-9C37-29E7AB00B91E,"Green, Anderson and Brown","Green, Anderson and Brown",Private Equity,Communication Services,Communication Services Services,DK,Denmark,Europe
+FUND_005,USD,United States Dollar,C2572EB6-9289-44B1-8BEF-F3C5D869BEFA,Coleman PLC,Coleman PLC,Private Equity,Utilities,Utilities Services,EG,Egypt,Africa
+FUND_004,USD,United States Dollar,9627A32B-A47C-4BF8-8020-EE9F374E8DEA,"Rangel, Banks and Thompson","Rangel, Banks and Thompson",Private Equity,Utilities,Utilities Services,TW,Taiwan,Asia
+FUND_004,USD,United States Dollar,EFB7DA5A-3356-475F-AB43-DBF1F869033E,"Blankenship, Lambert and Ramirez","Blankenship, Lambert and Ramirez",Private Equity,Consumer Discretionary,Consumer Discretionary Services,GL,Greenland,Americas
+FUND_002,USD,United States Dollar,7CBB58BC-0418-480E-9C0E-275E5C8F3CD4,"Lindsey, Walton and Ayers","Lindsey, Walton and Ayers",Private Equity,Information Technology,Information Technology Services,LC,Saint Lucia,Americas
+FUND_001,USD,United States Dollar,E350CB8A-AD2A-4EE8-8932-21E3F74C229F,Cross Inc,Cross Inc,Private Equity,Energy,Energy Services,SA,Saudi Arabia,Asia
+FUND_001,USD,United States Dollar,AAB5B180-CF63-4F59-B42C-66FB5742EABB,"Trujillo, James and Scott","Trujillo, James and Scott",Private Equity,Real Estate,Real Estate Services,CF,Central African Republic,Africa
+FUND_002,USD,United States Dollar,FBEE2FF4-335B-4E55-ADE1-8B0759F46958,Perkins-Gonzalez,Perkins-Gonzalez,Private Equity,Real Estate,Real Estate Services,SM,San Marino,Europe
+FUND_004,USD,United States Dollar,08B95EF9-7FC4-442C-8E3C-5FB6CAADA25C,Garcia Ltd,Garcia Ltd,Private Equity,Materials,Materials Services,MP,Northern Mariana Islands,Oceania
+FUND_004,USD,United States Dollar,C4E17B61-F29C-4872-9AC0-E16A50E46DF7,Valdez PLC,Valdez PLC,Private Equity,Utilities,Utilities Services,HK,Hong Kong,Asia
+FUND_004,EUR,Euro,7A4438F1-C95A-4E3B-8C12-EB559A84845A,Dixon-Gutierrez,Dixon-Gutierrez,Private Equity,Consumer Staples,Consumer Staples Services,LU,Luxembourg,Europe
+FUND_005,USD,United States Dollar,75BABEC0-9494-44A1-AA1D-08702E396671,Frye-Fuller,Frye-Fuller,Private Equity,Energy,Energy Services,TJ,Tajikistan,Asia
+FUND_001,USD,United States Dollar,C700E816-0491-4F4E-8676-644D7DA619BD,"Brown, Leach and Mooney","Brown, Leach and Mooney",Private Equity,Communication Services,Communication Services Services,PK,Pakistan,Asia
+FUND_003,USD,United States Dollar,C05D3F3F-F060-43D1-BD98-B17514130E6E,Lewis Inc,Lewis Inc,Private Equity,Real Estate,Real Estate Services,SG,Singapore,Asia
+FUND_003,USD,United States Dollar,0C52ADB7-DD96-4679-9CFA-F7A5CB147531,"Price, Jordan and Mcgee","Price, Jordan and Mcgee",Private Equity,Consumer Staples,Consumer Staples Services,BY,Belarus,Europe
+FUND_004,CAD,Canadian dollar,0898AC02-DBAE-4C50-B3B7-5A821CB55140,Marshall-Berger,Marshall-Berger,Private Equity,Information Technology,Information Technology Services,CA,Canada,Americas
+FUND_001,USD,United States Dollar,83E45DA0-1781-4C02-A999-EC5FA1021FDE,"Powell, Matthews and Smith","Powell, Matthews and Smith",Private Equity,Consumer Staples,Consumer Staples Services,WF,Wallis and Futuna,Oceania
+FUND_005,USD,United States Dollar,4969088F-3A41-4A34-90D3-C43474835B8E,"Villanueva, Alvarado and Ellison","Villanueva, Alvarado and Ellison",Private Equity,Industrials,Industrials Services,SN,Senegal,Africa
+FUND_005,USD,United States Dollar,9C46A62A-6584-4E48-A2A5-0E8DC823CFA2,Baker PLC,Baker PLC,Private Equity,Materials,Materials Services,UM,United States Minor Outlying Islands,Americas
+FUND_003,USD,United States Dollar,85599AFC-843C-4C7F-98BC-FA2475E59C80,Patrick-Adams,Patrick-Adams,Private Equity,Real Estate,Real Estate Services,SY,Syria,Asia
+FUND_005,USD,United States Dollar,D455D6A0-6080-4DD7-9D29-ECBDB70A57CE,"Hunt, Paul and Flores","Hunt, Paul and Flores",Private Equity,Consumer Discretionary,Consumer Discretionary Services,MS,Montserrat,Americas
+FUND_002,USD,United States Dollar,C11E0C65-6F19-461E-AD78-2171AB2DAC99,Young-Barker,Young-Barker,Private Equity,Industrials,Industrials Services,GU,Guam,Oceania
+FUND_005,USD,United States Dollar,073D9407-CCC2-4425-A987-9A45A965AA54,Jacobson LLC,Jacobson LLC,Private Equity,Communication Services,Communication Services Services,WF,Wallis and Futuna,Oceania
+FUND_001,USD,United States Dollar,529440BC-9E03-4827-8693-4E54C068534C,Bailey-Phillips,Bailey-Phillips,Private Equity,Health Care,Health Care Services,MZ,Mozambique,Africa
+FUND_004,USD,United States Dollar,54C9B026-36AF-4FB0-ACB7-05FBB555CEDF,Reed-Garcia,Reed-Garcia,Private Equity,Materials,Materials Services,AX,Åland Islands,Europe
+FUND_003,USD,United States Dollar,59347849-69A2-4658-9E24-84E38ED0B387,Johnson-Ryan,Johnson-Ryan,Private Equity,Consumer Staples,Consumer Staples Services,TO,Tonga,Oceania
+FUND_002,AUD,Australian dollar,A35B7F1C-22FF-4340-A7D5-862096761AC0,Davis PLC,Davis PLC,Private Equity,Consumer Discretionary,Consumer Discretionary Services,AU,Australia,Oceania
+FUND_005,USD,United States Dollar,1904C03C-6DC8-4E4D-91A3-EC4BC6B7CAF0,Matthews PLC,Matthews PLC,Private Equity,Materials,Materials Services,VN,Vietnam,Asia
+FUND_001,USD,United States Dollar,F115192C-2AFB-4AF4-8E50-3101636137D2,Schultz and Sons,Schultz and Sons,Private Equity,Information Technology,Information Technology Services,PF,French Polynesia,Oceania
+FUND_001,USD,United States Dollar,C140984C-FACD-4F8E-B823-17A18BC7F3E4,Smith-Young,Smith-Young,Private Equity,Communication Services,Communication Services Services,SD,Sudan,Africa
+FUND_002,USD,United States Dollar,6A583B2F-B3CF-4DA5-9B8E-2D6F22C87B62,"Stewart, Chandler and Jones","Stewart, Chandler and Jones",Private Equity,Real Estate,Real Estate Services,BQ,Caribbean Netherlands,Americas
+FUND_004,USD,United States Dollar,9B22DDCC-D966-4CE9-8869-6FF892756FE9,"Wright, Young and George","Wright, Young and George",Private Equity,Communication Services,Communication Services Services,VN,Vietnam,Asia
+FUND_002,USD,United States Dollar,F688D994-7F13-4848-8014-EFAB8BDAE9F5,Parrish-Sanchez,Parrish-Sanchez,Private Equity,Communication Services,Communication Services Services,EG,Egypt,Africa
+FUND_005,USD,United States Dollar,63E85C7F-015A-49F8-A491-DAB135FB6A2A,Cruz-Ryan,Cruz-Ryan,Private Equity,Consumer Discretionary,Consumer Discretionary Services,IR,Iran,Asia
+FUND_005,USD,United States Dollar,0A258BFC-0EBF-495B-A248-B3356188A218,Pennington LLC,Pennington LLC,Private Equity,Consumer Discretionary,Consumer Discretionary Services,SA,Saudi Arabia,Asia
+FUND_003,USD,United States Dollar,B36EBABF-B0C0-46AF-9090-4049D00725B8,Johnson-Day,Johnson-Day,Private Equity,Real Estate,Real Estate Services,HU,Hungary,Europe
+FUND_003,USD,United States Dollar,EEC52749-EF4B-4068-83E7-13590A2F3DAE,"Singleton, Moody and King","Singleton, Moody and King",Private Equity,Communication Services,Communication Services Services,IT,Italy,Europe
+FUND_004,USD,United States Dollar,8F05C915-AB66-479A-B07D-C937F3E478C8,Esparza-Smith,Esparza-Smith,Private Equity,Consumer Discretionary,Consumer Discretionary Services,BM,Bermuda,Americas
+FUND_002,USD,United States Dollar,1245221A-A337-4F58-A586-7BAEDD898559,Foster Inc,Foster Inc,Private Equity,Health Care,Health Care Services,AZ,Azerbaijan,Asia
+FUND_001,USD,United States Dollar,A4F34C65-FE80-4083-A80A-EBDF93196131,Stewart PLC,Stewart PLC,Private Equity,Communication Services,Communication Services Services,ME,Montenegro,Europe
+FUND_002,USD,United States Dollar,5F41BDB3-95E0-4A4F-A493-5FA491924460,Knox-Hernandez,Knox-Hernandez,Private Equity,Consumer Discretionary,Consumer Discretionary Services,ME,Montenegro,Europe
+FUND_001,USD,United States Dollar,06946C08-47B6-4531-929E-E302DE6AC52F,Snyder Inc,Snyder Inc,Private Equity,Real Estate,Real Estate Services,BE,Belgium,Europe
+FUND_001,USD,United States Dollar,78EAFA38-370C-44C7-96CB-E9F45120FE00,Cole Inc,Cole Inc,Private Equity,Materials,Materials Services,CY,Cyprus,Europe
+FUND_001,USD,United States Dollar,0946E411-2CC6-428F-8E3D-9F83D7C552D4,"Brown, Keller and Rollins","Brown, Keller and Rollins",Private Equity,Health Care,Health Care Services,TJ,Tajikistan,Asia
+FUND_001,USD,United States Dollar,6CD6387A-F6D1-4D0C-A5F7-7B4F72120CAE,"Mack, Schroeder and Barker","Mack, Schroeder and Barker",Private Equity,Consumer Discretionary,Consumer Discretionary Services,LI,Liechtenstein,Europe
+FUND_003,USD,United States Dollar,EF0CA660-533D-482B-8A64-5134E1733FCF,Hart LLC,Hart LLC,Private Equity,Information Technology,Information Technology Services,NR,Nauru,Oceania
+FUND_002,USD,United States Dollar,910422ED-C0E5-40F2-9B87-9FAC76E36D1D,Rodriguez Inc,Rodriguez Inc,Private Equity,Industrials,Industrials Services,MF,Saint Martin,Americas
+FUND_005,USD,United States Dollar,7BBE6672-5743-4162-9D24-5A155F2D0456,Robertson-Oliver,Robertson-Oliver,Private Equity,Information Technology,Information Technology Services,ML,Mali,Africa
+FUND_002,USD,United States Dollar,232A5100-5F56-440E-9889-78307AB3CD22,Scott-Peterson,Scott-Peterson,Private Equity,Information Technology,Information Technology Services,SL,Sierra Leone,Africa
+FUND_004,USD,United States Dollar,92613DA3-C5FC-40BC-AC32-09B7FEC27DAD,"Smith, Gordon and Lucas","Smith, Gordon and Lucas",Private Equity,Materials,Materials Services,CG,Congo,Africa
+FUND_001,USD,United States dollar,282916C9-1A03-4BDA-92CB-9DA7DC9B7147,Byrd-Rivera,Byrd-Rivera,Private Equity,Financials,Financials Services,NL,Netherlands,Europe
+FUND_003,USD,United States Dollar,83332CFC-7188-4B4D-9E57-110265EF73D4,Braun-Smith,Braun-Smith,Private Equity,Financials,Financials Services,IR,Iran,Asia
+FUND_004,USD,United States Dollar,C1613641-F775-4DDD-9621-7A154B1E4AF6,Koch Inc,Koch Inc,Private Equity,Energy,Energy Services,TK,Tokelau,Oceania
+FUND_001,USD,United States Dollar,4EE1EBB8-85E1-4E3C-9764-8791A47F2DF0,Alvarez-Munoz,Alvarez-Munoz,Private Equity,Financials,Financials Services,AT,Austria,Europe
+FUND_003,USD,United States Dollar,740DD053-2FDB-4F19-82B4-B2A7E1275488,Scott-Gray,Scott-Gray,Private Equity,Materials,Materials Services,PM,Saint Pierre and Miquelon,Americas
+FUND_002,USD,United States Dollar,F7B9B37B-10D4-4841-B353-868BD1116627,"Miller, Chapman and Jackson","Miller, Chapman and Jackson",Private Equity,Consumer Discretionary,Consumer Discretionary Services,CK,Cook Islands,Oceania
+FUND_005,USD,United States Dollar,FCDDAA83-485B-46ED-84C7-58EDE8D4318D,"James, Cox and Marshall","James, Cox and Marshall",Private Equity,Industrials,Industrials Services,JE,Jersey,Europe
+FUND_004,USD,United States Dollar,C86DB894-16B7-4683-A065-97056AF15D89,"Garcia, Rodriguez and Johnston","Garcia, Rodriguez and Johnston",Private Equity,Consumer Staples,Consumer Staples Services,CM,Cameroon,Africa
+FUND_004,USD,United States Dollar,74E9103E-666D-4E45-8490-ACEB7E1F54B1,Watson Group,Watson Group,Private Equity,Materials,Materials Services,DK,Denmark,Europe
+FUND_004,USD,United States Dollar,8ECEAC88-C276-494D-BF89-E8E96F88EA2E,Ashley-Jones,Ashley-Jones,Private Equity,Communication Services,Communication Services Services,SS,South Sudan,Africa
+FUND_001,USD,United States Dollar,F26C4ACD-E866-45F3-A6A1-AE2D34F45A26,Stone Ltd,Stone Ltd,Private Equity,Real Estate,Real Estate Services,TF,French Southern and Antarctic Lands,Antarctic

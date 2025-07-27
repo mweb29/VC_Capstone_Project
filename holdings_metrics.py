@@ -164,4 +164,8 @@ if __name__ == "__main__":
     validate_performance(df)
 
     # Display the first few rows of the generated DataFrame
-    print(df.head())
+    #print(df.head())
+
+    # Save to CSV for further use
+    df.to_csv('holdings_metrics.csv', index=False)
+    

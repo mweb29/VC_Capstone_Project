@@ -113,8 +113,8 @@ if __name__ == "__main__":
     df_holdings = generate_holdings_data(n=100)
     
     # Preview the first few rows for sanity check
-    print("Preview of synthetic VC/PE holdings data:")
-    print(df_holdings.head())
+    #print("Preview of synthetic VC/PE holdings data:")
+    #print(df_holdings.head())
 
     # Optional: save to CSV or integrate into Snowflake pipeline
-    # df_holdings.to_csv("synthetic_holdings.csv", index=False)
+    df_holdings.to_csv("holdings.csv", index=False)

@@ -4,12 +4,12 @@ This class simulates the process of assigning experienced managers
 from a randomly generated pool to a set of venture capital funds.
 """
 
-import requests
 import pandas as pd
 import random
+import json
 
 class FundManagerAssigner:
-    def __init__(self, n_funds=100, n_managers=80):
+    def __init__(self, n_funds=100, n_managers=80, json_path="JSON/manager_data.json"):
         self.N_FUNDS = n_funds
         self.N_MANAGERS = n_managers
         self.MIN_EXP = 15
@@ -18,17 +18,20 @@ class FundManagerAssigner:
         self.FUND_IDS = [f"FUND{str(i).zfill(4)}" for i in range(1, self.N_FUNDS + 1)]
         self.df_managers = None
         self.df_assignments = None
+        self.manager_json = None
+        self.json_path = json_path
 
     
-    # Convert this to a JSON file
-    def fetch_manager_pool(self):
-        """Fetch manager names & assign experience. Store as DataFrame."""
-        r = requests.get(f"https://randomuser.me/api/?results={self.N_MANAGERS}&nat=us")
-        r.raise_for_status()
-        users = r.json()["results"]
-        names = [f"{u['name']['first']} {u['name']['last']}" for u in users]
+    def build_manager_pool(self):
+        """Load manager JSON from file and randomly sample N_MANAGERS to build manager DataFrame."""
+        with open(self.json_path, "r") as f:
+            full_json = json.load(f)
+
+        results = random.sample(full_json, self.N_MANAGERS)
+        names = [f"{u['name']['first']} {u['name']['last']}" for u in results]
         exp = [random.randint(self.MIN_EXP, self.MAX_EXP) for _ in range(self.N_MANAGERS)]
         ids = [f"MNGR{str(i+1).zfill(3)}" for i in range(self.N_MANAGERS)]
+
         self.df_managers = pd.DataFrame({
             "ManagerID": ids,
             "ManagerName": names,
@@ -81,7 +84,7 @@ class FundManagerAssigner:
 
 if __name__ == '__main__':
     assigner = FundManagerAssigner()
-    assigner.fetch_manager_pool()
+    assigner.build_manager_pool()
     assigner.assign_to_funds()
     df = assigner.get_assignments()
     print(df.head(10))

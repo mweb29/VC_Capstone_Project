@@ -152,20 +152,20 @@ def generate_portfolio_company_financials(n=100):
     Returns:
     pd.DataFrame: Tabular output with one row per company
     """
-    records = [build_company_record(f"COMPANY_{i}") for i in range(1, n + 1)]
-    return pd.DataFrame(records)
+    # Gets the tickers from the holdings DataFrame
+    tickers = holdings_df["TICKER"].unique()
+    records = [build_company_record(ticker) for ticker in tickers]
+    return pd.DataFrame(records)   
 
 if __name__ == "__main__":
     # 100 has to be entered so that the company names are coming over correctly
     # from the holdings module
-    df = generate_portfolio_company_financials(100)
+    holdings_df = pd.read_csv("holdings.csv")
+    metrics_df = generate_portfolio_company_financials(holdings_df)
 
     # Run the validation
-    validate_performance(df)
-
-    # Display the first few rows of the generated DataFrame
-    #print(df.head())
+    validate_performance(metrics_df)
 
     # Save to CSV for further use
-    df.to_csv('holdings_metrics.csv', index=False)
+    metrics_df.to_csv('holdings_metrics.csv', index=False)
     

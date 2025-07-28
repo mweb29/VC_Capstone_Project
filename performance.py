@@ -4,69 +4,108 @@
 # could just say that the majority of the portfolio companies increased in value
 # so we select some random value to show that increase
 
+# portfolio_performance.py
 """
-This script computes aggregated portfolio-level performance metrics by combining:
-1. holdings.csv: Synthetic holdings for each company including portfolio affiliation
-2. holdings_metrics.csv: Performance metrics (IRR, MOIC, DPI, etc.) at company level
+This script computes and visualizes portfolio-level performance metrics using synthetic holdings and performance data.
+It supports CSV-based input for local testing and will be adapted to use a Snowflake connection.
 
-Output:
-A DataFrame containing portfolio-level IRR, MOIC, TVPI, DPI, RVPI, NAV, and total cash flows.
-
-Assumptions:
-- Each COMPANYID exists in both files
-- Holdings include a 'PORTFOLIOCODE' field
-- All metrics are numeric and clean
+Functionality:
+- Aggregates investment metrics by portfolio
+- Calculates TVPI, DPI, RVPI
+- Computes weighted IRR and MOIC
+- Visualizes results with bar charts
 """
+
 import pandas as pd
 import numpy as np
-import importlib
-importlib.import_module("ace_tools")
+import matplotlib.pyplot as plt
 
-# Load the newly uploaded corrected files
-holdings_df = pd.read_csv("holdings.csv")
-metrics_df = pd.read_csv("holdings_metrics.csv")
+class PortfolioPerformanceAnalyzer:
+    def __init__(self, holdings_path: str, metrics_path: str):
+        """
+        Initialize the analyzer with file paths to holdings and metrics data.
+        """
+        self.holdings_path = holdings_path
+        self.metrics_path = metrics_path
+        self.df = None
+        self.portfolio_perf = None
+        self.final_perf = None
 
-# Merge using TICKER (holdings) <-> company_id (metrics)
-df = pd.merge(metrics_df, holdings_df[['TICKER', 'PORTFOLIOCODE']], left_on='company_id', right_on='TICKER', how='left')
+    def load_data(self):
+        """
+        Load holdings and metrics CSV files and merge on TICKER.
+        """
+        holdings_df = pd.read_csv(self.holdings_path)
+        metrics_df = pd.read_csv(self.metrics_path)
 
-# Rename and convert fields as needed
-df.rename(columns={
-    'irr': 'IRR',
-    'moic': 'MOIC',
-    'tvpi': 'TVPI',
-    'dpi': 'DPI',
-    'current_nav': 'NAV',
-    'investment_amount': 'CASHINVESTED',
-    'distribution_amounts': 'CASHDISTRIBUTED'
-}, inplace=True)
+        df = pd.merge(metrics_df, holdings_df[['TICKER', 'PORTFOLIOCODE']],
+                      on='TICKER', how='left')
 
-# Ensure numeric columns are float
-numeric_cols = ['MOIC', 'IRR', 'TVPI', 'DPI', 'CASHINVESTED', 'CASHDISTRIBUTED', 'NAV']
-df[numeric_cols] = df[numeric_cols].apply(pd.to_numeric, errors='coerce')
+        df.rename(columns={
+            'CURRENT_NAV': 'NAV',
+            'INVESTMENT_AMOUNT': 'CASHINVESTED',
+            'DISTRIBUTION_AMOUNTS': 'CASHDISTRIBUTED'
+        }, inplace=True)
 
-# Aggregate to portfolio level
-portfolio_perf = df.groupby('PORTFOLIOCODE').agg({
-    'CASHINVESTED': 'sum',
-    'CASHDISTRIBUTED': 'sum',
-    'NAV': 'sum'
-}).reset_index()
+        numeric_cols = ['MOIC', 'IRR', 'TVPI', 'DPI', 'CASHINVESTED', 'CASHDISTRIBUTED', 'NAV']
+        df[numeric_cols] = df[numeric_cols].apply(pd.to_numeric, errors='coerce')
 
-# Derived performance metrics
-portfolio_perf['TVPI'] = (portfolio_perf['CASHDISTRIBUTED'] + portfolio_perf['NAV']) / portfolio_perf['CASHINVESTED']
-portfolio_perf['DPI'] = portfolio_perf['CASHDISTRIBUTED'] / portfolio_perf['CASHINVESTED']
-portfolio_perf['RVPI'] = portfolio_perf['NAV'] / portfolio_perf['CASHINVESTED']
+        self.df = df
 
-# Weighted IRR and MOIC
-df['WEIGHT'] = df['CASHINVESTED'] / df.groupby('PORTFOLIOCODE')['CASHINVESTED'].transform('sum')
-weighted_perf = df.groupby('PORTFOLIOCODE').apply(
-    lambda x: pd.Series({
-        'IRR': np.average(x['IRR'], weights=x['WEIGHT']),
-        'MOIC': np.average(x['MOIC'], weights=x['WEIGHT'])
-    })
-).reset_index()
+    def calculate_aggregates(self):
+        """
+        Aggregate and compute portfolio-level metrics.
+        """
+        df = self.df
 
-# Final merge
-final_perf = pd.merge(portfolio_perf, weighted_perf, on='PORTFOLIOCODE', how='left')
+        portfolio_perf = df.groupby('PORTFOLIOCODE').agg({
+            'CASHINVESTED': 'sum',
+            'CASHDISTRIBUTED': 'sum',
+            'NAV': 'sum'
+        }).reset_index()
 
-import ace_tools as tools; tools.display_dataframe_to_user(name="Final Portfolio Performance (Updated Inputs)", dataframe=final_perf)
+        portfolio_perf['TVPI'] = (portfolio_perf['CASHDISTRIBUTED'] + portfolio_perf['NAV']) / portfolio_perf['CASHINVESTED']
+        portfolio_perf['DPI'] = portfolio_perf['CASHDISTRIBUTED'] / portfolio_perf['CASHINVESTED']
+        portfolio_perf['RVPI'] = portfolio_perf['NAV'] / portfolio_perf['CASHINVESTED']
 
+        df['WEIGHT'] = df['CASHINVESTED'] / df.groupby('PORTFOLIOCODE')['CASHINVESTED'].transform('sum')
+        weighted_perf = df.groupby('PORTFOLIOCODE').apply(
+            lambda x: pd.Series({
+                'IRR': np.average(x['IRR'], weights=x['WEIGHT']),
+                'MOIC': np.average(x['MOIC'], weights=x['WEIGHT'])
+            })
+        ).reset_index()
+
+        final_perf = pd.merge(portfolio_perf, weighted_perf, on='PORTFOLIOCODE', how='left')
+        self.portfolio_perf = portfolio_perf
+        self.final_perf = final_perf
+
+    def plot_metrics(self):
+        """
+        Generate bar plots for IRR and MOIC by portfolio.
+        """
+        sorted_perf = self.final_perf.sort_values(by="IRR", ascending=False)
+
+        plt.figure(figsize=(10, 5))
+        plt.bar(sorted_perf['PORTFOLIOCODE'], sorted_perf['IRR'])
+        plt.title("Portfolio IRR by Fund")
+        plt.ylabel("Internal Rate of Return")
+        plt.xlabel("Portfolio Code")
+        plt.xticks(rotation=45)
+        plt.tight_layout()
+        plt.show()
+
+        plt.figure(figsize=(10, 5))
+        plt.bar(sorted_perf['PORTFOLIOCODE'], sorted_perf['MOIC'])
+        plt.title("Portfolio MOIC by Fund")
+        plt.ylabel("Multiple on Invested Capital")
+        plt.xlabel("Portfolio Code")
+        plt.xticks(rotation=45)
+        plt.tight_layout()
+        plt.show()
+
+if __name__ == '__main__':
+    analyzer = PortfolioPerformanceAnalyzer('holdings.csv', 'holdings_metrics.csv')
+    analyzer.load_data()
+    analyzer.calculate_aggregates()
+    analyzer.plot_metrics()

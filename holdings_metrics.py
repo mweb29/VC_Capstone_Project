@@ -94,17 +94,17 @@ def build_company_record(company_id):
     tvpi = round((total_dist + nav) / investment_amount, 4)
 
     return {
-        "company_id": company_id,
-        "investment_date": investment_date,
-        "investment_amount": investment_amount,
-        "distribution_dates": dist_dates,
-        "distribution_amounts": dist_amounts,
-        "valuation_date": val_date,
-        "current_nav": nav,
-        "irr": irr,
-        "moic": moic,
-        "dpi": dpi,
-        "tvpi": tvpi
+        "TICKER": company_id,
+        "INVESTMENT_DATE": investment_date,
+        "INVESTMENT_AMOUNT": investment_amount,
+        "DISTRIBUTION_DATES": dist_dates,
+        "DISTRIBUTION_AMOUNTS": dist_amounts,
+        "VALUATION_DATE": val_date,
+        "CURRENT_NAV": nav,
+        "IRR": irr,
+        "MOIC": moic,
+        "DPI": dpi,
+        "TVPI": tvpi
         #"history_date": # history
     }
 
@@ -122,9 +122,9 @@ def validate_performance(df):
             'current_nav', 'moic', 'dpi', and 'tvpi'.
     """
     for i, row in df.iterrows():
-        investment = row['investment_amount']
-        nav = row['current_nav']
-        distributions = sum(row['distribution_amounts'])
+        investment = row['INVESTMENT_AMOUNT']
+        nav = row['CURRENT_NAV']
+        distributions = sum(row['DISTRIBUTION_AMOUNTS'])
 
         # Recalculate metrics
         expected_moic = round((distributions + nav) / investment, 4)
@@ -132,7 +132,7 @@ def validate_performance(df):
         expected_tvpi = expected_moic  # TVPI and MOIC are equivalent
 
         # Pull from row
-        moic, dpi, tvpi = round(row['moic'], 4), round(row['dpi'], 4), round(row['tvpi'], 4)
+        moic, dpi, tvpi = round(row['MOIC'], 4), round(row['DPI'], 4), round(row['TVPI'], 4)
 
         # Validate
         assert np.isclose(moic, expected_moic, atol=0.01), f"MOIC mismatch at index {i}"

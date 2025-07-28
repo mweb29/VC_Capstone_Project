@@ -17,48 +17,56 @@ Assumptions:
 - Holdings include a 'PORTFOLIOCODE' field
 - All metrics are numeric and clean
 """
-
 import pandas as pd
 import numpy as np
+import importlib
+importlib.import_module("ace_tools")
 
-def compute_portfolio_performance(holdings_path='holdings.csv', metrics_path='holdings_metrics.csv'):
-    # Load data
-    holdings_df = pd.read_csv(holdings_path)
-    metrics_df = pd.read_csv(metrics_path)
+# Load the newly uploaded corrected files
+holdings_df = pd.read_csv("holdings.csv")
+metrics_df = pd.read_csv("holdings_metrics.csv")
 
-    # Merge to align company performance with portfolio mapping
-    df = pd.merge(metrics_df, holdings_df[['COMPANYID', 'PORTFOLIOCODE']], on='COMPANYID', how='left')
+# Merge using TICKER (holdings) <-> company_id (metrics)
+df = pd.merge(metrics_df, holdings_df[['TICKER', 'PORTFOLIOCODE']], left_on='company_id', right_on='TICKER', how='left')
 
-    # Ensure numeric columns
-    numeric_cols = ['MOIC', 'IRR', 'TVPI', 'DPI', 'RVPI', 'CASHINVESTED', 'CASHDISTRIBUTED', 'NAV']
-    df[numeric_cols] = df[numeric_cols].apply(pd.to_numeric, errors='coerce')
+# Rename and convert fields as needed
+df.rename(columns={
+    'irr': 'IRR',
+    'moic': 'MOIC',
+    'tvpi': 'TVPI',
+    'dpi': 'DPI',
+    'current_nav': 'NAV',
+    'investment_amount': 'CASHINVESTED',
+    'distribution_amounts': 'CASHDISTRIBUTED'
+}, inplace=True)
 
-    # Aggregate core values
-    portfolio_perf = df.groupby('PORTFOLIOCODE').agg({
-        'CASHINVESTED': 'sum',
-        'CASHDISTRIBUTED': 'sum',
-        'NAV': 'sum'
-    }).reset_index()
+# Ensure numeric columns are float
+numeric_cols = ['MOIC', 'IRR', 'TVPI', 'DPI', 'CASHINVESTED', 'CASHDISTRIBUTED', 'NAV']
+df[numeric_cols] = df[numeric_cols].apply(pd.to_numeric, errors='coerce')
 
-    # Derived performance ratios
-    portfolio_perf['TVPI'] = (portfolio_perf['CASHDISTRIBUTED'] + portfolio_perf['NAV']) / portfolio_perf['CASHINVESTED']
-    portfolio_perf['DPI'] = portfolio_perf['CASHDISTRIBUTED'] / portfolio_perf['CASHINVESTED']
-    portfolio_perf['RVPI'] = portfolio_perf['NAV'] / portfolio_perf['CASHINVESTED']
+# Aggregate to portfolio level
+portfolio_perf = df.groupby('PORTFOLIOCODE').agg({
+    'CASHINVESTED': 'sum',
+    'CASHDISTRIBUTED': 'sum',
+    'NAV': 'sum'
+}).reset_index()
 
-    # Weighted IRR and MOIC by invested capital
-    df['WEIGHT'] = df['CASHINVESTED'] / df.groupby('PORTFOLIOCODE')['CASHINVESTED'].transform('sum')
-    weighted_perf = df.groupby('PORTFOLIOCODE').apply(
-        lambda x: pd.Series({
-            'IRR': np.average(x['IRR'], weights=x['WEIGHT']),
-            'MOIC': np.average(x['MOIC'], weights=x['WEIGHT'])
-        })
-    ).reset_index()
+# Derived performance metrics
+portfolio_perf['TVPI'] = (portfolio_perf['CASHDISTRIBUTED'] + portfolio_perf['NAV']) / portfolio_perf['CASHINVESTED']
+portfolio_perf['DPI'] = portfolio_perf['CASHDISTRIBUTED'] / portfolio_perf['CASHINVESTED']
+portfolio_perf['RVPI'] = portfolio_perf['NAV'] / portfolio_perf['CASHINVESTED']
 
-    # Merge final result
-    final_perf = pd.merge(portfolio_perf, weighted_perf, on='PORTFOLIOCODE', how='left')
-    return final_perf
+# Weighted IRR and MOIC
+df['WEIGHT'] = df['CASHINVESTED'] / df.groupby('PORTFOLIOCODE')['CASHINVESTED'].transform('sum')
+weighted_perf = df.groupby('PORTFOLIOCODE').apply(
+    lambda x: pd.Series({
+        'IRR': np.average(x['IRR'], weights=x['WEIGHT']),
+        'MOIC': np.average(x['MOIC'], weights=x['WEIGHT'])
+    })
+).reset_index()
 
-# Example usage:
-if __name__ == '__main__':
-    summary = compute_portfolio_performance()
-    print(summary.head())
+# Final merge
+final_perf = pd.merge(portfolio_perf, weighted_perf, on='PORTFOLIOCODE', how='left')
+
+import ace_tools as tools; tools.display_dataframe_to_user(name="Final Portfolio Performance (Updated Inputs)", dataframe=final_perf)
+

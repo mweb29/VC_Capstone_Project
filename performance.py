@@ -109,3 +109,12 @@ if __name__ == '__main__':
     analyzer.load_data()
     analyzer.calculate_aggregates()
     analyzer.plot_metrics()
+
+
+"""
+Get the benchmark for that time period so we can see if the metrics are performing
+well relative to whatever benchmark we choose.
+
+Refactor, documentation, next steps
+Snowflake 
+"""

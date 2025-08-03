@@ -30,7 +30,7 @@ Example:
 
 import pandas as pd
 # Use the functions from countries_api.py so we do not have to rewrite functions
-from countries_api import json_output, connect_to_snowflake, upload_to_snowflake_country
+from APIs.countries_api import json_output, connect_to_snowflake, upload_to_snowflake_country
 
 def get_gics_sectors():
 # Load full GICS classification from GitHub Gist

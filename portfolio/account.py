@@ -45,6 +45,7 @@ import random
 import requests
 from faker import Faker
 from datetime import datetime
+import json
 
 fake = Faker()
 
@@ -78,35 +79,20 @@ lp_data = [
 ]
 
 def get_currency_info(country):
+    # Load currency info JSON
+    with open("JSON/currency_lookup.json", "r") as f:
+        currency_data = json.load(f)
+
     try:
-        if country == "Unknown":
+        if country == "Unknown" or country not in currency_data:
             return "USD", "US Dollar", 1.0
 
-        # Get currency code from restcountries
-        r = requests.get(f"https://restcountries.com/v3.1/name/{country}?fullText=true")
-        r.raise_for_status()
-        data = r.json()[0]
-        currency_code = list(data["currencies"].keys())[0]
-        currency_name = data["currencies"][currency_code]["name"]
-
-        # Check cache
-        if currency_code in currency_cache:
-            return currency_code, currency_name, currency_cache[currency_code]
-
-        # Use Frankfurter API
-        fx_url = f"https://api.frankfurter.app/latest?from={currency_code}&to=USD"
-        fx_res = requests.get(fx_url)
-        fx_res.raise_for_status()
-        fx_data = fx_res.json()
-        fx_to_usd = round(fx_data["rates"]["USD"], 4)
-
-        currency_cache[currency_code] = fx_to_usd
-        return currency_code, currency_name, fx_to_usd
+        info = currency_data[country]
+        return info["currency_code"], info["currency_name"], info["fx_to_usd"]
 
     except Exception as e:
         print(f"[WARNING] Failed to get FX for {country}: {e}")
         return "USD", "US Dollar", 1.0
-
 
 
 # 3. Generate Institutional Accounts
@@ -193,5 +179,6 @@ for i in range(25):
 if __name__ == "__main__":
     # Generate LP account data and export to CSV
     accounts_df = pd.DataFrame(institutional_accounts + individual_accounts)
-    #accounts_df.to_csv("accounts.csv", index=False)
-    print(accounts_df.head(10))  # Display first 10 rows for verification
+    accounts_df.to_csv("CSVs/accounts.csv", index=False)
+
+    # Need to export to SNOWFLAKE in realtime

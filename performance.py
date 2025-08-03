@@ -66,7 +66,6 @@ class PortfolioPerformanceAnalyzer:
 
         portfolio_perf['TVPI'] = (portfolio_perf['CASHDISTRIBUTED'] + portfolio_perf['NAV']) / portfolio_perf['CASHINVESTED']
         portfolio_perf['DPI'] = portfolio_perf['CASHDISTRIBUTED'] / portfolio_perf['CASHINVESTED']
-        portfolio_perf['RVPI'] = portfolio_perf['NAV'] / portfolio_perf['CASHINVESTED']
 
         df['WEIGHT'] = df['CASHINVESTED'] / df.groupby('PORTFOLIOCODE')['CASHINVESTED'].transform('sum')
         weighted_perf = df.groupby('PORTFOLIOCODE').apply(
@@ -108,7 +107,8 @@ if __name__ == '__main__':
     analyzer = PortfolioPerformanceAnalyzer('holdings.csv', 'holdings_metrics.csv')
     analyzer.load_data()
     analyzer.calculate_aggregates()
-    analyzer.plot_metrics()
+    print(analyzer.final_perf.head())
+    #analyzer.plot_metrics()
 
 
 """

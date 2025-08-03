@@ -59,7 +59,6 @@ def fetch_countries_data():
     pd.set_option('display.max_rows', 250)
     return df
 
-# (Optional) Save to JSON file
 def json_output(df, filename=None):
     """
     Saves a pandas DataFrame to a JSON file.

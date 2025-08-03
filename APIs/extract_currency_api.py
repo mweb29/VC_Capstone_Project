@@ -47,9 +47,10 @@ import json
 
 # List of countries from your LP and individual account scripts
 countries = list(set([
-    "Luxembourg", "United States", "Canada", "United Kingdom", "Germany", 
+    "United States", "Canada", "United Kingdom", "Germany", 
     "France", "Australia", "Netherlands", "Japan", "India", "Brazil"
 ]))
+
 
 def get_currency_info(country):
     """
@@ -60,20 +61,24 @@ def get_currency_info(country):
         if country == "Unknown":
             return "USD", "US Dollar", 1.0
 
-        r = requests.get(f"https://restcountries.com/v3.1/name/{country}")
+        # Get currency code from restcountries
+        r = requests.get(f"https://restcountries.com/v3.1/name/{country}?fullText=true")
         r.raise_for_status()
         data = r.json()[0]
         currency_code = list(data["currencies"].keys())[0]
         currency_name = data["currencies"][currency_code]["name"]
 
-        # FX rates - manually defined snapshot for consistency
-        fx_dict = {"USD": 1.0, "EUR": 1.1, "GBP": 1.3, "CAD": 0.74, "JPY": 0.0067}
-        fx_to_usd = fx_dict.get(currency_code, 1.0)
+        # Use Frankfurter API
+        fx_url = f"https://api.frankfurter.app/latest?from={currency_code}&to=USD"
+        fx_res = requests.get(fx_url)
+        fx_res.raise_for_status()
+        fx_data = fx_res.json()
+        fx_to_usd = round(fx_data["rates"]["USD"], 4)
 
         return currency_code, currency_name, fx_to_usd
 
     except Exception as e:
-        print(f"Warning: API failed for {country}: {e}")
+        print(f"[WARNING] Failed to get FX for {country}: {e}")
         return "USD", "US Dollar", 1.0
 
 def build_currency_json():
@@ -89,7 +94,7 @@ def build_currency_json():
             "fx_to_usd": fx
         }
 
-    with open("currency_lookup.json", "w") as f:
+    with open("JSON/currency_lookup.json", "w") as f:
         json.dump(cache, f, indent=2)
 
 if __name__ == "__main__":

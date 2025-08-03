@@ -189,12 +189,9 @@ for i in range(25):
         "Start Date": start_date
     })
 
-# 5. Combine both into one DataFrame
-accounts_df = pd.DataFrame(institutional_accounts + individual_accounts)
-accounts_df
-
 
 if __name__ == "__main__":
     # Generate LP account data and export to CSV
     accounts_df = pd.DataFrame(institutional_accounts + individual_accounts)
-    accounts_df.to_csv("accounts.csv", index=False)
+    #accounts_df.to_csv("accounts.csv", index=False)
+    print(accounts_df.head(10))  # Display first 10 rows for verification

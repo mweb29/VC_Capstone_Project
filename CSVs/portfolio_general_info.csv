@@ -1,0 +1,101 @@
+PORTFOLIOCODE,FIRM_NAME,FUND_NAME,STRATEGY,VINTAGE_YEAR,CLOSE_DATE,FUND_SIZE_MILLIONS,FUND_LOCATION,COUNTRY,BASECURRENCYCODE,PRODUCTCODE,PORTFOLIOCATEGORY,STRATEGY_ABBR,REGION_BLOCK
+FND0001,Redwood Partners,Redwood Partners Early Stage Fund III,Early Stage,2020,2020-04-05,394.59,Berlin,Germany,EUR,VC_EARLY_EU,Fund,EARLY,EU
+FND0002,Global Gate Capital,Global Gate Capital Early Stage Fund II,Early Stage,2016,2016-04-08,362.57,New York,United States,USD,VC_EARLY_NA,Fund,EARLY,NA
+FND0003,Photon Capital,Photon Capital Growth Fund II,Later Stage,2020,2020-04-15,3357.06,Tokyo,Japan,JPY,VC_LATE_AS,Fund,LATE,AS
+FND0004,Global Gate Capital,Global Gate Capital Flagship Fund III,General,2014,2014-04-25,703.91,London,United Kingdom,GBP,VC_GEN_EU,Fund,GEN,EU
+FND0005,Redwood Partners,Redwood Partners Flagship Fund III,General,2015,2015-01-24,851.31,Paris,France,EUR,VC_GEN_EU,Fund,GEN,EU
+FND0006,Redwood Partners,Redwood Partners Crossover Fund II,Later Stage,2014,2014-10-07,3818.29,Toronto,Canada,CAD,VC_LATE_NA,Fund,LATE,NA
+FND0007,Photon Capital,Photon Capital Opportunity Fund VII,General,2011,2011-02-13,633.57,Berlin,Germany,EUR,VC_GEN_EU,Fund,GEN,EU
+FND0008,BlueRock Ventures,BlueRock Ventures Select Fund IV,General,2013,2013-12-22,1077.64,Paris,France,EUR,VC_GEN_EU,Fund,GEN,EU
+FND0009,Photon Capital,Photon Capital Early Stage Fund V,Early Stage,2023,2023-05-21,375.26,Tokyo,Japan,JPY,VC_EARLY_AS,Fund,EARLY,AS
+FND0010,BlueRock Ventures,BlueRock Ventures Early Stage Fund V,Early Stage,2019,2019-06-13,248.52,San Francisco,United States,USD,VC_EARLY_NA,Fund,EARLY,NA
+FND0011,BlueRock Ventures,BlueRock Ventures Seed Fund IV,Early Stage,2023,2023-11-15,157.15,Tokyo,Japan,JPY,VC_EARLY_AS,Fund,EARLY,AS
+FND0012,Vertex Frontier Partners,Vertex Frontier Partners Crossover Fund IV,Later Stage,2014,2014-10-13,2447.99,Tokyo,Japan,JPY,VC_LATE_AS,Fund,LATE,AS
+FND0013,NextEdge Advisors,NextEdge Advisors Early Stage Fund VIII,Early Stage,2016,2016-03-21,196.79,New York,United States,USD,VC_EARLY_NA,Fund,EARLY,NA
+FND0014,Redwood Partners,Redwood Partners Select Fund II,General,2016,2016-09-09,1465.29,Seoul,South Korea,KRW,VC_GEN_AS,Fund,GEN,AS
+FND0015,Redwood Partners,Redwood Partners Growth Fund VIII,Later Stage,2018,2018-11-11,1446.21,Paris,France,EUR,VC_LATE_EU,Fund,LATE,EU
+FND0016,NextEdge Advisors,NextEdge Advisors Early Stage Fund VI,Early Stage,2020,2020-09-04,448.21,London,United Kingdom,GBP,VC_EARLY_EU,Fund,EARLY,EU
+FND0017,Vertex Frontier Partners,Vertex Frontier Partners Crossover Fund II,Later Stage,2013,2013-06-25,1646.2,London,United Kingdom,GBP,VC_LATE_EU,Fund,LATE,EU
+FND0018,BlueRock Ventures,BlueRock Ventures Opportunity Fund V,General,2010,2010-06-27,1521.76,New York,United States,USD,VC_GEN_NA,Fund,GEN,NA
+FND0019,Photon Capital,Photon Capital Growth Fund IV,Later Stage,2011,2011-12-16,5116.91,New York,United States,USD,VC_LATE_NA,Fund,LATE,NA
+FND0020,NextEdge Advisors,NextEdge Advisors Crossover Fund V,Later Stage,2012,2012-09-28,3426.38,Paris,France,EUR,VC_LATE_EU,Fund,LATE,EU
+FND0021,Photon Capital,Photon Capital Growth Fund IX,Later Stage,2014,2014-11-21,2493.68,Tokyo,Japan,JPY,VC_LATE_AS,Fund,LATE,AS
+FND0022,Photon Capital,Photon Capital Seed Fund V,Early Stage,2017,2017-01-19,321.57,Toronto,Canada,CAD,VC_EARLY_NA,Fund,EARLY,NA
+FND0023,Redwood Partners,Redwood Partners Growth Fund VII,Later Stage,2020,2020-04-03,5546.02,San Francisco,United States,USD,VC_LATE_NA,Fund,LATE,NA
+FND0024,Vertex Frontier Partners,Vertex Frontier Partners Seed Fund IX,Early Stage,2020,2020-04-18,152.92,Seoul,South Korea,KRW,VC_EARLY_AS,Fund,EARLY,AS
+FND0025,NextEdge Advisors,NextEdge Advisors Flagship Fund VIII,General,2013,2013-02-22,980.71,New York,United States,USD,VC_GEN_NA,Fund,GEN,NA
+FND0026,NextEdge Advisors,NextEdge Advisors Growth Fund III,Later Stage,2010,2010-01-13,4695.42,New York,United States,USD,VC_LATE_NA,Fund,LATE,NA
+FND0027,Photon Capital,Photon Capital Seed Fund IX,Early Stage,2024,2024-03-14,173.4,Seoul,South Korea,KRW,VC_EARLY_AS,Fund,EARLY,AS
+FND0028,Redwood Partners,Redwood Partners Opportunity Fund II,General,2022,2022-01-21,1798.97,New York,United States,USD,VC_GEN_NA,Fund,GEN,NA
+FND0029,Photon Capital,Photon Capital Seed Fund II,Early Stage,2022,2022-08-07,445.86,Seoul,South Korea,KRW,VC_EARLY_AS,Fund,EARLY,AS
+FND0030,Global Gate Capital,Global Gate Capital Seed Fund IX,Early Stage,2022,2022-08-10,269.2,Paris,France,EUR,VC_EARLY_EU,Fund,EARLY,EU
+FND0031,Photon Capital,Photon Capital Opportunity Fund VII #2,General,2013,2013-10-24,1140.76,San Francisco,United States,USD,VC_GEN_NA,Fund,GEN,NA
+FND0032,Summit Bridge Capital,Summit Bridge Capital Growth Fund IV,Later Stage,2017,2017-01-17,1320.45,London,United Kingdom,GBP,VC_LATE_EU,Fund,LATE,EU
+FND0033,IronHill Ventures,IronHill Ventures Early Stage Fund II,Early Stage,2019,2019-02-19,198.49,Tokyo,Japan,JPY,VC_EARLY_AS,Fund,EARLY,AS
+FND0034,Redwood Partners,Redwood Partners Opportunity Fund VII,General,2020,2020-05-07,1103.67,Toronto,Canada,CAD,VC_GEN_NA,Fund,GEN,NA
+FND0035,Horizon Growth Partners,Horizon Growth Partners Opportunity Fund III,General,2012,2012-08-11,1414.82,Paris,France,EUR,VC_GEN_EU,Fund,GEN,EU
+FND0036,NextEdge Advisors,NextEdge Advisors Growth Fund VI,Later Stage,2019,2019-02-18,2223.14,New York,United States,USD,VC_LATE_NA,Fund,LATE,NA
+FND0037,BlueRock Ventures,BlueRock Ventures Early Stage Fund VI,Early Stage,2019,2019-05-06,275.27,Toronto,Canada,CAD,VC_EARLY_NA,Fund,EARLY,NA
+FND0038,Vertex Frontier Partners,Vertex Frontier Partners Innovation Fund IV,Early Stage,2024,2024-11-04,475.57,Paris,France,EUR,VC_EARLY_EU,Fund,EARLY,EU
+FND0039,Redwood Partners,Redwood Partners Seed Fund VII,Early Stage,2024,2024-05-10,341.93,London,United Kingdom,GBP,VC_EARLY_EU,Fund,EARLY,EU
+FND0040,Horizon Growth Partners,Horizon Growth Partners Growth Fund VI,Later Stage,2017,2017-01-03,3537.14,Paris,France,EUR,VC_LATE_EU,Fund,LATE,EU
+FND0041,Summit Bridge Capital,Summit Bridge Capital Select Fund IX,General,2022,2022-11-09,493.9,London,United Kingdom,GBP,VC_GEN_EU,Fund,GEN,EU
+FND0042,Global Gate Capital,Global Gate Capital Expansion Fund II,Later Stage,2010,2010-02-23,5538.85,New York,United States,USD,VC_LATE_NA,Fund,LATE,NA
+FND0043,IronHill Ventures,IronHill Ventures Expansion Fund II,Later Stage,2012,2012-03-02,2233.03,Tokyo,Japan,JPY,VC_LATE_AS,Fund,LATE,AS
+FND0044,Photon Capital,Photon Capital Crossover Fund VIII,Later Stage,2013,2013-06-25,3887.44,New York,United States,USD,VC_LATE_NA,Fund,LATE,NA
+FND0045,NorthPoint Ventures,NorthPoint Ventures Innovation Fund VII,Early Stage,2018,2018-07-01,171.74,London,United Kingdom,GBP,VC_EARLY_EU,Fund,EARLY,EU
+FND0046,Photon Capital,Photon Capital Opportunity Fund IX,General,2012,2012-07-28,415.76,New York,United States,USD,VC_GEN_NA,Fund,GEN,NA
+FND0047,Photon Capital,Photon Capital Flagship Fund V,General,2015,2015-04-08,328.4,Paris,France,EUR,VC_GEN_EU,Fund,GEN,EU
+FND0048,BlueRock Ventures,BlueRock Ventures Opportunity Fund VII,General,2011,2011-06-21,911.29,Paris,France,EUR,VC_GEN_EU,Fund,GEN,EU
+FND0049,Redwood Partners,Redwood Partners Select Fund VII,General,2012,2012-01-04,1015.89,Paris,France,EUR,VC_GEN_EU,Fund,GEN,EU
+FND0050,BlueRock Ventures,BlueRock Ventures Select Fund II,General,2019,2019-07-19,633.71,New York,United States,USD,VC_GEN_NA,Fund,GEN,NA
+FND0051,Global Gate Capital,Global Gate Capital Early Stage Fund VII,Early Stage,2024,2024-06-14,127.99,Berlin,Germany,EUR,VC_EARLY_EU,Fund,EARLY,EU
+FND0052,BlueRock Ventures,BlueRock Ventures Expansion Fund VII,Later Stage,2011,2011-09-10,3667.57,Paris,France,EUR,VC_LATE_EU,Fund,LATE,EU
+FND0053,Horizon Growth Partners,Horizon Growth Partners Crossover Fund IV,Later Stage,2012,2012-07-22,4761.45,Berlin,Germany,EUR,VC_LATE_EU,Fund,LATE,EU
+FND0054,IronHill Ventures,IronHill Ventures Flagship Fund VII,General,2016,2016-05-10,662.66,San Francisco,United States,USD,VC_GEN_NA,Fund,GEN,NA
+FND0055,NextEdge Advisors,NextEdge Advisors Select Fund IV,General,2020,2020-09-16,1252.48,Berlin,Germany,EUR,VC_GEN_EU,Fund,GEN,EU
+FND0056,Redwood Partners,Redwood Partners Select Fund V,General,2018,2018-02-27,1442.4,Toronto,Canada,CAD,VC_GEN_NA,Fund,GEN,NA
+FND0057,Horizon Growth Partners,Horizon Growth Partners Early Stage Fund IX,Early Stage,2019,2019-01-02,197.94,London,United Kingdom,GBP,VC_EARLY_EU,Fund,EARLY,EU
+FND0058,Redwood Partners,Redwood Partners Opportunity Fund VIII,General,2016,2016-12-23,760.77,Berlin,Germany,EUR,VC_GEN_EU,Fund,GEN,EU
+FND0059,NorthPoint Ventures,NorthPoint Ventures Crossover Fund IV,Later Stage,2021,2021-02-25,3240.7,San Francisco,United States,USD,VC_LATE_NA,Fund,LATE,NA
+FND0060,Vertex Frontier Partners,Vertex Frontier Partners Select Fund IX,General,2010,2010-02-15,460.01,Berlin,Germany,EUR,VC_GEN_EU,Fund,GEN,EU
+FND0061,Vertex Frontier Partners,Vertex Frontier Partners Crossover Fund VIII,Later Stage,2019,2019-08-20,4260.03,Toronto,Canada,CAD,VC_LATE_NA,Fund,LATE,NA
+FND0062,NextEdge Advisors,NextEdge Advisors Early Stage Fund VI #2,Early Stage,2023,2023-05-25,198.9,Seoul,South Korea,KRW,VC_EARLY_AS,Fund,EARLY,AS
+FND0063,NextEdge Advisors,NextEdge Advisors Expansion Fund V,Later Stage,2013,2013-08-03,3854.18,Paris,France,EUR,VC_LATE_EU,Fund,LATE,EU
+FND0064,BlueRock Ventures,BlueRock Ventures Select Fund IV #2,General,2018,2018-03-05,693.01,New York,United States,USD,VC_GEN_NA,Fund,GEN,NA
+FND0065,Photon Capital,Photon Capital Seed Fund II #2,Early Stage,2022,2022-06-18,286.37,Tokyo,Japan,JPY,VC_EARLY_AS,Fund,EARLY,AS
+FND0066,Global Gate Capital,Global Gate Capital Flagship Fund VII,General,2022,2022-10-13,1046.86,San Francisco,United States,USD,VC_GEN_NA,Fund,GEN,NA
+FND0067,Global Gate Capital,Global Gate Capital Opportunity Fund IX,General,2018,2018-08-08,627.52,Berlin,Germany,EUR,VC_GEN_EU,Fund,GEN,EU
+FND0068,Global Gate Capital,Global Gate Capital Select Fund IV,General,2020,2020-12-06,1308.61,Tokyo,Japan,JPY,VC_GEN_AS,Fund,GEN,AS
+FND0069,Vertex Frontier Partners,Vertex Frontier Partners Seed Fund IX #2,Early Stage,2022,2022-02-21,325.74,San Francisco,United States,USD,VC_EARLY_NA,Fund,EARLY,NA
+FND0070,Summit Bridge Capital,Summit Bridge Capital Flagship Fund VIII,General,2016,2016-04-15,692.21,Toronto,Canada,CAD,VC_GEN_NA,Fund,GEN,NA
+FND0071,Global Gate Capital,Global Gate Capital Opportunity Fund VII,General,2011,2011-01-24,947.3,Seoul,South Korea,KRW,VC_GEN_AS,Fund,GEN,AS
+FND0072,Redwood Partners,Redwood Partners Growth Fund IV,Later Stage,2010,2010-04-07,5228.3,San Francisco,United States,USD,VC_LATE_NA,Fund,LATE,NA
+FND0073,NorthPoint Ventures,NorthPoint Ventures Flagship Fund VI,General,2020,2020-10-07,1029.65,New York,United States,USD,VC_GEN_NA,Fund,GEN,NA
+FND0074,NorthPoint Ventures,NorthPoint Ventures Expansion Fund II,Later Stage,2019,2019-03-10,1718.87,New York,United States,USD,VC_LATE_NA,Fund,LATE,NA
+FND0075,IronHill Ventures,IronHill Ventures Growth Fund V,Later Stage,2016,2016-12-07,1303.99,Tokyo,Japan,JPY,VC_LATE_AS,Fund,LATE,AS
+FND0076,Horizon Growth Partners,Horizon Growth Partners Crossover Fund VIII,Later Stage,2019,2019-10-26,1397.14,New York,United States,USD,VC_LATE_NA,Fund,LATE,NA
+FND0077,BlueRock Ventures,BlueRock Ventures Seed Fund IX,Early Stage,2024,2024-01-28,268.02,Toronto,Canada,CAD,VC_EARLY_NA,Fund,EARLY,NA
+FND0078,Global Gate Capital,Global Gate Capital Select Fund VI,General,2020,2020-12-05,822.58,Seoul,South Korea,KRW,VC_GEN_AS,Fund,GEN,AS
+FND0079,Vertex Frontier Partners,Vertex Frontier Partners Opportunity Fund V,General,2017,2017-12-19,622.07,Tokyo,Japan,JPY,VC_GEN_AS,Fund,GEN,AS
+FND0080,Horizon Growth Partners,Horizon Growth Partners Opportunity Fund VII,General,2013,2013-10-20,1101.83,Seoul,South Korea,KRW,VC_GEN_AS,Fund,GEN,AS
+FND0081,NextEdge Advisors,NextEdge Advisors Flagship Fund VII,General,2012,2012-04-12,1257.4,Seoul,South Korea,KRW,VC_GEN_AS,Fund,GEN,AS
+FND0082,IronHill Ventures,IronHill Ventures Expansion Fund VIII,Later Stage,2014,2014-09-07,1610.94,San Francisco,United States,USD,VC_LATE_NA,Fund,LATE,NA
+FND0083,Vertex Frontier Partners,Vertex Frontier Partners Seed Fund VI,Early Stage,2023,2023-08-26,106.9,Seoul,South Korea,KRW,VC_EARLY_AS,Fund,EARLY,AS
+FND0084,Global Gate Capital,Global Gate Capital Expansion Fund VII,Later Stage,2013,2013-11-19,2476.08,Paris,France,EUR,VC_LATE_EU,Fund,LATE,EU
+FND0085,Vertex Frontier Partners,Vertex Frontier Partners Select Fund III,General,2015,2015-05-10,601.68,Seoul,South Korea,KRW,VC_GEN_AS,Fund,GEN,AS
+FND0086,Photon Capital,Photon Capital Select Fund VI,General,2011,2011-04-07,1186.33,London,United Kingdom,GBP,VC_GEN_EU,Fund,GEN,EU
+FND0087,IronHill Ventures,IronHill Ventures Expansion Fund V,Later Stage,2019,2019-02-27,1776.47,Paris,France,EUR,VC_LATE_EU,Fund,LATE,EU
+FND0088,NorthPoint Ventures,NorthPoint Ventures Select Fund VI,General,2010,2010-05-02,1469.15,London,United Kingdom,GBP,VC_GEN_EU,Fund,GEN,EU
+FND0089,NorthPoint Ventures,NorthPoint Ventures Expansion Fund VI,Later Stage,2022,2022-02-28,1049.06,Seoul,South Korea,KRW,VC_LATE_AS,Fund,LATE,AS
+FND0090,NextEdge Advisors,NextEdge Advisors Opportunity Fund IX,General,2015,2015-01-09,1429.28,London,United Kingdom,GBP,VC_GEN_EU,Fund,GEN,EU
+FND0091,Redwood Partners,Redwood Partners Opportunity Fund IV,General,2017,2017-10-21,1348.49,New York,United States,USD,VC_GEN_NA,Fund,GEN,NA
+FND0092,IronHill Ventures,IronHill Ventures Select Fund V,General,2011,2011-02-18,1217.33,Berlin,Germany,EUR,VC_GEN_EU,Fund,GEN,EU
+FND0093,Global Gate Capital,Global Gate Capital Select Fund II,General,2017,2017-10-14,666.46,Paris,France,EUR,VC_GEN_EU,Fund,GEN,EU
+FND0094,Redwood Partners,Redwood Partners Early Stage Fund IV,Early Stage,2019,2019-11-03,162.82,Paris,France,EUR,VC_EARLY_EU,Fund,EARLY,EU
+FND0095,Redwood Partners,Redwood Partners Seed Fund VI,Early Stage,2016,2016-08-23,337.52,Tokyo,Japan,JPY,VC_EARLY_AS,Fund,EARLY,AS
+FND0096,Photon Capital,Photon Capital Flagship Fund V #2,General,2021,2021-12-28,844.84,Paris,France,EUR,VC_GEN_EU,Fund,GEN,EU
+FND0097,IronHill Ventures,IronHill Ventures Expansion Fund IV,Later Stage,2022,2022-07-04,3178.25,Berlin,Germany,EUR,VC_LATE_EU,Fund,LATE,EU
+FND0098,NorthPoint Ventures,NorthPoint Ventures Innovation Fund VI,Early Stage,2016,2016-05-20,399.58,London,United Kingdom,GBP,VC_EARLY_EU,Fund,EARLY,EU
+FND0099,Redwood Partners,Redwood Partners Flagship Fund IX,General,2021,2021-12-13,1431.21,Paris,France,EUR,VC_GEN_EU,Fund,GEN,EU
+FND0100,Redwood Partners,Redwood Partners Growth Fund II,Later Stage,2010,2010-12-11,3414.85,Tokyo,Japan,JPY,VC_LATE_AS,Fund,LATE,AS

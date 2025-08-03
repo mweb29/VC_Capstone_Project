@@ -151,12 +151,8 @@ def generate_synthetic_portfolio(n=100, seed=42):
 
     return pd.DataFrame(funds)
 
-# Generate updated portfolio
-portfolio_general_info_df = generate_synthetic_portfolio(n=100)
-portfolio_general_info_df
-
 
 if __name__ == "__main__":
     # Generate synthetic portfolio and export to CSV
     portfolio_general_info_df = generate_synthetic_portfolio(n=100)
-    portfolio_general_info_df.to_csv("portfolio_general_info.csv", index=False)
+    portfolio_general_info_df.to_csv("CSVs/portfolio_general_info.csv", index=False)

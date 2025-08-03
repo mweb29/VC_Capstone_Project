@@ -39,7 +39,6 @@
 # | Number of Funds | Number of VC funds this LP is invested in |
 # | Start Date | Inferred participation start date |
 
-!pip install faker
 
 import pandas as pd
 import random

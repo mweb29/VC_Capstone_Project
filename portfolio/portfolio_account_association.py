@@ -29,6 +29,10 @@
 import pandas as pd
 import random
 
+# Load portfolio general info and accounts data
+portfolio_general_info_df = pd.read_csv("CSVs/portfolio_general_info.csv")
+accounts_df = pd.read_csv("CSVs/accounts.csv")
+
 # 1. Prepare portfolio and account ID lists
 portfolio_codes = portfolio_general_info_df["PORTFOLIOCODE"].tolist()
 account_ids = accounts_df["Account ID"].tolist()
@@ -57,18 +61,19 @@ for _, row in accounts_df.iterrows():
             "ACCOUNTID": account_id
         })
 
-# 3. Create final mapping DataFrame
-portfolio_account_map_df = pd.DataFrame(mapping)
-portfolio_account_map_df
+# # 3. Create final mapping DataFrame
+# portfolio_account_map_df = pd.DataFrame(mapping)
+# portfolio_account_map_df
 
 
-# Count number of funds per account
-funds_per_account = portfolio_account_map_df.groupby("ACCOUNTID")["PORTFOLIOCODE"].nunique().reset_index()
-funds_per_account.columns = ["ACCOUNTID", "Num_Funds"]
-funds_per_account
+# # Count number of funds per account
+# funds_per_account = portfolio_account_map_df.groupby("ACCOUNTID")["PORTFOLIOCODE"].nunique().reset_index()
+# funds_per_account.columns = ["ACCOUNTID", "Num_Funds"]
+# funds_per_account
 
 
 if __name__ == "__main__":
     # Map accounts to portfolios and export to CSV
     portfolio_account_map_df = pd.DataFrame(mapping)
-    portfolio_account_map_df.to_csv("portfolio_account_map.csv", index=False)
+    portfolio_account_map_df.to_csv("CSVs/portfolio_account_map.csv", index=False)
+

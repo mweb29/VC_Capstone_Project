@@ -1,9 +1,6 @@
 # price last month, price this month --> performance metrics
 # do this for each company in the portfolio and aggregate the results
 
-# could just say that the majority of the portfolio companies increased in value
-# so we select some random value to show that increase
-
 # portfolio_performance.py
 """
 This script computes and visualizes portfolio-level performance metrics using synthetic holdings and performance data.
@@ -104,7 +101,7 @@ class PortfolioPerformanceAnalyzer:
         plt.show()
 
 if __name__ == '__main__':
-    analyzer = PortfolioPerformanceAnalyzer('holdings.csv', 'holdings_metrics.csv')
+    analyzer = PortfolioPerformanceAnalyzer('CSVs/holdings.csv', 'CSVs/holdings_metrics.csv')
     analyzer.load_data()
     analyzer.calculate_aggregates()
     print(analyzer.final_perf.head())

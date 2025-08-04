@@ -1,49 +1,46 @@
-# # Portfolio General Info
-#
-#
-# ### Portfolio Generation Logic
-#
-# This module generates a synthetic **venture capital fund-level dataset** for use in fact sheets, LP reporting, and simulation.  
-# It mimics enriched PitchBook-style data, maintaining internal consistency across firm, strategy, region, currency, and naming conventions.
-#
-# ---
-#
-# ### Processing Steps
-#
-# | Step | Description |
-# |------|-------------|
-# | 1 | Simulates 100 funds across synthetic VC firms (e.g., Horizon Growth Partners, IronHill Ventures) |
-# | 2 | Assigns fund strategy (`Early`, `General`, `Later`) randomly across firms |
-# | 3 | Generates `VINTAGE_YEAR` and aligns `CLOSE_DATE` within that year |
-# | 4 | Randomly selects `FUND_LOCATION` and infers `COUNTRY`, `REGION_BLOCK`, and `BASECURRENCYCODE` |
-# | 5 | Computes `FUND_SIZE` based on strategy, country, and scaling rules (e.g., U.S. funds are 20% larger) |
-# | 6 | Constructs a unique `FUND_NAME` using firm, strategy, and suffix (e.g., “Photon Capital Innovation Fund IV”) |
-# | 7 | Assigns unique `PORTFOLIOCODE` (e.g., `FND0001`) for internal tracking |
-# | 8 | Generates `PRODUCTCODE` based on strategy and region (e.g., `VC_EARLY_NA`) |
-# | 9 | Returns final dataset as `portfolio_general_info_df` with full metadata for integration |
-#
-# ---
-#
-# ### Output Schema: `portfolio_general_info_df`
-#
-# | Column              | Description |
-# |---------------------|-------------|
-# | `PORTFOLIOCODE`     | Unique fund ID (e.g., `FND0001`) |
-# | `FIRM_NAME`         | Synthetic VC firm name (e.g., `Photon Capital`) |
-# | `FUND_NAME`         | Full fund name with suffix (e.g., `Photon Capital Innovation Fund IV`) |
-# | `STRATEGY`          | Fund strategy: `Early Stage`, `General`, or `Later Stage` |
-# | `VINTAGE_YEAR`      | Launch year of the fund |
-# | `CLOSE_DATE`        | Date the fund closed (format: `YYYY-MM-DD`) |
-# | `FUND_SIZE_MILLIONS`| Committed capital in millions of local currency |
-# | `FUND_LOCATION`     | City or hub where the fund is based |
-# | `COUNTRY`           | Country corresponding to the location |
-# | `BASECURRENCYCODE`  | Currency code (e.g., `USD`, `EUR`) |
-# | `PRODUCTCODE`       | Internal product group code (e.g., `VC_EARLY_AS`, `VC_GEN_NA`) |
-# | `PORTFOLIOCATEGORY` | Always set to `"Fund"` |
-# | `STRATEGY_ABBR`     | Short code for strategy (e.g., `EARLY`, `GEN`, `LATE`) |
-# | `REGION_BLOCK`      | Geographic block (e.g., `NA`, `EU`, `AS`, `GL`) |
-#
-# ---
+"""
+### Portfolio Generation Logic
+
+This module generates a synthetic **venture capital fund-level dataset** for use in fact sheets, LP reporting, and simulation.  
+It mimics enriched PitchBook-style data, maintaining internal consistency across firm, strategy, region, currency, and naming conventions.
+
+---
+
+### Processing Steps
+
+| Step | Description |
+|------|-------------|
+| 1 | Simulates 100 funds across synthetic VC firms (e.g., Horizon Growth Partners, IronHill Ventures) |
+| 2 | Assigns fund strategy (`Early`, `General`, `Later`) randomly across firms |
+| 3 | Generates `VINTAGE_YEAR` and aligns `CLOSE_DATE` within that year |
+| 4 | Randomly selects `FUND_LOCATION` and infers `COUNTRY`, `REGION_BLOCK`, and `BASECURRENCYCODE` |
+| 5 | Computes `FUND_SIZE` based on strategy, country, and scaling rules (e.g., U.S. funds are 20% larger) |
+| 6 | Constructs a unique `FUND_NAME` using firm, strategy, and suffix (e.g., “Photon Capital Innovation Fund IV”) |
+| 7 | Assigns unique `PORTFOLIOCODE` (e.g., `FND0001`) for internal tracking |
+| 8 | Generates `PRODUCTCODE` based on strategy and region (e.g., `VC_EARLY_NA`) |
+| 9 | Returns final dataset as `portfolio_general_info_df` with full metadata for integration |
+
+---
+
+### Output Schema: `portfolio_general_info_df`
+
+| Column              | Description |
+|---------------------|-------------|
+| `PORTFOLIOCODE`     | Unique fund ID (e.g., `FND0001`) |
+| `FIRM_NAME`         | Synthetic VC firm name (e.g., `Photon Capital`) |
+| `FUND_NAME`         | Full fund name with suffix (e.g., `Photon Capital Innovation Fund IV`) |
+| `STRATEGY`          | Fund strategy: `Early Stage`, `General`, or `Later Stage` |
+| `VINTAGE_YEAR`      | Launch year of the fund |
+| `CLOSE_DATE`        | Date the fund closed (format: `YYYY-MM-DD`) |
+| `FUND_SIZE_MILLIONS`| Committed capital in millions of local currency |
+| `FUND_LOCATION`     | City or hub where the fund is based |
+| `COUNTRY`           | Country corresponding to the location |
+| `BASECURRENCYCODE`  | Currency code (e.g., `USD`, `EUR`) |
+| `PRODUCTCODE`       | Internal product group code (e.g., `VC_EARLY_AS`, `VC_GEN_NA`) |
+| `PORTFOLIOCATEGORY` | Always set to `"Fund"` |
+| `STRATEGY_ABBR`     | Short code for strategy (e.g., `EARLY`, `GEN`, `LATE`) |
+| `REGION_BLOCK`      | Geographic block (e.g., `NA`, `EU`, `AS`, `GL`) |
+"""
 
 import random
 import pandas as pd

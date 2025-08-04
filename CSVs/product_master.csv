@@ -1,0 +1,10 @@
+PRODUCTCODE,PRODUCTNAME,STRATEGY,VEHICLECATEGORY,VEHICLETYPE,ASSETCLASS,SHARECLASS,REGION_BLOCK
+VC_EARLY_AS,Assette Early Stage Fund I,Early Stage,Pooled,Commingled Fund,Venture Capital,Offshore,AS
+VC_EARLY_EU,Assette Early Stage Fund I,Early Stage,Pooled,Commingled Fund,Venture Capital,Offshore,EU
+VC_EARLY_NA,Assette Early Stage Fund III,Early Stage,Segregated,Separate Account,Venture Capital,Institutional,NA
+VC_GEN_AS,Assette Venture Capital Fund III,Venture Capital,Pooled,Commingled Fund,Venture Capital,Institutional,AS
+VC_GEN_EU,Assette Venture Capital Fund III,Venture Capital,Segregated,Separate Account,Venture Capital,Institutional,EU
+VC_GEN_NA,Assette Venture Capital Fund I,Venture Capital,Pooled,Commingled Fund,Venture Capital,Institutional,NA
+VC_LATE_AS,Assette Growth Equity Fund II,Growth Equity,Pooled,Commingled Fund,Venture Capital,Institutional,AS
+VC_LATE_EU,Assette Growth Equity Fund II,Growth Equity,Segregated,Separate Account,Venture Capital,Institutional,EU
+VC_LATE_NA,Assette Growth Equity Fund I,Growth Equity,Pooled,Commingled Fund,Venture Capital,Institutional,NA

@@ -36,6 +36,9 @@
 import pandas as pd
 import random
 
+# Load in the portfolio general info DataFrame
+portfolio_general_info_df = pd.read_csv("CSVs/portfolio_general_info.csv")
+
 # 1. Strategy & Region Mapping
 strategy_abbr = {"Early Stage": "EARLY", "General": "GEN", "Later Stage": "LATE"}
 strategy_name_map = {
@@ -98,4 +101,4 @@ product_master_df
 if __name__ == "__main__":
     # Generate product master metadata and export to CSV
     product_master_df = pd.DataFrame(product_rows)
-    product_master_df.to_csv("product_master.csv", index=False)
+    product_master_df.to_csv("CSVs/product_master.csv", index=False)

@@ -50,9 +50,9 @@ today = datetime.today()
 
 vc_exit_events = []
 
-# Load or generate holdings_df (should already exist in pipeline)
-# Example: holdings_df = pd.read_csv("synthetic_holdings.csv")
-# Must contain: PORTFOLIOCODE, TICKER, ISSUENAME
+# Load holdings DataFrame and portfolio general info DataFrame
+holdings_df = pd.read_csv("CSVs/holdings.csv")
+portfolio_general_info_df = pd.read_csv("CSVs/portfolio_general_info.csv")
 
 for _, row in portfolio_general_info_df.iterrows():
     fund_id = row["PORTFOLIOCODE"]
@@ -118,4 +118,5 @@ vc_exit_df = pd.DataFrame(vc_exit_events)
 if __name__ == "__main__":
     # Simulate exit events and export to CSV
     vc_exit_df = pd.DataFrame(vc_exit_events)
-    vc_exit_df.to_csv("vc_exit.csv", index=False)
+    #vc_exit_df.to_csv("vc_exit.csv", index=False)
+    print(vc_exit_df.head())  # Display first few rows for verification 

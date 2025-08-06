@@ -47,10 +47,13 @@ import numpy as np
 import random
 import yfinance as yf
 from datetime import datetime
-from IPython.display import display, HTML
 
 random.seed(42)
 np.random.seed(42)
+
+# Bring in the information
+df_benchmark_characteristics = pd.read_csv("CSVs/df_benchmark_characteristics.csv")
+df_benchmark_general = pd.read_csv("CSVs/df_benchmark_general.csv")
 
 # Mapping: BENCHMARK_CODE -> INCEPTION_YEAR
 INCEPTION_MAP = df_benchmark_characteristics.drop_duplicates("BENCHMARK_CODE") \
@@ -179,8 +182,10 @@ df_benchmark_performance = pd.DataFrame(performance_records)[[
 ]]
 
 print("\nBENCHMARK_PERFORMANCE")
-print(df_benchmark_performance.head)
+print(df_benchmark_performance.head())
 
+
+df_benchmark_performance.to_csv("CSVs/df_benchmark_performance.csv", index=False)
 
 # -- Snowflake SQL table creation
 
@@ -195,3 +200,14 @@ print(df_benchmark_performance.head)
 
 #     FOREIGN KEY (BENCHMARK_CODE) REFERENCES BENCHMARK_GENERAL_INFORMATION(BENCHMARK_CODE)
 # );
+
+
+"""
+1 Failed download:
+['^GSPC']: Timeout('Failed to perform, curl: (28) Operation timed out after 10001 
+milliseconds with 70715 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.')
+
+This is the error that gets thrown if you are offline due to the connection to 
+the yfinance API. Would we quickly be able to get this information as a CSV
+just in case there is a problem in the future?
+"""

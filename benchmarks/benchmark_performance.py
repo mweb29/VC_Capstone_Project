@@ -179,7 +179,7 @@ df_benchmark_performance = pd.DataFrame(performance_records)[[
 ]]
 
 print("\nBENCHMARK_PERFORMANCE")
-display(HTML(df_benchmark_performance.head(50).to_html(index=False)))
+print(df_benchmark_performance.head)
 
 
 # -- Snowflake SQL table creation

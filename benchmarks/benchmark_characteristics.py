@@ -34,12 +34,13 @@ import pandas as pd
 import numpy as np
 import random
 import yfinance as yf
-from IPython.display import display, HTML
 from datetime import datetime
 
 # Ensure reproducibility
 random.seed(42)
 np.random.seed(42)
+
+df_benchmark_general = pd.read_csv("CSVs/df_benchmark_general.csv")
 
 BENCHMARK_CODES = df_benchmark_general["BENCHMARK_CODE"].tolist()
 BENCHMARK_NAMES = df_benchmark_general["BENCHMARK_NAME"].tolist()
@@ -52,6 +53,8 @@ UNIT_MAP = {
     "StdDevIRR":  "%",
     "NumSecurities": "#"
 }
+
+# SHOULD THESE BE CALLS TO OUR APIS!!!!!!
 
 CURRENCY_CODES = ["USD", "EUR", "CAD", "JPY", "GBP"]
 CURRENCY_WEIGHTS = [0.80, 0.05, 0.05, 0.05, 0.05]
@@ -159,7 +162,10 @@ for bench_code, bench_name in zip(BENCHMARK_CODES, BENCHMARK_NAMES):
 
 df_benchmark_characteristics = pd.DataFrame(char_records)
 print("\nBENCHMARK_CHARACTERISTICS")
-display(HTML(df_benchmark_characteristics.to_html(index=False)))
+print(df_benchmark_characteristics.head())
+
+df_benchmark_characteristics.to_csv("CSVs/df_benchmark_characteristics.csv", index=False)
+
 
 # -- Snowflake SQL table creation
 

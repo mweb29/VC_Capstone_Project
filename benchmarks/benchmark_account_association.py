@@ -1,7 +1,11 @@
 """
-The `BENCHMARK_ACCOUNT_ASSOCIATION` table defines the relationship between **accounts** and the **benchmarks** they are evaluated against. This association layer serves as the **join table** that connects account-level data with benchmark-level return and characteristic information.
+The `BENCHMARK_ACCOUNT_ASSOCIATION` table defines the relationship between
+accounts and the benchmarks they are evaluated against. This association
+layer serves as the **join table** that connects account-level data with 
+benchmark-level return and characteristic information.
 
-Each row links an account (identified by `ACCOUNT_ID`) to one of its assigned benchmarks, with an ordinal `RANK` indicating priority.
+Each row links an account (identified by `ACCOUNT_ID`) to one of its assigned
+ benchmarks, with an ordinal `RANK` indicating priority.
 
 ---
 
@@ -13,7 +17,7 @@ Each row links an account (identified by `ACCOUNT_ID`) to one of its assigned be
 
 ---
 
-| Field            | Description                                                    |
+| Field            | Description                                                   |
 |------------------|---------------------------------------------------------------|
 | `ACCOUNT_ID`     | Internal code for the account (FK to `ACCOUNTS_MASTER` table) |
 | `BENCHMARK_CODE` | Reference to a benchmark (e.g., `PB_EU_HC`)                   |
@@ -21,14 +25,19 @@ Each row links an account (identified by `ACCOUNT_ID`) to one of its assigned be
 
 ---
 
-**Notes:**
-- This table enables flexible benchmarking: an account can be compared against multiple benchmarks, supporting composite benchmarking, relative performance reporting, and peer analysis.
-- There are no duplicate (`ACCOUNT_ID`, `BENCHMARK_CODE`) pairs—each association is unique.
+Notes:
+- This table enables flexible benchmarking: an account can be compared against 
+multiple benchmarks, supporting composite benchmarking, relative performance 
+reporting, and peer analysis.
+- There are no duplicate (`ACCOUNT_ID`, `BENCHMARK_CODE`) pairs—each 
+association is unique.
 """
 
 import pandas as pd
 import random
-from IPython.display import display, HTML
+
+# Import the necessary information
+df_benchmark_general = pd.read_csv("CSVs/df_benchmark_general.csv")
 
 # 1. Simulate 50 account IDs (ACC0001, ACC0002, ...)
 NUM_ACCOUNTS = 50
@@ -55,12 +64,11 @@ df_benchmark_account_association = pd.DataFrame(assoc_rows)
 if df_benchmark_account_association.duplicated(subset=["ACCOUNT_ID", "BENCHMARK_CODE"]).any():
     raise ValueError("Duplicate ACCOUNT_ID–BENCHMARK_CODE pairs found!")
 
-# 5. Show all rows in the notebook output
-pd.set_option('display.max_rows', None)
-
 # Display the full association table
 print("BENCHMARK_ACCOUNT_ASSOCIATION")
-display(HTML(df_benchmark_account_association.to_html(index=False)))
+print(df_benchmark_account_association.head())
+
+df_benchmark_account_association.to_csv("CSVs/df_benchmark_account_association.csv", index=False)
 
 
 # -- Snowflake SQL table creation

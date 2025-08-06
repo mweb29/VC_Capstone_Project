@@ -117,4 +117,4 @@ if __name__ == "__main__":
     #print(df_holdings.head())
 
     # Optional: save to CSV or integrate into Snowflake pipeline
-    df_holdings.to_csv("holdings.csv", index=False)
+    df_holdings.to_csv("CSVs/holdings.csv", index=False)

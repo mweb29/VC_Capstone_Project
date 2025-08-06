@@ -160,12 +160,12 @@ def generate_portfolio_company_financials(n=100):
 if __name__ == "__main__":
     # 100 has to be entered so that the company names are coming over correctly
     # from the holdings module
-    holdings_df = pd.read_csv("holdings.csv")
+    holdings_df = pd.read_csv("CSVs/holdings.csv")
     metrics_df = generate_portfolio_company_financials(holdings_df)
 
     # Run the validation
     validate_performance(metrics_df)
 
     # Save to CSV for further use
-    metrics_df.to_csv('holdings_metrics.csv', index=False)
+    metrics_df.to_csv('CSVs/holdings_metrics.csv', index=False)
     

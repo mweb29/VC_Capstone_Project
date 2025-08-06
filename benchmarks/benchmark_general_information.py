@@ -41,7 +41,6 @@ import pandas as pd
 import numpy as np
 import random
 import re
-from IPython.display import display, HTML
 
 # Ensure reproducibility
 random.seed(42)
@@ -153,15 +152,10 @@ df_benchmark_general = pd.DataFrame({
     "BENCHMARK_NAME":  BENCHMARK_NAMES
 })
 
-# Render as HTML table with UPPER_SNAKE_CASE table name
-html = df_benchmark_general.to_html(index=False, classes="mytable")
-styled = f"""
-<style>
-  .mytable th {{ text-align: center !important; }}
-  .mytable td {{ text-align: left   !important; }}
-</style>
-{html}
-"""
 
 print("BENCHMARK_GENERAL_INFORMATION")
-display(HTML(styled))
+print(df_benchmark_general.head())
+
+df_benchmark_general.to_csv("CSVs/df_benchmark_general.csv", index=False)
+
+print("Completed")

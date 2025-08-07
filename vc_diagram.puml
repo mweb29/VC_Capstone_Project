@@ -1,0 +1,155 @@
+@startuml VC_Diagram
+
+' ───── Class Definitions (Tables) ─────
+
+class ACCOUNT {
+  ACCOUNT_ID : string
+  INVESTOR_TYPE : string
+  ACCOUNT_NAME : string
+  TYPE : string
+  COUNTRY : string
+  ACCOUNT_CURRENCY : string
+  CURRENCY_NAME : string
+  FX_TO_USD : float
+  COMMITTED_CAPITAL_LOCAL : float
+  COMMITTED_CAPITAL_USD : float
+  NUMBER_OF_FUNDS : int
+  NAV_USD : float
+  START_DATE : date
+}
+
+class PORTFOLIO_GENERAL_INFO {
+  PORTFOLIO_CODE : string
+  FIRM_NAME : string
+  FUND_NAME : string
+  STRATEGY : string
+  VINTAGE_YEAR : int
+  CLOSE_DATE : date
+  FUND_SIZE_MILLIONS : float
+  FUND_LOCATION : string
+  COUNTRY : string
+  BASE_CURRENCY_CODE : string
+  PRODUCT_CODE : string
+  PORTFOLIO_CATEGORY : string
+  STRATEGY_ABBR : string
+  REGION_BLOCK : string
+}
+
+class PORTFOLIO_ACCOUNT_ASSOCIATION {
+  PORTFOLIO_CODE : string
+  ACCOUNT_ID : string
+}
+
+class PERFORMANCE {
+  PORTFOLIO_CODE : string
+  CASH_INVESTED : float
+  CASH_DISTRIBUTED : float
+  NAV : float
+  TVPI : float
+  DPI : float
+  IRR : float
+  MOIC : float
+}
+
+class HOLDINGS {
+  PORTFOLIO_CODE : string
+  TICKER : string
+  ISSUE_NAME : string
+}
+
+class HOLDINGS_METRICS {
+  TICKER : string
+  INVESTMENT_DATE : date
+  INVESTMENT_AMOUNT : float
+  CURRENT_NAV : float
+  IRR : float
+  MOIC : float
+  DPI : float
+  TVPI : float
+}
+
+class EXIT {
+  PORTFOLIO_CODE : string
+  TICKER : string
+  COMPANY : string
+  EXIT_TYPE : string
+  ACQUIRER_TYPE : string
+  MOIC : float
+  EXITVALUE_MILLION_USD : float
+  EXIT_DATE : date
+}
+
+class PRODUCT_MASTER {
+  PRODUCT_CODE : string
+  PRODUCT_NAME : string
+  STRATEGY : string
+  VEHICLE_CATEGORY : string
+  VEHICLE_TYPE : string
+  ASSET_CLASS : string
+  SHARE_CLASS : string
+  REGION_BLOCK : string
+}
+
+class FUND_MANAGER_DETAILS {
+  PORTFOLIO_CODE : string
+  MANAGER_ID : string
+  MANAGER_NAME : string
+  POSITION : string
+  RANK : int
+  START_DATE_ON_FUND : date
+  END_DATE_ON_FUND : date
+  YEARS_ON_FUND : float
+  TOTAL_EXPERIENCE_YEARS : float
+}
+
+class BENCHMARKGENERALINFORMATION {
+  BENCHMARK_CODE : string
+  BENCHMARK_NAME : string
+}
+
+class BENCHMARK_CHARACTERISTICS {
+  BENCHMARK_CODE : string
+  INCEPTION_YEAR : int
+  CURRENCY_CODE : string
+  CURRENCY : string
+  CATEGORY : string
+  CATEGORY_NAME : string
+  CHARACTERISTIC_NAME : string
+  STATISTIC_TYPE : string
+  UNIT : string
+  CHARACTERISTIC_VALUE : float
+  HISTORY_DATE : date
+}
+
+class BENCHMARK_PERFORMANCE {
+  BENCHMARK_CODE : string
+  PERFORMANCE_DATA_TYPE : string
+  CURRENCY_CODE : string
+  CURRENCY : string
+  PERFORMANCE_FREQUENCY : string
+  VALUE : float
+  HISTORY_DATE : date
+}
+
+class BENCHMARK_ACCOUNT_ASSOCIATION {
+  ACCOUNT_ID : string
+  BENCHMARK_CODE : string
+  RANK : int
+}
+
+' ───── Relationship Definitions (foreign keys + conceptual links) ─────
+
+ACCOUNT --> PORTFOLIO_ACCOUNT_ASSOCIATION : maps
+PORTFOLIO_GENERAL_INFO --> PORTFOLIO_ACCOUNT_ASSOCIATION : maps
+PORTFOLIO_GENERAL_INFO --> PERFORMANCE : contains
+PORTFOLIO_GENERAL_INFO --> HOLDINGS : holds
+PORTFOLIO_GENERAL_INFO --> EXIT : exits
+PORTFOLIO_GENERAL_INFO --> PRODUCT_MASTER : uses
+PORTFOLIO_GENERAL_INFO --> FUND_MANAGER_DETAILS : tracks
+HOLDINGS --> HOLDINGS_METRICS : values
+ACCOUNT --> BENCHMARK_ACCOUNT_ASSOCIATION : maps
+BENCHMARKGENERALINFORMATION --> BENCHMARK_CHARACTERISTICS : defines
+BENCHMARKGENERALINFORMATION --> BENCHMARK_PERFORMANCE : triggers
+BENCHMARKGENERALINFORMATION --> BENCHMARK_ACCOUNT_ASSOCIATION : contains
+
+@enduml

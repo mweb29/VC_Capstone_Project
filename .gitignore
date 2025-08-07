@@ -1,0 +1,36 @@
+# === PYTHON ===
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# === ENVIRONMENT FILES ===
+.env
+.env.*
+
+# === JUPYTER ===
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# === IDE SETTINGS ===
+.vscode/
+.idea/
+
+# === OS FILES ===
+.DS_Store
+Thumbs.db
+
+# === CSV OUTPUTS ===
+/CSVs/*.csv
+
+# === JSON ARTIFACTS ===
+/JSON/*.json
+
+# === LOGS / TEMP FILES ===
+*.log
+logs/
+tmp/

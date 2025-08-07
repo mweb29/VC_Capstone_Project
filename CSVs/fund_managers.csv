@@ -1,0 +1,201 @@
+FundID,ManagerID,ManagerName,Position,Rank,YearsOnFund,YearsExperience
+FUND0001,MNGR021,Brayden Ellis,Managing Partner,1,11,16
+FUND0001,MNGR026,Naomi Rice,Investment Partner,2,6,15
+FUND0002,MNGR006,Sara Watson,Principal,1,23,29
+FUND0002,MNGR023,Ellen Fisher,Principal,2,2,16
+FUND0003,MNGR001,Gilbert Jackson,Principal,1,16,20
+FUND0003,MNGR003,Tracy Porter,Principal,2,23,26
+FUND0004,MNGR039,Maureen White,Principal,1,3,16
+FUND0004,MNGR070,Andy Watkins,Managing Partner,2,5,29
+FUND0005,MNGR063,Tyrone Armstrong,Investment Partner,1,3,15
+FUND0005,MNGR022,Alexis Knight,Managing Partner,2,7,17
+FUND0006,MNGR059,Mitchell Palmer,Investment Partner,1,7,29
+FUND0006,MNGR039,Maureen White,Principal,2,9,16
+FUND0007,MNGR078,Sebastian Nichols,Principal,1,15,22
+FUND0007,MNGR071,Victor Boyd,Investment Partner,2,5,21
+FUND0008,MNGR028,Lee Phillips,Managing Partner,1,18,23
+FUND0008,MNGR069,Lauren Newman,Managing Partner,2,2,22
+FUND0009,MNGR011,Vivan Miles,Principal,1,2,23
+FUND0009,MNGR053,Micheal Wood,Managing Partner,2,15,28
+FUND0010,MNGR002,Bradley Banks,Investment Partner,1,10,27
+FUND0010,MNGR047,Kenneth Medina,Principal,2,5,29
+FUND0011,MNGR038,George White,Principal,1,17,28
+FUND0011,MNGR007,Carole Jennings,Principal,2,3,15
+FUND0012,MNGR066,Virgil Jenkins,Managing Partner,1,17,25
+FUND0012,MNGR030,Bryan Hawkins,Principal,2,13,15
+FUND0013,MNGR054,Claude Perez,Managing Partner,1,4,23
+FUND0013,MNGR036,Joy Stanley,Managing Partner,2,9,19
+FUND0014,MNGR061,Andrew Lane,Managing Partner,1,3,21
+FUND0014,MNGR015,Kaylee Mitchell,Principal,2,6,21
+FUND0015,MNGR067,Don Meyer,Managing Partner,1,10,19
+FUND0015,MNGR052,Yolanda Burke,Managing Partner,2,26,30
+FUND0016,MNGR004,Jo Ferguson,Principal,1,12,20
+FUND0016,MNGR030,Bryan Hawkins,Investment Partner,2,1,15
+FUND0017,MNGR069,Lauren Newman,Principal,1,12,22
+FUND0017,MNGR031,Zachary Miles,Principal,2,9,27
+FUND0018,MNGR031,Zachary Miles,Managing Partner,1,3,27
+FUND0018,MNGR050,Robin Lynch,Principal,2,15,29
+FUND0019,MNGR054,Claude Perez,Principal,1,1,23
+FUND0019,MNGR006,Sara Watson,Principal,2,4,29
+FUND0020,MNGR035,Mason Richards,Investment Partner,1,11,19
+FUND0020,MNGR056,Flenn Mills,Managing Partner,2,6,25
+FUND0021,MNGR079,Alfred Davis,Investment Partner,1,4,17
+FUND0021,MNGR058,Julian Wilson,Principal,2,19,22
+FUND0022,MNGR024,Peggy Fox,Principal,1,2,26
+FUND0022,MNGR008,Amber Frazier,Principal,2,11,18
+FUND0023,MNGR066,Virgil Jenkins,Managing Partner,1,5,25
+FUND0023,MNGR040,Dustin Gibson,Investment Partner,2,7,25
+FUND0024,MNGR064,Jeremiah Butler,Managing Partner,1,17,25
+FUND0024,MNGR016,Darrell Morales,Investment Partner,2,5,19
+FUND0025,MNGR029,Jeff Warren,Principal,1,22,30
+FUND0025,MNGR059,Mitchell Palmer,Principal,2,1,29
+FUND0026,MNGR076,Crystal Frazier,Investment Partner,1,17,19
+FUND0026,MNGR013,Bill Beck,Principal,2,22,27
+FUND0027,MNGR074,Fernando Williamson,Investment Partner,1,1,23
+FUND0027,MNGR018,Albert Johnson,Principal,2,14,16
+FUND0028,MNGR015,Kaylee Mitchell,Investment Partner,1,7,21
+FUND0028,MNGR054,Claude Perez,Principal,2,3,23
+FUND0029,MNGR035,Mason Richards,Principal,1,6,19
+FUND0029,MNGR011,Vivan Miles,Investment Partner,2,18,23
+FUND0030,MNGR017,Terrence Carlson,Investment Partner,1,15,28
+FUND0030,MNGR034,Glenda Gonzales,Investment Partner,2,20,25
+FUND0031,MNGR076,Crystal Frazier,Principal,1,1,19
+FUND0031,MNGR057,Janice Bennett,Investment Partner,2,16,28
+FUND0032,MNGR021,Brayden Ellis,Principal,1,2,16
+FUND0032,MNGR056,Flenn Mills,Investment Partner,2,2,25
+FUND0033,MNGR019,Kelly Fletcher,Principal,1,8,22
+FUND0033,MNGR024,Peggy Fox,Principal,2,21,26
+FUND0034,MNGR001,Gilbert Jackson,Managing Partner,1,3,20
+FUND0034,MNGR048,Ted Bell,Investment Partner,2,17,28
+FUND0035,MNGR049,Connor Morales,Investment Partner,1,5,17
+FUND0035,MNGR077,Jamie Bennett,Investment Partner,2,11,29
+FUND0036,MNGR073,Roberto Oliver,Principal,1,4,21
+FUND0036,MNGR025,Mia Spencer,Managing Partner,2,24,27
+FUND0037,MNGR002,Bradley Banks,Managing Partner,1,6,27
+FUND0037,MNGR020,Herman Dunn,Investment Partner,2,8,26
+FUND0038,MNGR021,Brayden Ellis,Managing Partner,1,1,16
+FUND0038,MNGR031,Zachary Miles,Investment Partner,2,14,27
+FUND0039,MNGR004,Jo Ferguson,Managing Partner,1,4,20
+FUND0039,MNGR066,Virgil Jenkins,Principal,2,3,25
+FUND0040,MNGR002,Bradley Banks,Investment Partner,1,7,27
+FUND0040,MNGR035,Mason Richards,Investment Partner,2,1,19
+FUND0041,MNGR027,Randy Rose,Principal,1,8,25
+FUND0041,MNGR037,Carter Powell,Investment Partner,2,3,23
+FUND0042,MNGR015,Kaylee Mitchell,Investment Partner,1,6,21
+FUND0042,MNGR058,Julian Wilson,Managing Partner,2,2,22
+FUND0043,MNGR026,Naomi Rice,Principal,1,8,15
+FUND0043,MNGR036,Joy Stanley,Principal,2,1,19
+FUND0044,MNGR038,George White,Principal,1,1,28
+FUND0044,MNGR050,Robin Lynch,Managing Partner,2,7,29
+FUND0045,MNGR055,Florence Hansen,Principal,1,15,21
+FUND0045,MNGR011,Vivan Miles,Managing Partner,2,1,23
+FUND0046,MNGR068,Edgar Brooks,Principal,1,2,25
+FUND0046,MNGR039,Maureen White,Managing Partner,2,2,16
+FUND0047,MNGR080,Amelia Castillo,Investment Partner,1,4,18
+FUND0047,MNGR038,George White,Investment Partner,2,3,28
+FUND0048,MNGR024,Peggy Fox,Investment Partner,1,2,26
+FUND0048,MNGR020,Herman Dunn,Managing Partner,2,13,26
+FUND0049,MNGR022,Alexis Knight,Principal,1,1,17
+FUND0049,MNGR078,Sebastian Nichols,Managing Partner,2,6,22
+FUND0050,MNGR079,Alfred Davis,Investment Partner,1,5,17
+FUND0050,MNGR063,Tyrone Armstrong,Investment Partner,2,5,15
+FUND0051,MNGR053,Micheal Wood,Investment Partner,1,10,28
+FUND0051,MNGR023,Ellen Fisher,Investment Partner,2,4,16
+FUND0052,MNGR016,Darrell Morales,Managing Partner,1,10,19
+FUND0052,MNGR077,Jamie Bennett,Investment Partner,2,16,29
+FUND0053,MNGR036,Joy Stanley,Investment Partner,1,8,19
+FUND0053,MNGR009,Lily Evans,Investment Partner,2,23,25
+FUND0054,MNGR020,Herman Dunn,Principal,1,1,26
+FUND0054,MNGR052,Yolanda Burke,Principal,2,3,30
+FUND0055,MNGR060,Wyatt Jenkins,Principal,1,10,27
+FUND0055,MNGR010,Hunter Sanders,Investment Partner,2,16,21
+FUND0056,MNGR075,Avery Miller,Principal,1,8,28
+FUND0056,MNGR076,Crystal Frazier,Investment Partner,2,1,19
+FUND0057,MNGR044,Julia Sanchez,Investment Partner,1,17,26
+FUND0057,MNGR067,Don Meyer,Investment Partner,2,4,19
+FUND0058,MNGR043,Marjorie Steward,Managing Partner,1,13,15
+FUND0058,MNGR023,Ellen Fisher,Managing Partner,2,6,16
+FUND0059,MNGR078,Sebastian Nichols,Principal,1,1,22
+FUND0059,MNGR029,Jeff Warren,Managing Partner,2,1,30
+FUND0060,MNGR073,Roberto Oliver,Investment Partner,1,4,21
+FUND0060,MNGR030,Bryan Hawkins,Managing Partner,2,1,15
+FUND0061,MNGR073,Roberto Oliver,Managing Partner,1,1,21
+FUND0061,MNGR006,Sara Watson,Principal,2,1,29
+FUND0062,MNGR043,Marjorie Steward,Investment Partner,1,1,15
+FUND0062,MNGR067,Don Meyer,Principal,2,3,19
+FUND0063,MNGR025,Mia Spencer,Principal,1,2,27
+FUND0063,MNGR079,Alfred Davis,Managing Partner,2,6,17
+FUND0064,MNGR052,Yolanda Burke,Managing Partner,1,1,30
+FUND0064,MNGR044,Julia Sanchez,Managing Partner,2,7,26
+FUND0065,MNGR003,Tracy Porter,Investment Partner,1,2,26
+FUND0065,MNGR043,Marjorie Steward,Principal,2,1,15
+FUND0066,MNGR051,Yolanda Ford,Principal,1,3,21
+FUND0066,MNGR056,Flenn Mills,Managing Partner,2,5,25
+FUND0067,MNGR027,Randy Rose,Investment Partner,1,9,25
+FUND0067,MNGR013,Bill Beck,Investment Partner,2,2,27
+FUND0068,MNGR044,Julia Sanchez,Investment Partner,1,1,26
+FUND0068,MNGR034,Glenda Gonzales,Investment Partner,2,1,25
+FUND0069,MNGR049,Connor Morales,Investment Partner,1,4,17
+FUND0069,MNGR062,Ava Armstrong,Principal,2,16,26
+FUND0070,MNGR055,Florence Hansen,Principal,1,5,21
+FUND0070,MNGR042,Dale Bailey,Managing Partner,2,10,16
+FUND0071,MNGR048,Ted Bell,Investment Partner,1,10,28
+FUND0071,MNGR037,Carter Powell,Investment Partner,2,1,23
+FUND0072,MNGR008,Amber Frazier,Principal,1,1,18
+FUND0072,MNGR063,Tyrone Armstrong,Investment Partner,2,7,15
+FUND0073,MNGR026,Naomi Rice,Investment Partner,1,1,15
+FUND0073,MNGR051,Yolanda Ford,Principal,2,12,21
+FUND0074,MNGR060,Wyatt Jenkins,Principal,1,2,27
+FUND0074,MNGR080,Amelia Castillo,Managing Partner,2,1,18
+FUND0075,MNGR068,Edgar Brooks,Investment Partner,1,7,25
+FUND0075,MNGR065,Dolores Soto,Principal,2,15,17
+FUND0076,MNGR034,Glenda Gonzales,Investment Partner,1,4,25
+FUND0076,MNGR065,Dolores Soto,Managing Partner,2,1,17
+FUND0077,MNGR065,Dolores Soto,Investment Partner,1,1,17
+FUND0077,MNGR058,Julian Wilson,Principal,2,1,22
+FUND0078,MNGR032,Brianna Gilbert,Managing Partner,1,14,23
+FUND0078,MNGR004,Jo Ferguson,Investment Partner,2,1,20
+FUND0079,MNGR019,Kelly Fletcher,Managing Partner,1,1,22
+FUND0079,MNGR047,Kenneth Medina,Managing Partner,2,11,29
+FUND0080,MNGR022,Alexis Knight,Managing Partner,1,8,17
+FUND0080,MNGR055,Florence Hansen,Managing Partner,2,1,21
+FUND0081,MNGR068,Edgar Brooks,Managing Partner,1,6,25
+FUND0081,MNGR028,Lee Phillips,Investment Partner,2,1,23
+FUND0082,MNGR012,Chester Bailey,Principal,1,3,19
+FUND0082,MNGR027,Randy Rose,Investment Partner,2,8,25
+FUND0083,MNGR008,Amber Frazier,Principal,1,1,18
+FUND0083,MNGR013,Bill Beck,Managing Partner,2,2,27
+FUND0084,MNGR070,Andy Watkins,Investment Partner,1,20,29
+FUND0084,MNGR041,Josephine Hanson,Managing Partner,2,14,25
+FUND0085,MNGR046,Derek Myers,Principal,1,20,29
+FUND0085,MNGR009,Lily Evans,Principal,2,1,25
+FUND0086,MNGR010,Hunter Sanders,Managing Partner,1,2,21
+FUND0086,MNGR057,Janice Bennett,Principal,2,10,28
+FUND0087,MNGR040,Dustin Gibson,Investment Partner,1,15,25
+FUND0087,MNGR075,Avery Miller,Investment Partner,2,12,28
+FUND0088,MNGR080,Amelia Castillo,Principal,1,7,18
+FUND0088,MNGR001,Gilbert Jackson,Investment Partner,2,1,20
+FUND0089,MNGR009,Lily Evans,Investment Partner,1,1,25
+FUND0089,MNGR012,Chester Bailey,Investment Partner,2,15,19
+FUND0090,MNGR037,Carter Powell,Managing Partner,1,11,23
+FUND0090,MNGR025,Mia Spencer,Investment Partner,2,1,27
+FUND0091,MNGR041,Josephine Hanson,Investment Partner,1,8,25
+FUND0091,MNGR047,Kenneth Medina,Principal,2,6,29
+FUND0092,MNGR061,Andrew Lane,Principal,1,14,21
+FUND0092,MNGR051,Yolanda Ford,Principal,2,4,21
+FUND0093,MNGR074,Fernando Williamson,Principal,1,19,23
+FUND0093,MNGR033,Susan Wagner,Investment Partner,2,8,16
+FUND0094,MNGR019,Kelly Fletcher,Investment Partner,1,13,22
+FUND0094,MNGR053,Micheal Wood,Principal,2,3,28
+FUND0095,MNGR029,Jeff Warren,Principal,1,1,30
+FUND0095,MNGR077,Jamie Bennett,Investment Partner,2,2,29
+FUND0096,MNGR064,Jeremiah Butler,Managing Partner,1,3,25
+FUND0096,MNGR014,Julio Green,Investment Partner,2,7,20
+FUND0097,MNGR017,Terrence Carlson,Principal,1,10,28
+FUND0097,MNGR049,Connor Morales,Managing Partner,2,5,17
+FUND0098,MNGR061,Andrew Lane,Managing Partner,1,3,21
+FUND0098,MNGR062,Ava Armstrong,Principal,2,2,26
+FUND0099,MNGR032,Brianna Gilbert,Investment Partner,1,8,23
+FUND0099,MNGR069,Lauren Newman,Managing Partner,2,3,22
+FUND0100,MNGR074,Fernando Williamson,Principal,1,2,23
+FUND0100,MNGR048,Ted Bell,Principal,2,1,28

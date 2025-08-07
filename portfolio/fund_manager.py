@@ -87,4 +87,4 @@ if __name__ == '__main__':
     assigner.build_manager_pool()
     assigner.assign_to_funds()
     df = assigner.get_assignments()
-    print(df.head(10))
+    df.to_csv("CSVs/fund_managers.csv", index=False)

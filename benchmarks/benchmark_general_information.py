@@ -156,6 +156,6 @@ df_benchmark_general = pd.DataFrame({
 print("BENCHMARK_GENERAL_INFORMATION")
 print(df_benchmark_general.head())
 
-df_benchmark_general.to_csv("CSVs/df_benchmark_general.csv", index=False)
+df_benchmark_general.to_csv("CSVs/benchmark_general.csv", index=False)
 
 print("Completed")

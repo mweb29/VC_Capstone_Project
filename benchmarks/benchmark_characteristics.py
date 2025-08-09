@@ -40,7 +40,7 @@ from datetime import datetime
 random.seed(42)
 np.random.seed(42)
 
-df_benchmark_general = pd.read_csv("CSVs/df_benchmark_general.csv")
+df_benchmark_general = pd.read_csv("CSVs/benchmark_general.csv")
 
 BENCHMARK_CODES = df_benchmark_general["BENCHMARK_CODE"].tolist()
 BENCHMARK_NAMES = df_benchmark_general["BENCHMARK_NAME"].tolist()
@@ -164,7 +164,7 @@ df_benchmark_characteristics = pd.DataFrame(char_records)
 print("\nBENCHMARK_CHARACTERISTICS")
 print(df_benchmark_characteristics.head())
 
-df_benchmark_characteristics.to_csv("CSVs/df_benchmark_characteristics.csv", index=False)
+df_benchmark_characteristics.to_csv("CSVs/benchmark_characteristics.csv", index=False)
 
 
 # -- Snowflake SQL table creation

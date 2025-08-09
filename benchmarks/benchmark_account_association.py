@@ -37,7 +37,7 @@ import pandas as pd
 import random
 
 # Import the necessary information
-df_benchmark_general = pd.read_csv("CSVs/df_benchmark_general.csv")
+df_benchmark_general = pd.read_csv("CSVs/benchmark_general.csv")
 
 # 1. Simulate 50 account IDs (ACC0001, ACC0002, ...)
 NUM_ACCOUNTS = 50
@@ -68,7 +68,7 @@ if df_benchmark_account_association.duplicated(subset=["ACCOUNT_ID", "BENCHMARK_
 print("BENCHMARK_ACCOUNT_ASSOCIATION")
 print(df_benchmark_account_association.head())
 
-df_benchmark_account_association.to_csv("CSVs/df_benchmark_account_association.csv", index=False)
+df_benchmark_account_association.to_csv("CSVs/benchmark_account_association.csv", index=False)
 
 
 # -- Snowflake SQL table creation

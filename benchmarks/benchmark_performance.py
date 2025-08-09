@@ -52,8 +52,8 @@ random.seed(42)
 np.random.seed(42)
 
 # Bring in the information
-df_benchmark_characteristics = pd.read_csv("CSVs/df_benchmark_characteristics.csv")
-df_benchmark_general = pd.read_csv("CSVs/df_benchmark_general.csv")
+df_benchmark_characteristics = pd.read_csv("CSVs/benchmark_characteristics.csv")
+df_benchmark_general = pd.read_csv("CSVs/benchmark_general.csv")
 
 # Mapping: BENCHMARK_CODE -> INCEPTION_YEAR
 INCEPTION_MAP = df_benchmark_characteristics.drop_duplicates("BENCHMARK_CODE") \
@@ -185,7 +185,7 @@ print("\nBENCHMARK_PERFORMANCE")
 print(df_benchmark_performance.head())
 
 
-df_benchmark_performance.to_csv("CSVs/df_benchmark_performance.csv", index=False)
+df_benchmark_performance.to_csv("CSVs/benchmark_performance.csv", index=False)
 
 # -- Snowflake SQL table creation
 

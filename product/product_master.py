@@ -32,13 +32,13 @@ Each product represents a group of funds sharing the same **strategy** and **reg
 | `SHARECLASS`     | Assigned as `Institutional` or `Offshore` |
 | `REGION_BLOCK`   | Regional classification (e.g., `NA`, `EU`, `AS`, or `GL`)
 """
-
-
+import os
 import pandas as pd
 import random
 
 # Load in the portfolio general info DataFrame
-portfolio_general_info_df = pd.read_csv("CSVs/portfolio_general_info.csv")
+portfolio_general_path = os.path.join(os.path.dirname(__file__), '..', 'CSVs', 'portfolio_general_info.csv')
+portfolio_general_info_df = pd.read_csv(portfolio_general_path)
 
 # 1. Strategy & Region Mapping
 strategy_abbr = {"Early Stage": "EARLY", "General": "GEN", "Later Stage": "LATE"}
@@ -102,4 +102,6 @@ product_master_df
 if __name__ == "__main__":
     # Generate product master metadata and export to CSV
     product_master_df = pd.DataFrame(product_rows)
-    product_master_df.to_csv("CSVs/product_master.csv", index=False)
+    #product_master_df.to_csv("CSVs/product_master.csv", index=False)
+    print("Product Master Metadata:")
+    print(product_master_df.head())

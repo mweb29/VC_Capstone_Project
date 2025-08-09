@@ -1,7 +1,3 @@
-# price last month, price this month --> performance metrics
-# do this for each company in the portfolio and aggregate the results
-
-# portfolio_performance.py
 """
 This script computes and visualizes portfolio-level performance metrics using synthetic holdings and performance data.
 It supports CSV-based input for local testing and will be adapted to use a Snowflake connection.
@@ -15,6 +11,7 @@ Functionality:
 
 import pandas as pd
 import numpy as np
+import os
 import matplotlib.pyplot as plt
 
 class PortfolioPerformanceAnalyzer:
@@ -101,10 +98,18 @@ class PortfolioPerformanceAnalyzer:
         plt.show()
 
 if __name__ == '__main__':
-    analyzer = PortfolioPerformanceAnalyzer('CSVs/holdings.csv', 'CSVs/holdings_metrics.csv')
+    holdings_path = os.path.join(os.path.dirname(__file__), '..', 'CSVs', 'holdings.csv')
+    metrics_path  = os.path.join(os.path.dirname(__file__), '..', 'CSVs', 'holdings_metrics.csv')
+
+    holdings_path = os.path.abspath(holdings_path)
+    metrics_path  = os.path.abspath(metrics_path)
+
+    analyzer = PortfolioPerformanceAnalyzer(holdings_path, metrics_path)
     analyzer.load_data()
     analyzer.calculate_aggregates()
     print(analyzer.final_perf.head())
+
+
     #analyzer.plot_metrics()
 
 

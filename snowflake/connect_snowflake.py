@@ -50,6 +50,9 @@ def appending_snowflake_tables(file):
 
     session.create_dataframe(df).write.mode("append").save_as_table()
 
+if __name__ == "__main__":
+    create_initial_snowflake_tables()
+
 
 
 

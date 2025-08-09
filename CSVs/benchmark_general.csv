@@ -1,0 +1,11 @@
+BENCHMARK_CODE,BENCHMARK_NAME
+SP_500,S&P 500 Index
+R2500,Russell 2500 Index
+MSCI_WD,MSCI World Index
+CA_US,Carta U.S. Private Equity Index
+CA_NA,Cambridge Associates North America Venture Capital Index
+CA_EU_TE,Carta Europe Tech VC Performance Index
+CB_US,CB Insights U.S. Venture Capital Index
+CA_EU,Cambridge Associates Europe Private Capital Index
+PB_NA_GE,PitchBook North America Growth Equity Growth Index
+CA_GE,Cambridge Associates Growth Equity Private Equity Index

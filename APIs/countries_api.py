@@ -75,38 +75,6 @@ def json_output(df, filename=None):
 
     print(f"JSON file saved as {filename}")
 
-
-# -------------------------------
-# Snowflake Integration Placeholders (Country)
-# -------------------------------
-
-def connect_to_snowflake():
-    """
-    Placeholder function for establishing connection to Snowflake.
-    To be completed by a data engineer or used in final deployment phase.
-    """
-    # Example (not implemented):
-    # import snowflake.connector
-    # conn = snowflake.connector.connect(
-    #     user='your_user',
-    #     password='your_password',
-    #     account='your_account_id',
-    #     ...
-    # )
-    # return conn
-    pass
-
-def upload_to_snowflake_country(df):
-    """
-    Placeholder function for uploading country data to Snowflake.
-    Parameters:
-        df (pandas.DataFrame): Country metadata (name, ISO2, region, etc.)
-    Expected target: DIM_COUNTRY table in Snowflake.
-    """
-    print(f"[Placeholder] Uploading {len(df)} country records to Snowflake (DIM_COUNTRY)...")
-    pass
-
-
 # Main execution
 if __name__ == "__main__":
     """Main function to fetch and display country data.

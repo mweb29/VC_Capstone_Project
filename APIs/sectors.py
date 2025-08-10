@@ -1,27 +1,30 @@
 """
 Description:
-    This script retrieves the full Global Industry Classification Standard (GICS) hierarchy 
-    from a public GitHub Gist and separates it into two structures:
+    This script retrieves the full Global Industry Classification Standard 
+    (GICS) hierarchy from a public GitHub Gist and separates it into two structures:
       1. A simplified list of unique top-level GICS sectors
-      2. A full GICS hierarchy including sector, industry group, industry, and sub-industry
+      2. A full GICS hierarchy including sector, industry group, industry, and 
+      sub-industry
 
-    Both outputs are saved as JSON files (`sectors.json`, `gics.json`) for reuse in downstream 
-    portfolio allocation modeling and sector-level analytics.
+    Both outputs are saved as JSON files (`sectors.json`, `gics.json`) for 
+    reuse in downstream portfolio allocation modeling and sector-level analytics.
 
-    The script uses shared utility functions from `countries_api.py` for JSON export and Snowflake 
-    integration scaffolding, ensuring consistency across the capstone pipeline.
+    The script uses shared utility functions from `countries_api.py` for JSON 
+    export and Snowflake integration scaffolding, ensuring consistency across 
+    the capstone pipeline.
 
 Functions:
-    - get_gics_sectors(): Downloads and parses the GICS CSV into two structured DataFrames
+    - get_gics_sectors(): Downloads and parses the GICS CSV into two structured 
+    DataFrames
 
 Output:
     - `sectors.json`: List of unique GICS sector codes and names
     - `gics.json`: Full GICS hierarchy including Sector → Sub-Industry mappings
 
 Intended Use:
-    These outputs support sector allocation generation, investor reporting, and metadata enrichment 
-    in synthetic VC and financial datasets. The JSON outputs can be later uploaded to Snowflake's 
-    dimensional tables if desired.
+    These outputs support sector allocation generation, investor reporting, and 
+    metadata enrichment in synthetic VC and financial datasets. The JSON 
+    outputs can be later uploaded to Snowflake's dimensional tables if desired.
 
 Example:
     Run this script to generate GICS sector JSON artifacts:
@@ -30,7 +33,7 @@ Example:
 
 import pandas as pd
 # Use the functions from countries_api.py so we do not have to rewrite functions
-from APIs.countries_api import json_output, connect_to_snowflake, upload_to_snowflake_country
+from APIs.countries_api import json_output
 
 def get_gics_sectors():
 # Load full GICS classification from GitHub Gist

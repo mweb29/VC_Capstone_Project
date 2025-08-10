@@ -35,6 +35,7 @@ Each product represents a group of funds sharing the same **strategy** and **reg
 import os
 import pandas as pd
 import random
+from path_helpers import get_csv_path, ensure_csvs_dir
 
 # Load in the portfolio general info DataFrame
 portfolio_general_path = os.path.join(os.path.dirname(__file__), '..', 'CSVs', 'portfolio_general_info.csv')
@@ -102,6 +103,9 @@ product_master_df
 if __name__ == "__main__":
     # Generate product master metadata and export to CSV
     product_master_df = pd.DataFrame(product_rows)
-    #product_master_df.to_csv("CSVs/product_master.csv", index=False)
-    print("Product Master Metadata:")
-    print(product_master_df.head())
+    
+    product_master_df.to_csv("CSVs/product_master.csv", index=False)
+
+    # Write the product_master_df to a CSV file in the CSVs folder
+    output_file_path = get_csv_path('product_master.csv')
+    product_master_df.to_csv(output_file_path, index=False)

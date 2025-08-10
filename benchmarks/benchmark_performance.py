@@ -1,21 +1,25 @@
 """
-The `BENCHMARK_PERFORMANCE` table records price index levels for each benchmark—**daily for public (market) benchmarks** and **quarterly for synthetic (VC/PE) strategies**.
-This mixed frequency enables direct, realistic time-series comparison between venture strategies and public benchmarks in fact sheets, dashboards, and J-curve analysis.
+The `BENCHMARK_PERFORMANCE` table records price index levels for each 
+benchmark—daily for public (market) benchmarks and quarterly for 
+synthetic (VC/PE) strategies. This mixed frequency enables direct, realistic 
+time-series comparison between venture strategies and public benchmarks in fact 
+sheets, dashboards, and J-curve analysis.
 
-Each row represents a single (date, benchmark) value—**daily for public benchmarks, quarterly for synthetic**.
+Each row represents a single (date, benchmark) value—daily for public 
+benchmarks, quarterly for synthetic.
 
 ### Generation Logic
 
-| Step                           | Description                                                                                                                                                                                                                                                                                                                                                                                       |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1. Benchmark Loop**          | For every benchmark in `BENCHMARK_GENERAL_INFORMATION`, determine its reporting currency and inception year using `BENCHMARK_CHARACTERISTICS`.                                                                                                                                                                                                                                                    |
-| **2. Index Type Detection**    | If the benchmark is a public index (S&P 500, Russell 2000/2500, MSCI World), **daily closing levels are pulled using the [yfinance Python package](https://pypi.org/project/yfinance/)**, with the time series starting from the benchmark's inception year.                                                                                                                                    |
-| **3. Synthetic VC Indices**    | For venture capital and private benchmarks, a synthetic "price index" (base=100) is generated **quarterly** from the inception year, reflecting realistic fund value trajectories:<br> - **Early Years:** Modest or flat growth<br> - **Growth Phase:** Accelerated mark-ups<br> - **Late Years:** Steady, slower compounding.                                 |
-| **4. Placeholder for Future Daily Synthetic Logic** | For synthetic benchmarks, the code includes a clearly marked placeholder for future extension to daily frequency, should granular reporting ever be required. The quarterly logic can be swapped for daily by enabling a commented code block.                                                               |
-| **5. Consistent Currency**     | Each row records both `CURRENCY_CODE` (ISO) and `CURRENCY` (full name), consistent with benchmark-level assignment for reporting.                                                                                                                                                                                                                           |
-| **6. Time Window Enforcement** | For both real and synthetic indices, only periods from the benchmark's inception year through the most recent available date are reported, so series are directly comparable by inception.                                                                                                                                                                |
-| **7. Validation**              | All `VALUE` fields are guaranteed floats (never arrays or lists). Rows with missing price data (package gaps) are excluded.                                                                                                                                                                                                                                |
-| **8. Foreign Key**             | `BENCHMARK_CODE` maintains referential integrity to `BENCHMARK_GENERAL_INFORMATION` and downstream fact sheet components.                                                                                                                                                                                                                                   |
+| Step                       | Description                                                                                                                                                                                                                                                                                                                                                                                       |
+| ---------------------------| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Benchmark Loop          | For every benchmark in `BENCHMARK_GENERAL_INFORMATION`, determine its reporting currency and inception year using `BENCHMARK_CHARACTERISTICS`.                                                                                                                                                                                                                                                    |
+| 2. Index Type Detection    | If the benchmark is a public index (S&P 500, Russell 2000/2500, MSCI World),  daily closing levels are pulled using the [yfinance Python package](https://pypi.org/project/yfinance/) , with the time series starting from the benchmark's inception year.                                                                                                                                      |
+| 3. Synthetic VC Indices    | For venture capital and private benchmarks, a synthetic "price index" (base=100) is generated  quarterly  from the inception year, reflecting realistic fund value trajectories:<br> - Early Years: Modest or flat growth<br> - Growth Phase: Accelerated mark-ups<br> - Late Years: Steady, slower compounding.                                                                    |
+| 4. Placeholder for Future Daily Synthetic Logic | For synthetic benchmarks, the code includes a clearly marked placeholder for future extension to daily frequency, should granular reporting ever be required. The quarterly logic can be swapped for daily by enabling a commented code block.                                                                                                                               |
+| 5. Consistent Currency     | Each row records both `CURRENCY_CODE` (ISO) and `CURRENCY` (full name), consistent with benchmark-level assignment for reporting.                                                                                                                                                                                                                                                                 |
+| 6. Time Window Enforcement | For both real and synthetic indices, only periods from the benchmark's inception year through the most recent available date are reported, so series are directly comparable by inception.                                                                                                                                                                                                        |
+| 7. Validation              | All `VALUE` fields are guaranteed floats (never arrays or lists). Rows with missing price data (package gaps) are excluded.                                                                                                                                                                                                                                                                       |
+| 8. Foreign Key             | `BENCHMARK_CODE` maintains referential integrity to `BENCHMARK_GENERAL_INFORMATION` and downstream fact sheet components.                                                                                                                                                                                                                                                                         |
 
 ### Field Definitions
 
@@ -25,18 +29,27 @@ Each row represents a single (date, benchmark) value—**daily for public benchm
 | `PERFORMANCE_DATA_TYPE`| Type of measure (always 'PRICE' in this implementation) | PRICE          |
 | `CURRENCY_CODE`        | ISO code (USD, EUR, etc.)                               | USD            |
 | `CURRENCY`             | Full currency name                                      | US Dollar      |
-| `PERFORMANCE_FREQUENCY`| **'Daily' for public benchmarks; 'Quarterly' for synthetic** | Daily / Quarterly |
+| `PERFORMANCE_FREQUENCY`| 'Daily' for public benchmarks; 'Quarterly' for synthetic| Daily / Quarterly |
 | `VALUE`                | Index level (float)                                     | 125.43         |
 | `HISTORY_DATE`         | Price date (YYYY-MM-DD); can be quarter-end or daily    | 2022-09-30     |
 
 ### Design Rationale and Alignment
 
-- **Hybrid Data Source:** Public indices are actual market levels (e.g., S&P 500, MSCI World) pulled with the yfinance Python package at daily frequency; VC/private indices are simulated quarterly for realism.
-- **Flexible Frequency:** Real indices support daily analysis and charting; synthetic benchmarks reflect true fund reporting practice (quarterly), but code is designed for future daily expansion if needed.
-- **Aligned Inceptions:** Every benchmark’s time series starts at its own inception year for apples-to-apples analysis.
-- **Consistent Index Construction:** All synthetic price series are generated using plausible VC logic—never negative in early years, no bracketed values, and appropriate compounding.
-- **Schema Compliance:** Structure and keys align to Assette’s Snowflake data model and support downstream fact sheet automation.
-- **Clean Output:** Output ready for reporting, charting, and IRR/J-curve calculations (to be performed downstream using the price series).
+- Hybrid Data Source: Public indices are actual market levels 
+(e.g., S&P 500, MSCI World) pulled with the yfinance Python package at daily 
+frequency; VC/private indices are simulated quarterly for realism.
+- Flexible Frequency: Real indices support daily analysis and charting; 
+synthetic benchmarks reflect true fund reporting practice (quarterly), but 
+code is designed for future daily expansion if needed.
+- Aligned Inceptions: Every benchmark’s time series starts at its own 
+inception year for apples-to-apples analysis.
+- Consistent Index Construction: All synthetic price series are generated 
+using plausible VC logic—never negative in early years, no bracketed values, 
+and appropriate compounding.
+- Schema Compliance: Structure and keys align to Assette’s Snowflake data model 
+and support downstream fact sheet automation.
+- Clean Output: Output ready for reporting, charting, and IRR/J-curve 
+calculations (to be performed downstream using the price series).
 """
 
 import warnings
@@ -47,6 +60,7 @@ import numpy as np
 import random
 import yfinance as yf
 from datetime import datetime
+from path_helpers import get_csv_path
 
 random.seed(42)
 np.random.seed(42)
@@ -184,8 +198,8 @@ df_benchmark_performance = pd.DataFrame(performance_records)[[
 print("\nBENCHMARK_PERFORMANCE")
 print(df_benchmark_performance.head())
 
-
-df_benchmark_performance.to_csv("CSVs/benchmark_performance.csv", index=False)
+output_file_path = get_csv_path('benchmark_performance.csv')
+df_benchmark_performance.to_csv(output_file_path, index=False)
 
 # -- Snowflake SQL table creation
 

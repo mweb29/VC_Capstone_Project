@@ -27,20 +27,21 @@ We generate 7 unique synthetic records using one of three patterns:
 
 ### Key Logic and Validation
 
-| Step                     | Description                                                                                                                                |
-|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| 1. Provider Prefix**     | Extracts a stable 2-letter code from the provider name: <br>e.g., `"PitchBook"` → `"PB"`                                                   |
-| 2. Geography Mapping**   | Maps region names like `"Asia-Pacific"` to short codes like `"AP"`                                                                         |
-| 3. Sector Mapping**      | Maps sectors like `"Healthcare"` to codes like `"HC"`                                                                                      |
-| 4. Code Construction**   | Combines provider, region, and/or sector codes to form a machine-readable `BENCHMARKCODE`                                                  |
-| 5. Real vs Synthetic**   | Lists 3 fixed real benchmarks explicitly; generates 7 synthetic ones programmatically                                                      |
-| 6. Uniqueness**          | Appends numeric suffixes (`_2`, `_3`, etc.) if a generated code already exists                                                             |
+| Step                     | Description                                                                                   |
+|--------------------------|-----------------------------------------------------------------------------------------------|
+| 1. Provider Prefix**     | Extracts a stable 2-letter code from the provider name: <br>e.g., `"PitchBook"` → `"PB"`      |
+| 2. Geography Mapping**   | Maps region names like `"Asia-Pacific"` to short codes like `"AP"`                            |
+| 3. Sector Mapping**      | Maps sectors like `"Healthcare"` to codes like `"HC"`                                         |
+| 4. Code Construction**   | Combines provider, region, and/or sector codes to form a machine-readable `BENCHMARKCODE`     |
+| 5. Real vs Synthetic**   | Lists 3 fixed real benchmarks explicitly; generates 7 synthetic ones programmatically         |
+| 6. Uniqueness**          | Appends numeric suffixes (`_2`, `_3`, etc.) if a generated code already exists                |
 """
 
 import pandas as pd
 import numpy as np
 import random
 import re
+from path_helpers import get_csv_path
 
 # Ensure reproducibility
 random.seed(42)
@@ -156,6 +157,6 @@ df_benchmark_general = pd.DataFrame({
 print("BENCHMARK_GENERAL_INFORMATION")
 print(df_benchmark_general.head())
 
-df_benchmark_general.to_csv("CSVs/benchmark_general.csv", index=False)
-
-print("Completed")
+# Write the product_master_df to a CSV file in the CSVs folder
+output_file_path = get_csv_path('benchmark_general.csv')
+df_benchmark_general.to_csv(output_file_path, index=False)

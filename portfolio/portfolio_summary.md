@@ -8,6 +8,7 @@ Generates and maps core portfolio data for the VC simulation. Provides fund meta
 **portfolio_general_info.py** — Creates synthetic VC fund metadata including fund name, strategy, vintage, size, base location, currency, and product code.
 
 **account.py** — Builds a set of institutional and individual LP accounts. Adds committed capital, NAV, FX conversion, investment count, and inception date. 
+
 **portfolio_account_association.py** — Creates the many-to-many mapping of LP accounts to funds with allocation amounts and dates.
 
 **fund_manager.py** — Reads manager pool from JSON and assigns exactly two managers per fund with role and experience constraints.

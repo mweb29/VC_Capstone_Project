@@ -89,6 +89,10 @@ pip install -r requirements.txt
 
 2. **Run core modules in order:**
 
+It is assumed that each file is being run at the folder level. This is necessary
+as the connection to the operating system in particular scripts will malfunction
+if run from the main directory.
+
 ```
 APIs/ (to generate JSON)
   - countries_api.py

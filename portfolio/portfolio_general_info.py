@@ -44,6 +44,7 @@ It mimics enriched PitchBook-style data, maintaining internal consistency across
 
 import random
 import pandas as pd
+from path_helpers import get_csv_path
 
 # Utility: Ensure unique FUND_NAMEs
 def generate_unique_fund_name(existing_names, firm, base_name):
@@ -152,4 +153,8 @@ def generate_synthetic_portfolio(n=100, seed=42):
 if __name__ == "__main__":
     # Generate synthetic portfolio and export to CSV
     portfolio_general_info_df = generate_synthetic_portfolio(n=100)
-    portfolio_general_info_df.to_csv("CSVs/portfolio_general_info.csv", index=False)
+
+    # Write the product_master_df to a CSV file in the CSVs folder
+    output_file_path = get_csv_path('portfolio_general_info.csv')
+    portfolio_general_info_df.to_csv(output_file_path, index=False)
+ 

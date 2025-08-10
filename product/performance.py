@@ -98,6 +98,7 @@ class PortfolioPerformanceAnalyzer:
         plt.show()
 
 if __name__ == '__main__':
+    # Define paths to the CSV files
     holdings_path = os.path.join(os.path.dirname(__file__), '..', 'CSVs', 'holdings.csv')
     metrics_path  = os.path.join(os.path.dirname(__file__), '..', 'CSVs', 'holdings_metrics.csv')
 
@@ -110,7 +111,16 @@ if __name__ == '__main__':
     print(analyzer.final_perf.head())
 
 
-    #analyzer.plot_metrics()
+
+    # # Generate product master metadata and export to CSV
+    # product_master_df = pd.DataFrame(product_rows)
+    
+    # product_master_df.to_csv("CSVs/product_master.csv", index=False)
+
+    # # Write the product_master_df to a CSV file in the CSVs folder
+    # output_file_path = get_csv_path('product_master.csv')
+    # product_master_df.to_csv(output_file_path, index=False)
+    # #analyzer.plot_metrics()
 
 
 """

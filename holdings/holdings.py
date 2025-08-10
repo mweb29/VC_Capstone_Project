@@ -20,10 +20,10 @@ Assumptions:
 import pandas as pd
 import numpy as np
 import random
-from datetime import datetime, timedelta
 from faker import Faker
 import json
 import uuid
+from path_helpers import get_csv_path
 
 # Initialize random number generators for reproducibility
 fake = Faker()
@@ -111,10 +111,7 @@ def generate_holdings_data(n=100):
 # Main block to allow standalone script execution
 if __name__ == "__main__":
     df_holdings = generate_holdings_data(n=100)
-    
-    # Preview the first few rows for sanity check
-    #print("Preview of synthetic VC/PE holdings data:")
-    #print(df_holdings.head())
 
-    # Optional: save to CSV or integrate into Snowflake pipeline
-    df_holdings.to_csv("CSVs/holdings.csv", index=False)
+    # Save the generated holdings data to a CSV file
+    output_file_path = get_csv_path('holdings.csv')
+    df_holdings.to_csv(output_file_path, index=False)

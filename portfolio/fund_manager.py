@@ -7,6 +7,7 @@ from a randomly generated pool to a set of venture capital funds.
 import pandas as pd
 import random
 import json
+from path_helpers import get_csv_path
 
 class FundManagerAssigner:
     def __init__(self, n_funds=100, n_managers=80, json_path="JSON/manager_data.json"):
@@ -87,4 +88,7 @@ if __name__ == '__main__':
     assigner.build_manager_pool()
     assigner.assign_to_funds()
     df = assigner.get_assignments()
-    df.to_csv("CSVs/fund_managers.csv", index=False)
+    
+    # Write the fund_managers to a CSV file in the CSVs folder
+    output_file_path = get_csv_path('fund_managers.csv')
+    df.to_csv(output_file_path, index=False)

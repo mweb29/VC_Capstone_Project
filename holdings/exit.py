@@ -42,6 +42,8 @@ import pandas as pd
 import numpy as np
 import random
 from datetime import datetime, timedelta
+import os
+from path_helpers import get_csv_path
 
 # Exit settings
 exit_types = ['IPO', 'Acquisition', 'Write-off']
@@ -51,8 +53,14 @@ today = datetime.today()
 vc_exit_events = []
 
 # Load holdings DataFrame and portfolio general info DataFrame
-holdings_df = pd.read_csv("CSVs/holdings.csv")
-portfolio_general_info_df = pd.read_csv("CSVs/portfolio_general_info.csv")
+holdings_path = os.path.join(os.path.dirname(__file__), '..', 'CSVs', 'holdings.csv')
+portfolio_general_info_path  = os.path.join(os.path.dirname(__file__), '..', 'CSVs', 'portfolio_general_info.csv')
+
+holdings_path = os.path.abspath(holdings_path)
+portfolio_general_info_path  = os.path.abspath(portfolio_general_info_path)
+
+holdings_df = pd.read_csv(holdings_path)
+portfolio_general_info_df = pd.read_csv(portfolio_general_info_path)
 
 for _, row in portfolio_general_info_df.iterrows():
     fund_id = row["PORTFOLIOCODE"]
@@ -119,4 +127,8 @@ if __name__ == "__main__":
     # Simulate exit events and export to CSV
     vc_exit_df = pd.DataFrame(vc_exit_events)
     #vc_exit_df.to_csv("vc_exit.csv", index=False)
-    print(vc_exit_df.head())  # Display first few rows for verification 
+    print(vc_exit_df.head())  # Display first few rows for verification
+
+    # Save the generated holdings data to a CSV file
+    # output_file_path = get_csv_path('exits.csv')
+    # vc_exit_df.to_csv(output_file_path, index=False) 

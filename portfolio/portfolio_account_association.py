@@ -28,10 +28,18 @@ It reflects how each investor (institutional or individual) allocates capital ac
 
 import pandas as pd
 import random
+import os
+from path_helpers import get_csv_path
 
-# Load portfolio general info and accounts data
-portfolio_general_info_df = pd.read_csv("CSVs/portfolio_general_info.csv")
-accounts_df = pd.read_csv("CSVs/accounts.csv")
+# Load portfolio general info and accounts data through the OS
+portfolio_gen_path = os.path.join(os.path.dirname(__file__), '..', 'CSVs', 'portfolio_general_info.csv')
+accounts_path  = os.path.join(os.path.dirname(__file__), '..', 'CSVs', 'accounts.csv')
+
+portfolio_gen_path = os.path.abspath(portfolio_gen_path)
+accounts_path  = os.path.abspath(accounts_path)
+
+portfolio_general_info_df = pd.read_csv(portfolio_gen_path)
+accounts_df = pd.read_csv(accounts_path)
 
 # 1. Prepare portfolio and account ID lists
 portfolio_codes = portfolio_general_info_df["PORTFOLIOCODE"].tolist()
@@ -64,5 +72,7 @@ for _, row in accounts_df.iterrows():
 if __name__ == "__main__":
     # Map accounts to portfolios and export to CSV
     portfolio_account_map_df = pd.DataFrame(mapping)
-    portfolio_account_map_df.to_csv("CSVs/portfolio_account_map.csv", index=False)
 
+    # Write the product_master_df to a CSV file in the CSVs folder
+    output_file_path = get_csv_path('portfolio_account_map.csv')
+    portfolio_account_map_df.to_csv(output_file_path, index=False)

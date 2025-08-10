@@ -1,9 +1,16 @@
 """
-The `BENCHMARK_CHARACTERISTICS` table captures key summary statistics and structural characteristics for each venture capital benchmark. It supports comparisons of performance, composition, and reporting within fact sheets. Each row represents one benchmark–statistic combination (e.g., MEDIAN_IRR for a benchmark).
+The `BENCHMARK_CHARACTERISTICS` table captures key summary statistics and 
+structural characteristics for each venture capital benchmark. It supports 
+comparisons of performance, composition, and reporting within fact sheets. 
+Each row represents one benchmark–statistic combination (e.g., MEDIAN_IRR 
+for a benchmark).
 
 ### **Generation Logic**
 
-We dynamically generate one row per benchmark and characteristic defined for each `BENCHMARK_CODE` in the `BENCHMARK_GENERAL_INFORMATION` table. Values are simulated within realistic ranges, with metadata and currency logic inferred from benchmark names and regional mapping.
+We dynamically generate one row per benchmark and characteristic defined for 
+each `BENCHMARK_CODE` in the `BENCHMARK_GENERAL_INFORMATION` table. Values 
+are simulated within realistic ranges, with metadata and currency logic 
+inferred from benchmark names and regional mapping.
 
 | Column Name             | Type      | Example           | Notes                                                |
 |-------------------------|-----------|-------------------|------------------------------------------------------|
@@ -35,12 +42,18 @@ import numpy as np
 import random
 import yfinance as yf
 from datetime import datetime
+import os
+from path_helpers import get_csv_path
 
 # Ensure reproducibility
 random.seed(42)
 np.random.seed(42)
 
-df_benchmark_general = pd.read_csv("CSVs/benchmark_general.csv")
+# Define paths to the CSV files
+benchmark_general_path = os.path.join(os.path.dirname(__file__), '..', 'CSVs', 'benchmark_general.csv')
+benchmark_general_path = os.path.abspath(benchmark_general_path)
+
+df_benchmark_general = pd.read_csv(benchmark_general_path)
 
 BENCHMARK_CODES = df_benchmark_general["BENCHMARK_CODE"].tolist()
 BENCHMARK_NAMES = df_benchmark_general["BENCHMARK_NAME"].tolist()
@@ -164,7 +177,9 @@ df_benchmark_characteristics = pd.DataFrame(char_records)
 print("\nBENCHMARK_CHARACTERISTICS")
 print(df_benchmark_characteristics.head())
 
-df_benchmark_characteristics.to_csv("CSVs/benchmark_characteristics.csv", index=False)
+# Write the product_master_df to a CSV file in the CSVs folder
+output_file_path = get_csv_path('benchmark_characteristics.csv')
+df_benchmark_characteristics.to_csv(output_file_path, index=False)
 
 
 # -- Snowflake SQL table creation

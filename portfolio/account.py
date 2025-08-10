@@ -42,10 +42,9 @@
 
 import pandas as pd
 import random
-import requests
 from faker import Faker
-from datetime import datetime
 import json
+from path_helpers import get_csv_path
 
 fake = Faker()
 
@@ -179,6 +178,7 @@ for i in range(25):
 if __name__ == "__main__":
     # Generate LP account data and export to CSV
     accounts_df = pd.DataFrame(institutional_accounts + individual_accounts)
-    accounts_df.to_csv("CSVs/accounts.csv", index=False)
 
-    # Need to export to SNOWFLAKE in realtime
+    # Write the accounts_df to a CSV file in the CSVs folder
+    output_file_path = get_csv_path('accounts.csv')
+    accounts_df.to_csv(output_file_path, index=False)

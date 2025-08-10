@@ -27,6 +27,8 @@ import numpy_financial as npf
 import pandas as pd
 from datetime import datetime, timedelta
 import random
+from path_helpers import get_csv_path
+import os
 
 def generate_distributions(investment_date, total_investment, max_years=7):
     """
@@ -160,12 +162,15 @@ def generate_portfolio_company_financials(n=100):
 if __name__ == "__main__":
     # 100 has to be entered so that the company names are coming over correctly
     # from the holdings module
-    holdings_df = pd.read_csv("CSVs/holdings.csv")
+    holdings_path = os.path.join(os.path.dirname(__file__), '..', 'CSVs', 'holdings.csv')
+    holdings_path = os.path.abspath(holdings_path)
+
+    holdings_df = pd.read_csv(holdings_path)
     metrics_df = generate_portfolio_company_financials(holdings_df)
 
     # Run the validation
     validate_performance(metrics_df)
-
-    # Save to CSV for further use
-    metrics_df.to_csv('CSVs/holdings_metrics.csv', index=False)
     
+    # Save the generated holdings data to a CSV file
+    output_file_path = get_csv_path('holdings_metrics.csv')
+    metrics_df.to_csv(output_file_path, index=False)
